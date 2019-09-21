@@ -12,7 +12,8 @@
 |area|references|null:false,foreigner_key:true
 |delivery_days|string|null:false
 |brand|references|null:false,foreigner_key:true
-###Association
+
+### Association
 - has_many :categoies
 - belongs_to :area
 - belongs_to :brand
@@ -47,3 +48,4 @@
 |adress
 |building
 
+## 
