@@ -3,6 +3,7 @@
 
 ## productsテーブル
 |Column|Type|Options|
+|------|----|-------|
 |image|string|null:false|
 |name|string|null:false|
 |text|text|null:false|
@@ -21,9 +22,11 @@
 - belongs_to :area
 - belongs_to :brand
 - belongs_to :user
+- has_many :categories, through: :products_categories
 
 ## products_categories テーブル
 |Column|Type|Options|
+|------|----|-------|
 |product|references|null:false,foreigner_key:true|
 |category|references|null:false,foreigner_key:true|
 ### Association
@@ -33,31 +36,43 @@
 
 ## categoriesテーブル
 |Column|Type|Options|
+|------|----|-------|
 |name|string|null:false|
+### Association
+- has_many :products
+- has_many :products, through: :products_categories
 
-## majorテーブル
+## majorsテーブル
 |Column|Type|Options|
+|------|----|-------|
 |category|references|null:false,foreigner_key:true|
 
 ### Association
 - has_many :middle
+- belongs_to :category
 
-## middle テーブル
+## middles テーブル
 |Column|Type|Options|
+|------|----|-------|
 |category|references|null:false,foreigner_key:true|
 |major|references|null:false,foreigner_key:true|
 ### Association
 - has_many :small
 - belongs_to :major
-## small テーブル
+- belongs_to :category
+
+## smalls テーブル
 |Column|Type|Options|
+|------|----|-------|
 |category|references|null:false,foreigner_key:true|
 |middle|references|null:false,foreigner_key:true|
 ### Association
 - belongs_to :middle
+- belongs_to :category
 
 ## usersテーブル
 |Column|Type|Options|
+|------|----|-------|
 |nickname|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
@@ -78,8 +93,9 @@
 - has_many :products
 - has_many :comments
 
-## comments
+## comments テーブル
 |Column|Type|Options|
+|------|----|-------|
 |user|references|null:false,foreigner_key:true|
 |text|string|
 ### Association
@@ -87,6 +103,7 @@
 
 ## credits テーブル
 |Column|Type|Options|
+|------|----|-------|
 |user|references|null:false,foreigner_key:true|
 |number|integer|null:false|
 |expiration_date|date|null:false|
@@ -95,15 +112,17 @@
 ### Association
 - belongs_to :user
 
-## area
+## area テーブル
 |Column|Type|Options|
+|------|----|-------|
 |name|string|
 
 ### Association
 - has_many :products
 
-## brand
+## brand テーブル
 |Column|Type|Options|
+|------|----|-------|
 |name|string|
 
 ### Association
