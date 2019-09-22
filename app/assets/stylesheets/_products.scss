@@ -1,0 +1,29 @@
+.card-main{
+ width: 100%;
+ height: 100%;
+ margin: 0 auto;
+
+ box-sizing: border-box;
+ 
+ 
+  .card-top{
+   width: 160px;
+   height: 160px;
+   background-image: url(public/1.jpeg);
+   background-color: black;
+    
+    .card-price{
+      width: 65px;
+      height: 24px;
+      float: left;
+      margin-bottom: 10px;
+      background-color: blue;
+      position: relative;
+    }}
+  .card-bottom{
+    width: 160px;
+    height: 58px;
+    background-color: aqua;
+  }
+  
+}
