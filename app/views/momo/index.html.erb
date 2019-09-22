@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset=“UTF-8” />
+   <link rel=“stylesheet”, href=“style.css”>
+   <link rel=“stylesheet” href=“https://use.fontawesome.com/releases/v5.2.0/css/all.css” integrity=“sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ” crossorigin=“anonymous”>
+   <title></title>
+</head>
+
+
+<body>
+<header class="header">
+<%=link_to root_path do%>
+<img src="https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3296506464" class="rootlink" >
+<%end%>
+</header>
+<div class="single-main">
+    <div class="main">
+      <h2>新規会員登録</h2>
+
+
+
+
+    <%=link_to root_path do%>
+    <div class="main__mail">
+    <i class="fa fa-envelope"></i>
+    メールアドレスで登録する
+    </div>
+    <%end%>
+
+    
+    
+    <%=link_to root_path do%>
+    <div class="main__facebook">
+    <i class="fab fa-facebook-square"></i>
+    facebookで登録する
+    </div>
+    <%end%>
+
+
+    <%=link_to root_path do%>  
+    <div class="main__google">
+    <i class="fab fa-google"></i>
+    Googleで登録する
+    </div>
+    <%end%>
+  
+  
+</body>
+
+
+</html>
