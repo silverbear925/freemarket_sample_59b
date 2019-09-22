@@ -1,3 +1,104 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  margin:0;
+}
+
+a{
+  text-decoration:none;
+}
+.container{
+  max-width:900px;
+  margin:0 auto;
+}
+// i{
+//   color:black;
+// }
+
+li{
+  list-style:none;
+}
+.header{
+  &__top{
+    height:50px;
+      display:flex;
+      justify-content:space-between;
+      &-logo{
+      transform:scale(1);
+      width:180px;
+    }
+    &-search{
+      background:lightgrey;
+      border:grey solid 2px;
+      width:200%;
+      height:50px;
+      float:right;
+    }
+  }
+  &__bottom{
+    display:flex;
+    height:50px;
+    justify-content:space-between;
+    align-items: center;
+    font-size:14px;
+    &__left{
+      display:flex;
+      padding:0;
+      &-list{
+        margin-right:20px;
+      }
+    }
+    &__right{
+      display:flex;
+      line-height:50px;
+      &-list{
+        margin-left:20px;
+        .my-page{
+          line-height:50px;
+          border-radius:50%;
+          width:26px;
+          height:26px;
+        }
+      }
+    }
+  }
+}
+
+.slide{
+  position:relative;
+  widows: 100vw;
+  overflow:hidden;
+  &-image{
+    // position:absolute;
+    width:100vw;
+    height:auto;
+  }
+}
+
+footer{
+  background:black;
+  color:white;
+  .footer-image{
+    width:100vw;
+  }
+  .text-area{
+    display:flex;
+  }
+}
+
+
+.sale-logo{
+  position:fixed;
+  z-index:1;
+  bottom:0;right:0;
+  background:red;
+  border-radius:50%;
+  width:150px;
+  height:150px;
+  color:white;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-size:50px;
+}
