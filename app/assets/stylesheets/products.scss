@@ -25,7 +25,6 @@ li{
       display:flex;
       justify-content:space-between;
       &-logo{
-      transform:scale(1);
       width:180px;
     }
     &-search{
@@ -76,6 +75,46 @@ li{
   }
 }
 
+.category{
+  background:lightgrey;
+  &__heading{
+    text-align:center;
+    margin:0;
+    background:white;
+    h3{
+      
+    }
+    &-list{
+      margin:0;
+      display:flex;
+      justify-content:center;
+      li{
+        color:black;
+        background:rgba(lightgrey,0.7);
+        margin-right:20px;
+        padding:0 15px;
+        height:30px;
+        line-height:30px;
+        border-radius:15px;
+        margin-bottom:20px;
+      }
+    }
+  }
+  &-new{
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  &__products{
+    display:flex;
+    flex-wrap: wrap;
+    padding-bottom:50px;
+  }
+  &__link{
+    float:right;
+  }
+}
+
 footer{
   background:black;
   color:white;
@@ -100,5 +139,9 @@ footer{
   display:flex;
   justify-content: center;
   align-items:center;
-  font-size:50px;
+  flex-direction:column;
+  .fa-camera{
+    font-size:50px;
+  }
 }
+

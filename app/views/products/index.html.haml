@@ -1,42 +1,68 @@
 %nav
-  .header
-    .container
-      .header__top
-        =link_to root_path do
-          =image_tag "/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg" ,class:"header__top-logo"
-        =form_with url:"" do |f|
-          =f.text_field :"",class:"header__top-search"
-          =f.submit :""
-      .header__bottom
-        %ul.header__bottom__left
-          %li.header__bottom__left-list
-            =link_to ""  do
-              %i.fa.fa-list-ul
-              カテゴリーから探す
-          %li.header__bottom__left-list
-            =link_to ""  do
-              %i.fa.fa-list-ul
-              ブランドから探す
-        %ul.header__bottom__right
-          %li.header__bottom__right-list
-            =link_to ""  do
-              %i.fa.fa-bell
-              お知らせ
-          %li.header__bottom__right-list
-            =link_to ""  do
-              %i.fa.fa-check
-              やることリスト
-          %li.header__bottom__right-list
-            =link_to ""  do
-              =image_tag "/member_photo_noimage_thumb.png",class:'my-page'
-              マイページ
+  .container
+    .header__top
+      =link_to root_path do
+        =image_tag "/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg" ,class:"header__top-logo"
+      =form_with url:"" do |f|
+        =f.text_field :"",class:"header__top-search"
+        =f.submit :""
+    .header__bottom
+      %ul.header__bottom__left
+        %li.header__bottom__left-list
+          =link_to ""  do
+            %i.fa.fa-list-ul
+            カテゴリーから探す
+        %li.header__bottom__left-list
+          =link_to ""  do
+            %i.fa.fa-list-ul
+            ブランドから探す
+      %ul.header__bottom__right
+        %li.header__bottom__right-list
+          =link_to ""  do
+            %i.fa.fa-bell
+            お知らせ
+        %li.header__bottom__right-list
+          =link_to ""  do
+            %i.fa.fa-check
+            やることリスト
+        %li.header__bottom__right-list
+          =link_to ""  do
+            =image_tag "/member_photo_noimage_thumb.png",class:'my-page'
+            マイページ
+        %li.header__bottom__right-list
+          =link_to ""  do
+            新規登録
 .slide
   =image_tag "/cb396095b5f07e7117201fe2c2980ee1.png" ,class:"slide-image"
   =image_tag "" ,class:""
 
-%h3人気のブランド
-
-
+.category
+  .category__heading
+    %h3 人気のカテゴリー
+    %ul.category__heading-list
+      =link_to "" do
+        %li レディース
+      =link_to "" do
+        %li メンズ
+      =link_to "" do
+        %li 家電・スマホ
+      =link_to "" do
+        %li おもちゃ・ホビー・グッズ
+  .container
+    .category-new
+      %h3 レディース新着アイテム
+      =link_to "もっと見る","",class:'category-new-link'
+    .category__products
+      =render 'card'
+      =render 'card'
+      =render 'card'
+      =render 'card'
+      =render 'card'
+      =render 'card'
+      =render 'card'
+      =render 'card'
+      =render 'card'
+      =render 'card'
 
 %footer
   =image_tag "/027e61bb6e6e1b9e3c94e408e71dd6e2.png",class:"footer-image"
