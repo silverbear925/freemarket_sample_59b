@@ -4,7 +4,6 @@
 ## productsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|string|null:false|
 |name|string|null:false|
 |text|text|null:false|
 |category|references|null:false,foreigner_key:true|
@@ -70,7 +69,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |product|references|null:false,foreigner_key:true|
-|url|string|null:false,foreigner_key:true|
+|url|string|
 
 ### Association
 - belongs_to :product
