@@ -6,13 +6,33 @@
   width:  343px;
   height: 50px;
   background: $background;
-  margin: 20px auto;
+  margin: 15px auto;
   border-radius: 10px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 13px;
+  position: relative;
   
 }
 
+@mixin loginicon {
+  position: absolute; top:17px; left:20px;
+  font-size: 20px;
 
+}
 
+* {
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.body-main{
+  width: 100%;
+  height: 100vh;
+  background-color: #fafafa;
+}
 
 
 .header{
@@ -20,7 +40,7 @@
   width: 100%;
   height: 128px;
   text-align: center;
-
+  
 }
 
 .rootlink{
@@ -31,12 +51,17 @@
 
 .single-main{
   background: #fafafa;
-  width: 1430px;
-  height: 900px;
+  width: 100%;
+  height: 70vh;
   margin: 0 auto;
 }
 
-
+h2{
+  text-align: center;
+  width: 700px;
+  height: 97px;
+  border-bottom: 1px solid rgb(245, 245, 245);
+}
 
 
 
@@ -51,17 +76,63 @@
   margin: 0 auto;
   &__mail{
     @include loginbox(#EA352D);
+    color: white;
 
     }
   &__facebook{
-    @include loginbox(blue);
+    @include loginbox(#385185);
+    color: white;
     }
      
   &__google{
    @include loginbox(white);
    border: 1px solid gray ;
+   color: black;
     }
+}
 
 
+.fa-envelope{
+  @include loginicon
+}
+.fa-facebook-square{
+  @include loginicon
+}
+.fa-google{
+  @include loginicon
+}
+
+
+.single-footer{
+  width: 100%;
+  height: 200px;
+  background: #fafafa;
+  text-align: center;
+  color: #000;
+}
+
+.login-footer-list {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 0 0;
+  a{
+    margin: 0 15px 0 15px;
+    font-size: 12px;
+    color: #333333;
+  }
+}
+
+
+
+
+
+
+.root-link-fooder{
+  width:70px;
+
+}
+
+.login-footer-list-text{
+ font-size: 5px;
 
 }

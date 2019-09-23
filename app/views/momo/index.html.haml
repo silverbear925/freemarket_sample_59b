@@ -1,7 +1,7 @@
-%body
+.boby-main
   %header.header
     = link_to root_path do
-      %img.rootlink{:src => "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3296506464"}/
+      = image_tag 'https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3296506464', class: 'rootlink'
   .single-main
     .main
       %h2 新規会員登録
@@ -17,3 +17,18 @@
         .main__google
           %i.fab.fa-google
           Googleで登録する
+  %footter.footter      
+  .single-footer
+    %ul.login-footer-list
+      %li
+        = link_to "プライバシーポリシー", "https://www.mercari.com/jp/privacy/"
+      %li
+        = link_to "メルカリ規約", "https://www.mercari.com/jp/privacy/"
+      %li
+        = link_to "特定商取引に関する表記", "https://www.mercari.com/jp/privacy/" 
+    = link_to root_path do 
+      = image_tag  'https://www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?3296506464', class: 'root-link-fooder'    
+      
+    %p.login-footer-list-text
+      ©︎2019 Mercari
+
