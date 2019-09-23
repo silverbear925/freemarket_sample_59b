@@ -14,7 +14,7 @@
 |delivery_days|string|null:false|
 |brand|references|foreigner_key:true|
 |user|references|null:false,foreigner_key:true|
-|buy|integer|
+|buy_user|integer|
 |sale|string|
 
 ### Association
@@ -22,6 +22,7 @@
 - belongs_to :area
 - belongs_to :brand
 - belongs_to :user
+- has_many :images
 - has_many :categories, through: :products_categories
 
 ## products_categories テーブル
@@ -32,7 +33,6 @@
 ### Association
 - belongs_to :product
 - belongs_to :category
-
 
 ## categoriesテーブル
 |Column|Type|Options|
@@ -45,30 +45,34 @@
 ## majorsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|category|references|null:false,foreigner_key:true|
-
-### Association
-- has_many :middle
-- belongs_to :category
+|name|string|null:false|
 
 ## middles テーブル
 |Column|Type|Options|
 |------|----|-------|
 |category|references|null:false,foreigner_key:true|
 |major|references|null:false,foreigner_key:true|
+|name|string|null:false|
 ### Association
-- has_many :small
 - belongs_to :major
 - belongs_to :category
 
-## smalls テーブル
+## likes テーブル
 |Column|Type|Options|
 |------|----|-------|
-|category|references|null:false,foreigner_key:true|
-|middle|references|null:false,foreigner_key:true|
+|user|references|null:false,foreigner_key:true|
+|late|string|null:false,foreigner_key:true|
+
 ### Association
-- belongs_to :middle
-- belongs_to :category
+- belongs_to :user
+
+## imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|product|references|null:false,foreigner_key:true|
+
+### Association
+- belongs_to :product
 
 ## usersテーブル
 |Column|Type|Options|
@@ -92,6 +96,7 @@
 ### Association
 - has_many :products
 - has_many :comments
+- has_many :likes
 
 ## comments テーブル
 |Column|Type|Options|
