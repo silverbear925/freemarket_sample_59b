@@ -69,7 +69,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |product|references|null:false,foreigner_key:true|
-|url|string|
+|url|string|null:false|
 
 ### Association
 - belongs_to :product
