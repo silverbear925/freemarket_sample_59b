@@ -13,8 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
- @import "products";
- @import "card";
- @import "momo";
- @import "sign_up";
+ @import "mixin";
+ @import "colors" ;
+ @import "modules/products";
+ @import "modules/card";
+ @import "modules/momo";
+ @import "modules/sign_up";
