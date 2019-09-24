@@ -4,8 +4,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
-  # storage :fog
+  if Rails.env.development? || Rails.env.test?
+    storage :file
+  else
+    storage :fog
+  end
 
   include CarrierWave::MiniMagick
       # 縦横比を維持したまま、width, heightを800pxにリサイズするという意味です。
