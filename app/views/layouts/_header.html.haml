@@ -1,0 +1,37 @@
+%nav
+  .container
+    .header__top
+      =link_to root_path do
+        =image_tag "/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg" ,class:"header__top-logo"
+      =form_with url:"" do |f|
+        =f.text_field :"",class:"header__top-search"
+        =f.submit :""
+    .header__bottom
+      %ul.header__bottom__left
+        %li.header__bottom__left-list
+          =link_to ""  do
+            %i.fa.fa-list-ul
+            カテゴリーから探す
+        %li.header__bottom__left-list
+          =link_to ""  do
+            %i.fa.fa-list-ul
+            ブランドから探す
+      %ul.header__bottom__right
+        %li.header__bottom__right-list
+          =link_to ""  do
+            %i.fa.fa-bell
+            お知らせ
+        %li.header__bottom__right-list
+          =link_to ""  do
+            %i.fa.fa-check
+            やることリスト
+        %li.header__bottom__right-list
+          =link_to ""  do
+            =image_tag "/member_photo_noimage_thumb.png",class:'my-page'
+            マイページ
+        %li.header__bottom__right-list
+          =link_to new_user_registration_path  do
+            新規登録
+        %li.header__bottom__right-list
+          =link_to new_user_session_path do
+            ログイン

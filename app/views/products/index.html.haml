@@ -1,40 +1,4 @@
-%nav
-  .container
-    .header__top
-      =link_to root_path do
-        =image_tag "/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg" ,class:"header__top-logo"
-      =form_with url:"" do |f|
-        =f.text_field :"",class:"header__top-search"
-        =f.submit :""
-    .header__bottom
-      %ul.header__bottom__left
-        %li.header__bottom__left-list
-          =link_to ""  do
-            %i.fa.fa-list-ul
-            カテゴリーから探す
-        %li.header__bottom__left-list
-          =link_to ""  do
-            %i.fa.fa-list-ul
-            ブランドから探す
-      %ul.header__bottom__right
-        %li.header__bottom__right-list
-          =link_to ""  do
-            %i.fa.fa-bell
-            お知らせ
-        %li.header__bottom__right-list
-          =link_to ""  do
-            %i.fa.fa-check
-            やることリスト
-        %li.header__bottom__right-list
-          =link_to ""  do
-            =image_tag "/member_photo_noimage_thumb.png",class:'my-page'
-            マイページ
-        %li.header__bottom__right-list
-          =link_to new_user_registration_path  do
-            新規登録
-        %li.header__bottom__right-list
-          =link_to new_user_session_path do
-            ログイン
+=render '/layouts/header'
 
 .slide
   =image_tag "/cb396095b5f07e7117201fe2c2980ee1.png" ,class:"slide-image"
@@ -68,44 +32,9 @@
       =render 'card'
       =render 'card'
 
-%footer
-  =image_tag "/027e61bb6e6e1b9e3c94e408e71dd6e2.png",class:"footer-image"
-  .text-area
-    %ul.footer__text-area-lists
-      %h5.class:footer__text-area_heading メルカリについて
-      %li.class:footer__text-area_list 会社概要（運営会社)
-      %li.class:footer__text-area_list 採用情報
-      %li.class:footer__text-area_list プレリリースコード
-      %li.class:footer__text-area_list 公式ブログ
-      %li.class:footer__text-area_list メルカリロゴ利用ガイドライン
-    
-    %ul.footer__text-area-lists
-      %h5.class:footer__text-area_heading ヘルプ＆ガイド
-      %li.class:footer__text-area_list らくらくメルカリ便
-      %li.class:footer__text-area_list ゆうゆうメルカリ便
-      %li.class:footer__text-area_list 大型メルカリ便
-      %li.class:footer__text-area_list 車体取引ガイド
-      %li.class:footer__text-area_list メルカリあんしん・あんぜん宣言！
-      %li.class:footer__text-area_list 偽ブランド品撲滅への取り組み
-      %li.class:footer__text-area_list メルカリボックス
-
-    %ul.footer__text-area-lists
-      %h5.class:footer__text-area_heading プライバシーポリシー
-      %li.class:footer__text-area_list メルカリ利用規約
-      %li.class:footer__text-area_list あんしんスマホサポートサービス制度に関する利用特約
-      %li.class:footer__text-area_list コンプライアンスポリシー
-      %li.class:footer__text-area_list 個人データのあんぜん管理に係る基本方針
-      %li.class:footer__text-area_list 特定商取引法に関する表記
-      %li.class:footer__text-area_list 資金決済法に基づく表示
-      %li.class:footer__text-area_list 法令遵守と犯罪抑止のために
-
-    %ul.footer__text-area-lists
-      %h5.class:footer__text-area_heading 国
-      %li.class:footer__text-area_list 日本
-
 =link_to new_product_path do
   .sale-logo
     出品
     %i.fa.fa-camera
 
-
+=render '/layouts/footer'
