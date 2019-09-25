@@ -1,0 +1,105 @@
+*{
+  box-sizing: border-box;
+}
+
+@mixin input-box{
+  border:2px solid lightgrey;
+  width:100%;
+  height:48px;
+  padding:10px 16px 8px ;
+  margin-top:10px;
+  border-radius:5px;
+  font-size:16px;
+  box-sizing:border-box;
+}
+
+@mixin sign-in {
+  width:  343px;
+  height: 50px;
+  margin: 15px auto;
+  text-align: center;
+  line-height: 50px;
+  font-size: 13px;  
+  color: white;
+  
+}
+
+
+
+
+
+
+
+.sign-in{
+  width: 100%;
+  height: 900px;
+  background: #fafafa;
+  position: relative;
+}
+
+.sign-in-main{
+  width: 450px;
+  background:white;
+  padding: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.sign-in-new {
+  @include sign-in;
+  background: #0099E8;
+}
+
+.sign-in-facebook{
+  width: 343px;
+  height: 50px;
+  background: #385185;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 14px;
+  color: white;
+
+}
+  
+.sign-in-google{
+  width: 343px;
+  height: 50px;
+  background: white;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 14px;
+  border: 1px solid gray ;
+}  
+
+
+
+.sign-in-field{
+ margin: 20px 0;
+ &-email{
+   @include input-box;
+ }
+ &-password{
+  @include input-box;
+
+ }
+ &-login{
+  @include sign-in;
+  background: #EA3522;
+ }
+}
+
+
+
+
+
+
+
+.sign-in-footter{
+  position: absolute; 
+  width: 100vw;
+}
+
