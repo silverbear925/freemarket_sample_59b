@@ -1,0 +1,111 @@
+
+.default-container
+
+
+
+
+  .item-box-container
+    %h1.item-name
+      ダボッと可愛く映え☆ゲス USA+刺繍 オーバーサイズ プルオーバー パーカー
+    %p.item-wording
+      『遠赤外線 電気ストーブ YAMAZEN』は、13回の取引実績を持つトレッセさんから出品されました。電気ヒーター/家電・スマホ・カメラの商品で、静岡県から1~2日で発送されます。
+
+    .item-main-content
+      .item-photo
+        .owl-stage-outer
+          .owl-carousel
+            =image_tag '/otya.png', class: ''
+          .owl-dots
+            .owl-dot
+
+
+
+
+      %table.item-detail-table
+        %tr.item-detail-table-tr
+          %th.item-detail-table-th  出品者
+          %td.item-detail-table-td
+            =link_to ""  do
+              お名前
+            //評価アイコン始
+            -# %div
+            -#   .item-user-ratings
+            -#     %i.fas.fa-grin
+            -#     %span 36
+            -#   .item-user-ratings
+            -#     %i.fas.fa-meh
+            -#     %span 0
+            -#   .item-user-ratings
+            -#     %i.fas.fa-frown
+            -#     %span 0
+            //評価アイコn終
+        %tr.item-detail-table-tr
+          %th.item-detail-table-th カテゴリ
+          %td.item-detail-table-td
+            %ul.item-detail-table_category
+              %li
+                =link_to ""  do
+                  メンズ
+              %li
+                =link_to ""  do
+                  靴
+              %li
+                =link_to ""  do
+                  スニーカー
+        %tr.item-detail-table-tr
+          %th.item-detail-table-th ブランド
+          %td.item-detail-table-td
+            =link_to ""  do
+              ナイキ
+        %tr.item-detail-table-tr
+          %th.item-detail-table-th 商品状態
+          %td.item-detail-table-td 目立った傷や汚れなし
+        %tr.item-detail-table-tr
+          %th.item-detail-table-th  配送料の負担
+          %td.item-detail-table-td 送料込み(出品者負担)
+        %tr.item-detail-table-tr
+          %th.item-detail-table-th  配達方法
+          %td.item-detail-table-td らくらくメルカリ便
+        %tr.item-detail-table-tr
+          %th.item-detail-table-th  配送元地域
+          %td.item-detail-table-td
+            =link_to ""  do
+              大阪
+        %tr.item-detail-table-tr
+          %th.item-detail-table-th  発送日の目安
+          %td.item-detail-table-td 2~3日で発送
+
+    .item-price-box.text-center
+      .item-price-box-price　¥10,800
+      .item-price-box-tax　(税込)
+      .item-price-box-shipping-fee　送料込み
+
+    .item-buy-btn
+      =link_to "" do
+        購入画面に進む
+
+    .item-description
+      %p.item-description-text
+        倉庫から出てきたデットストック品（新品未使用品）です。
+        k赤かっk閣下閣下かっかっkかかっっか
+
+    //massege-------------------------
+  .item-detail-message
+    .message-content
+      ここにはメッセージ機能？？？？？
+  
+  %ul.nav-item-link-prev-next.clearfix
+    %li.nav-item-link-prev
+      =link_to "" do
+        %i.fas.fa-chevron-left
+        おーいお茶
+    %li.nav-item-link-next
+      =link_to "" do
+        綾鷹
+        %i.fas.fa-chevron-right
+
+  .item-social-media-box
+    .text-center
+    %i.fab.fa-facebook-square
+
+
