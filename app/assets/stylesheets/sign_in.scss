@@ -51,6 +51,7 @@
 .sign-in-new {
   @include sign-in;
   background: #0099E8;
+  margin-bottom: 60px;
 }
 
 .sign-in-facebook{
@@ -68,14 +69,23 @@
   width: 343px;
   height: 50px;
   background: white;
-  margin-top: 30px;
+  margin-top: 27px;
+  margin-bottom: 40px;
   text-align: center;
   font-size: 14px;
   padding-top: 14px;
   border: 1px solid gray ;
+
 }  
 
 
+
+
+.sign-in-noaccount{
+  text-align: center;
+  font-size: 14px;
+  color: #666666;
+}
 
 .sign-in-field{
  margin: 20px 0;
@@ -90,10 +100,16 @@
   @include sign-in;
   background: #EA3522;
  }
+ &-robot{
+  transform:scale(0.9);
+ }
 }
 
-
-
+.sign-in-field-remember_me{
+  width: 324px;
+  height: 14px;
+  background: #EA3522;
+}
 
 
 
