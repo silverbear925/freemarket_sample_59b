@@ -91,9 +91,11 @@ $signup_container_width:700px;
   background:red;
   color:white;
   text-align:center;
-  height:30px;
+  height:48px;
+  width:100%;
   padding:10px;
   margin:20px 0;
+  font-size:16px;
 }
 .confirmation__link{
   float:right;
@@ -116,4 +118,19 @@ $signup_container_width:700px;
   color:white;
   text-align:center;
   border-radius:0px;
+}
+
+.credit__list{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0;
+  margin:0;
+    &-image{
+    width:50px;
+  }
+}
+
+.finish-message{
+  text-align:center;
 }

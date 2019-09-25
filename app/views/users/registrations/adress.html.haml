@@ -7,44 +7,36 @@
 
         .sign-up_field
           .sign-up_field-label
-            = f.label :nickname ,'郵便番号'
+            = f.label :zipcode ,'郵便番号'
             %span 必須
-          = f.text_field :nickname,class:'sign-up_field-input',placeholder:'例）メルカリ太郎'        
+          = f.text_field :zipcode,class:'sign-up_field-input',placeholder:'例）123−4567'        
 
         .sign-up_field
           .sign-up_field-label
-            = f.label :nickname, "都道府県"
+            = f.label :prefectures, "都道府県"
             %span 必須
-          = f.text_field :nickname,class:'sign-up_field-input',placeholder:'例）メルカリ太郎'        
+          = f.text_field :prefectures,class:'sign-up_field-input',placeholder:'例）北海道'        
         .sign-up_field
           .sign-up_field-label
-            = f.label :nickname ,'郵便番号'
+            = f.label :city ,'市区町村'
             %span 必須
-          = f.text_field :nickname,class:'sign-up_field-input',placeholder:'例）メルカリ太郎'        
+          = f.text_field :city,class:'sign-up_field-input',placeholder:'例）横浜市緑区'        
         .sign-up_field
           .sign-up_field-label
-            = f.label :nickname ,'郵便番号'
+            = f.label :adress ,'番地'
             %span 必須
-          = f.text_field :nickname,class:'sign-up_field-input',placeholder:'例）メルカリ太郎'        
+          = f.text_field :adress,class:'sign-up_field-input',placeholder:'例）青山1−1−1'        
         .sign-up_field
           .sign-up_field-label
-            = f.label :nickname ,'郵便番号'
+            = f.label :building ,'建物名'
             %span 必須
-          = f.text_field :nickname,class:'sign-up_field-input',placeholder:'例）メルカリ太郎'        
+          = f.text_field :building,class:'sign-up_field-input',placeholder:'例）柳ビル103'        
         .sign-up_field
           .sign-up_field-label
-            = f.label :nickname ,'郵便番号'
+            = f.label :phone_number ,'電話'
             %span 必須
-          = f.text_field :nickname,class:'sign-up_field-input',placeholder:'例）メルカリ太郎'        
+          = f.text_field :phone_number,class:'sign-up_field-input',placeholder:'例）09012345678'        
         
-
-        %p.confirmation__text「次に進む」のボタンを押すことにより、
-        %span
-          =link_to "利用規約" "",class:"confirmation__text"
-        に同意したものとみなします
-
         =f.submit  "次に進む" ,class:"sign-up-next "
-
-        =link_to "本人の情報の登録について＞","",class:'confirmation__link'
         
 =render '/momo/footter'

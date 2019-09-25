@@ -17,6 +17,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def pay
   end
 
+  def finish
+  end
+
   # GET /resource/sign_up
   # def new
   #   super
