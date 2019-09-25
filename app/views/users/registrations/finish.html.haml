@@ -1,0 +1,13 @@
+.sign-up
+  =render 'sign_up_header'
+  .sign-up__form
+    %h3.sign-up__form-heading 会員完了画面
+    .sign-up__form-container
+
+      %p.finish-message ありがとうございます。
+      %p.finish-message 会員登録が完了しました。
+      
+      
+      =link_to "メルカリに戻る",root_path ,class:"sign-up-next "
+        
+=render '/momo/footter'

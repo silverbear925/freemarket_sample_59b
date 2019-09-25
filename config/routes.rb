@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get 'registrations/phone', to:'users/registrations#phone'
     get 'registrations/adress', to:'users/registrations#adress'
     get 'registrations/pay', to:'users/registrations#pay'
+    get 'registrations/finish', to:'users/registrations#finish'
     
   end
 
