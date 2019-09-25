@@ -1,3 +1,23 @@
+.sign-up
+  =render 'sign_up_header'
+  .sign-up__form
+    %h3.sign-up__form-heading 会員情報入力
+    .sign-up__form-container
+      = form_with url:"" do |f|
+
+        .sign-up_field
+          .sign-up_field-label
+            = f.label :nickname ,'電話番号の確認'
+          = f.text_field :nickname,class:'sign-up_field-input',placeholder:'携帯電話の番号を入力'
+        
+        %p.confirmation__text 本人確認のため、携帯番号のSMS(ショートメッセージサービス)を利用して認証を行います。
+
+        =link_to "SMSを送信する" ,"",class:"send_sms"
+
+        %p.confirmation__text ※電話番号は本人の確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+
+        =link_to "電話番号の確認が必要な理由","",class:'confirmation__link'
+=render '/momo/footter'
 
 
 
