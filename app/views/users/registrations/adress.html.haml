@@ -1,0 +1,50 @@
+.sign-up
+  =render 'sign_up_header'
+  .sign-up__form
+    %h3.sign-up__form-heading 住所確認
+    .sign-up__form-container
+      = form_with url:"" do |f|
+
+        .sign-up_field
+          .sign-up_field-label
+            = f.label :nickname ,'郵便番号'
+            %span 必須
+          = f.text_field :nickname,class:'sign-up_field-input',placeholder:'例）メルカリ太郎'        
+
+        .sign-up_field
+          .sign-up_field-label
+            = f.label :nickname, "都道府県"
+            %span 必須
+          = f.text_field :nickname,class:'sign-up_field-input',placeholder:'例）メルカリ太郎'        
+        .sign-up_field
+          .sign-up_field-label
+            = f.label :nickname ,'郵便番号'
+            %span 必須
+          = f.text_field :nickname,class:'sign-up_field-input',placeholder:'例）メルカリ太郎'        
+        .sign-up_field
+          .sign-up_field-label
+            = f.label :nickname ,'郵便番号'
+            %span 必須
+          = f.text_field :nickname,class:'sign-up_field-input',placeholder:'例）メルカリ太郎'        
+        .sign-up_field
+          .sign-up_field-label
+            = f.label :nickname ,'郵便番号'
+            %span 必須
+          = f.text_field :nickname,class:'sign-up_field-input',placeholder:'例）メルカリ太郎'        
+        .sign-up_field
+          .sign-up_field-label
+            = f.label :nickname ,'郵便番号'
+            %span 必須
+          = f.text_field :nickname,class:'sign-up_field-input',placeholder:'例）メルカリ太郎'        
+        
+
+        %p.confirmation__text「次に進む」のボタンを押すことにより、
+        %span
+          =link_to "利用規約" "",class:"confirmation__text"
+        に同意したものとみなします
+
+        =f.submit  "次に進む" ,class:"sign-up-next "
+
+        =link_to "本人の情報の登録について＞","",class:'confirmation__link'
+        
+=render '/momo/footter'

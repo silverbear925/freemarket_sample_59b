@@ -43,6 +43,8 @@ $signup_container_width:700px;
     &-container{
       width:350px;
       margin:0 auto;
+      margin-bottom:30px;
+      padding:50px 0;
     }
     &-heading{
       text-align:center;
@@ -103,4 +105,15 @@ $signup_container_width:700px;
 }
 .confirmation__text{
   font-size:14px;
+}
+
+.send_sms{
+  width:100%;
+  background:red;
+  display:block;
+  @include input-box;
+  border:none;
+  color:white;
+  text-align:center;
+  border-radius:0px;
 }
