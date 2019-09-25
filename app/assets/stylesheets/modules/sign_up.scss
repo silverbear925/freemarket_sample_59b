@@ -9,8 +9,12 @@
   box-sizing:border-box;
 }
 
+$background:#fafafa;
+$signup_container_width:700px;
+
+
 .sign-up{
-  background:lightgrey;
+  background:$background;
   &-header{
     height:120px;
     display:flex;
