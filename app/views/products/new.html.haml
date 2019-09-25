@@ -1,170 +1,132 @@
--# .exhibit
--#   .exhibit-header
--#     %h1
--#       = link_to 'https://www.mercari.com/jp/'
--#   .exhibit-main
--#     %senction.l-exhibit-container_buy-item-container
--#       #sell-container
--#         .data
--#           .sell-container-inner
--#             %h2= "商品の情報を入力"
--#             %form.sell-form
--#               .sell-exhibit-image
--#               %select{name: "名前"}
--#               .sell-item
--#                 %h3= "商品名"
--#               .sell-item-explanation
--#                 %h3= "商品説明"
-             
--#               .item-show
--#               %h4= "商品詳細"
-
--#               .item-category
--#               %h3= "カテゴリー"
-
--#               .item-status
--#               %h3="商品の状態"
-
--#               .shipping-charge
--#               %h3="配送料の負担"
-
--#               .buy-area
--#               %h3="発送元の地域"
-
--#               .delivery-days
--#               %h3="発送までの日数"
-
--#               .selling-price
--#               %h4="販売価格（300~9,999,999)"
-
--#               .itme-price
--#               %h3="価格"
-
--#               .buy-fee
--#               %h4="販売手数料"
-
--#               .sales-profit
--#               %h3="販売利益"
-
--#               .exhibit-go
--#               %h5="禁止されている出品、行為を必ずご確認ください。またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。また、出品をもちまして加盟店規約に同意したことになります。"
-
-%body
-  %main.single-main
-    %section.l-single-container.buy-item-container
-      #sell-container
-        .sell-container-inner
-          %h2.l-single-head 商品の情報を入力
-          出品画像
-          %span.form-require 必須
-          %p 最大10枚までアップロードできます
-
-            
+.sell-wrappe
+  .sell
+    = form_with name:"" do |f|
+      %h3.sell__title 商品の情報を入力
+      .sell__image
+        = f.label :image, "出品画像"
+        %span.required
+        %p.max 最大10枚までアップロードできます
+        .sell__image-select
+          またはクリックしてファイルをアップロード
+      %ul.sell__image-select__ul
+        %form{:action => "", :enctype => "multipart/form-data", :method => "post"}
+        %input{:name => "image", :type => "file", :value => "ファイルを選択"}/
+        %input{:type => "value", :value => "送信"}/
+      .sell__about
+        .sell__about__name
+          = f.label :name, "商品名"
+          %span.required
+          = f.text_field :name, class: "form", placeholder: "商品名（必須40文字まで）"
+        .sell__about__description
+          = f.label :description, "商品の説明"
+          %span.required
+          = f.text_area :description, class: "sell__about-description__form", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
           
-          .sell-dropbox-container.clearfix
-            .sell-upload-items
+      .sell__about.clearfix
+        %h3= "商品の詳細" 
+        .sell__about__right
+          .sell__about__right__wrap
+            %h4= "カテゴリー"
+            %span.required
+            .sell__about__right__wrap-box.parent
+              %select#parent
+                %option{value: 0} ---
+              %i.fas.fa-chevron-down
+            .sell__about__right__wrap-box.child
+              %select#child
+              %i.fas.fa-chevron-down
+            .sell__about__right__wrap-box.grand_child
+              = f.collection_select(:category_id, [], :id, :name, {prompt: "---"}, {id: "grand_child"})
+              %i.fas.fa-chevron-down
+
+          .sell__about__right__wrap
+            = f.label :size_id, "サイズ"
+            %span.required-gray
+            .sell__about__right__wrap-box
+
+              %i.fas.fa-chevron-down
+          .sell__about__right__wrap
+            = f.label :brand_id, "ブランド"
+            %span.required-gray
+            .sell__about__right__wrap-box
+              = f.text_field :brand_id, placeholder: "例）シャネル", class: "form"
+          .sell__about__right__wrap
+            = f.label :condition_id, "商品の状態"
+            %span.required
+            .sell__about__right__wrap-box
+              %i.fas.fa-chevron-down
+
+      .sell__about.clearfix
+        .sell__about__left 配送について
+        .sell__about__right
+          .sell__about__right__wrap
+            = f.label :postage_burden, "配送料の負担"
+            %span.required
+            .sell__about__right__wrap-box
+              = f.select :postage_burden, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]], prompt: "---", class: "select"
+              %i.fas.fa-chevron-down
+          .sell__about__right__wrap
+            = f.label :sending_method_id, "配送の方法"
+            %span.required
+            .sell__about__right__wrap-box
               
-            .sell-upload-drop-box
-              %pre.visible-pc
-                :preserve
-                  ドラッグアンドドロップ
-                    またはクリックしてファイルをアップロード
-        .sell-content
-          .form-group
-            %h3= "商品名"
-            %span.form-require 必須
-            %input{:maxlength => "40", :name => "name", :size => "100", :type => "text"}
-                 
-          .form-group
-            %h3= "商品説明"
-            %input{:maxlength => "20", :name => "name", :size => "100", :type => "text"}
-            %span.form-require 必須
-        .sell-content.clearfix
-          %h3.sell-sub-head 商品の詳細
-          .sell-form-box
+              %i.fas.fa-chevron-down
+          .sell__about__right__wrap
+            = f.label :area_id, "発送元の地域"
+            %span.required
+            .sell__about__right__wrap-box
+              
+              %i.fas.fa-chevron-down
+          .sell__about__right__wrap
+            = f.label :scheduled_sending_date, "発送までの日数"
+            %span.required
+            .sell__about__right__wrap-box
             
-            .form-group
-              
-              %span.form-require 必須
-              .select-wrap
-                
-              .select-wrap
-                
-              .select-wrap
-                
-            .form-group
-              
-              %span.form-require 必須
-              .select-wrap
-                
-            .form-group
-              
-              %span.form-arbitrary 任意
-              .select-wrap
-                
-            .form-group
-              
-              %span.form-require 必須
-              .select-wrap
-                
-        .sell-content.clearfix
-          %h3.sell-sub-head 配送について
-          %a.form-question{href: "", target: "_blank"}?
-          .sell-form-box
-            .form-group
-              
-              %span.form-require 必須
-              .select-wrap
-                
-            .form-group
-              
-              %span.form-require 必須
-              .select-wrap
-                
-            .form-group
-              
-              %span.form-require 必須
-              .select-wrap
-                
-            .form-group
-              
-              %span.form-require 必須
-              .select-wrap
-                
-        .sell-content.clearfix
-          %h3.sell-sub-head 販売価格(300〜9,999,999)
-          %a.form-question{href: "", target: "_blank"} ?
-          .sell-form-box
-            %ul.sell-price
-              %li.form-group
-                .clearfix
-                  
-                  %span.form-require 必須
-                  #inputPrice.l-right.sell-price-input
-                    ¥
-                    .sell-form-box-input
-                      
-              %li.clearfix
-                .l-left
-                  販売手数料 (10%)
-                #handling_charge.l-right -
-              %li.clearfix.bold
-                .profitFee.l-left 販売利益
-                #profitFee.l-right -
-        .sell-content.sell-btn-box
-          %div
+              %i.fas.fa-chevron-down
+
+      .sell__about.clearfix
+        .sell__about__left 販売価格(300〜9,999,999)
+        .sell__about__right
+          .sell__about__right__wrap
+            .sell__about__right__wrap__price
+              .sell__about__right__wrap__price-label
+                = f.label :price, "価格"
+                %span.required
+              .sell__about__right__wrap__price-input
+                ¥
+                .sell__about__right__wrap__price-input-form
+                  = f.number_field :price, placeholder: "例）300", class: "form"
+
+          .sell__about__right__wrap__fee.clearfix
+            .sell__about__right__wrap__fee-left
+              販売手数料 (10%)
+            .sell__about__right__wrap__fee-right
+              ¥
+          .sell__about__right__wrap__profit
+            .sell__about__right__wrap__profit-left
+              販売利益
+            .sell__about__right__wrap__profit-right
+              ¥
+      .sell__about.clearfix
+        .sell__about__bottom
+          .sell__about__bottom-text
             %p
-              %a{href: "", target: "_blank"} 禁止されている出品
+              = link_to '#' do
+                禁止されている出品
               、
-              %a{href: "", target: "_blank"} 行為
+              = link_to '#' do
+                行為
               を必ずご確認ください。
             %p
               またブランド品でシリアルナンバー等がある場合はご記載ください。
-              %a{href: "", target: "_blank"} 偽ブランドの販売
-              は犯罪であり処罰される可能性があります。
+              = link_to '#' do
+                偽ブランド
+              の販売は犯罪であり処罰される可能性があります。
             %p
               また、出品をもちまして
-              %a{href: ""} 加盟店規約
+              = link_to '#' do
+                加盟店規約
               に同意したことになります。
-          
-          %a.btn-default.btn-gray{onclick: "history.back()", type: "button"}  もどる
+          = f.submit "出品する", class: 'sell__about__bottom-btn submit'
+          %button{type: "button", onclick: "history.back()", class: 'sell__about__bottom-btn back'} もどる
+
