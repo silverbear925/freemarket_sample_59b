@@ -2,18 +2,28 @@
   box-sizing: border-box;
 }
 
-@mixin loginbox($background) {
+@mixin input-box{
+  border:2px solid lightgrey;
+  width:100%;
+  height:48px;
+  padding:10px 16px 8px ;
+  margin-top:10px;
+  border-radius:5px;
+  font-size:16px;
+  box-sizing:border-box;
+}
+
+@mixin sign-in {
   width:  343px;
   height: 50px;
-  background: $background;
   margin: 15px auto;
-  border-radius: 10px;
   text-align: center;
   line-height: 50px;
-  font-size: 13px;
-  position: relative;
+  font-size: 13px;  
+  color: white;
   
 }
+
 
 
 
@@ -28,22 +38,59 @@
 }
 
 .sign-in-main{
-  width: 100%;
-  background: red;
-  padding: 20px 50px;
+  width: 450px;
+  background:white;
+  padding: 50px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
 }
 
+.sign-in-new {
+  @include sign-in;
+  background: #0099E8;
+}
 
-.sign-in-container{
-  width: 700px;
-  height: 500px;
+.sign-in-facebook{
+  width: 343px;
+  height: 50px;
+  background: #385185;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 14px;
+  color: white;
+
+}
+  
+.sign-in-google{
+  width: 343px;
+  height: 50px;
   background: white;
-  margin: 0 auto;
-  
-  
-}
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 14px;
+  border: 1px solid gray ;
+}  
 
+
+
+.sign-in-field{
+ margin: 20px 0;
+ &-email{
+   @include input-box;
+ }
+ &-password{
+  @include input-box;
+
+ }
+ &-login{
+  @include sign-in;
+  background: #EA3522;
+ }
+}
 
 
 
@@ -52,9 +99,7 @@
 
 
 .sign-in-footter{
-  position: absolute;
-  
-  
+  position: absolute; 
   width: 100vw;
 }
 

@@ -1,27 +1,24 @@
-%body.sign-in
+.sign-in
   = render partial: 'momo/header'
-.sign-in-main
-  .sign-in-container
-    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  .sign-in-main
+    %p アカウントをお持ちでない方はこちら      
+    .sign-in-new  
+      新規会員登録
+    .sign-in-facebook     
+      %i.fab.fa-facebook-square
+      facebookで登録する
+    .sign-in-google
+      %i.fab.fa-google
+      Googleで登録する
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|      
+      .sign-in-field  
+        = f.email_field :email, autofocus: true, autocomplete: "email",class:"sign-in-field-email",palaceholder:'メールアドレス'
       .sign-in-field
-        = f.label :email
-        %br/
-        = f.email_field :email, autofocus: true, autocomplete: "email"
+        = f.password_field :password, autocomplete: "current-password",class:"sign-in-field-password",palaceholder:'パスワード'
       .sign-in-field
-        = f.label :password
-        %br/
-        = f.password_field :password, autocomplete: "current-password"
-      - if devise_mapping.rememberable?
-        .sign-in-field
-          = f.check_box :remember_me
-          = f.label :remember_me
-      .actions
-        = f.submit "Log in"
-
-    
-
-  
-
+        = image_tag  ''        
+      .sign-in-field
+        = f.submit "ログイン",class:"sign-in-field-login"
 
 
 .sign-in-footter

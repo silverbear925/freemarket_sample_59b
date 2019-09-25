@@ -17,7 +17,8 @@
 
 @mixin loginicon {
   position: absolute; top:17px; left:20px;
-  font-size: 20px;
+  font-size: 15px;
+  text-align: center;
 
 }
 
@@ -92,15 +93,16 @@ h2{
 }
 
 
-.fa-envelope{
+.fa-envelope::before{
   @include loginicon
 }
-.fa-facebook-square{
+.fa-facebook-square::before{
   @include loginicon
 }
 .fa-google{
   @include loginicon
 }
+
 
 
 .single-footer{
