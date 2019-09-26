@@ -30,7 +30,7 @@
           .sign-up_field-label
             = f.label :expiration_date, "有効期限"
             %span 必須
-          = f.date_select :date,{use_two_digit_numbers:true},class:'sign-up_field-input',placeholder:''        
+          = f.date_select :date,{use_two_digit_numbers:true,discard_day: true,date_separator: '年'},class:'sign-up_field-date',placeholder:''        
         .sign-up_field
           .sign-up_field-label
             = f.label :security_code ,'セキュリティーコード'

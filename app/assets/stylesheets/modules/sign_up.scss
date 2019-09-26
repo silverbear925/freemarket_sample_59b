@@ -76,7 +76,11 @@ $signup_container_width:700px;
     @include input-box;
     width:25%;
   }
+  &-date{
+    @include input-box;
+    width:25%;
 
+  }
 
   span{
     background:red;
