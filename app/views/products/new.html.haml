@@ -28,19 +28,19 @@
             .sell__about__right__wrap-box
               = f.select :postage_burden, [["赤",0],["黄",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
-            .sell__about__right__wrap-box
+            .sell__about__right__wrap-box-none
               = f.select :postage_burden, [["赤",0],["黄",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
-            .sell__about__right__wrap-box
+            .sell__about__right__wrap-box-none
               = f.select :postage_burden, [["赤",0],["黄",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
           .sell__about__right__wrap
             = f.label :postage_burden, "サイズ"
             %span 必須
-            .sell__about__right__wrap-box
+            .sell__about__right__wrap-box-none
               = f.select :postage_burden, [["赤",0],["黄",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
-          .sell__about__right__wrap
+          .sell__about__right__wrap-box-none
             = f.label :brand_id, "ブランド"
             %span.required-gray
             .sell__about__right__wrap-box
@@ -51,33 +51,6 @@
             .sell__about__right__wrap-box
               = f.select :postage_burden, [["赤",0],["黄",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
-          -# .sell__about__right__wrap
-          -#   %h4= "カテゴリー"
-          -#   %span.required
-          -#   .sell__about__right__wrap-box.parent
-          -#     %select#parent
-          -#       %option{value: 0} ---
-          -#     %i.fas.fa-chevron-down
-          -#   .sell__about__right__wrap-box.child
-          -#     %select#child
-          -#     %i.fas.fa-chevron-down
-          -#   .sell__about__right__wrap-box.grand_child
-          -#     = f.collection_select(:category_id, [], :id, :name, {prompt: "---"}, {id: "grand_child"})
-          -#     %i.fas.fa-chevron-down
-
-          -# .sell__about__right__wrap
-          -#   = f.label :size_id, "サイズ"
-          -#   %span.required-gray
-          -#   .sell__about__right__wrap-box
-
-              -# %i.fas.fa-chevron-down
-          
-          -# .sell__about__right__wrap
-          -#   = f.label :condition_id, "商品の状態"
-          -#   %span.required
-          -#   .sell__about__right__wrap-box
-          -#     %i.fas.fa-chevron-down
-
       .sell__about.clearfix
         .sell__about__left 配送について
         .sell__about__right
