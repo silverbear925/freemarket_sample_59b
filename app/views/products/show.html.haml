@@ -14,11 +14,22 @@
 
     .item-main-content
       .item-photo
-        .owl-stage-outer
-          .owl-carousel
-            =image_tag '/otya.png', class: ''
-          .owl-dots
-            .owl-dot
+        .owl-carousel
+          .owl-stage-outer
+            .owl-stage
+              .owl-item
+                .owl-item-inner
+                  =image_tag '/otya2.png', class: ''
+                .owl-dots
+                  .owl-dot
+                    .owl-dot-1
+                      =image_tag '/otya.png', class: ''
+                    .owl-dot-1
+                      =image_tag '/otya.png', class: ''
+                    .owl-dot-1
+                      =image_tag '/otya.png', class: ''
+                    .owl-dot-1
+                      =image_tag '/otya.png', class: ''
 
 
 
@@ -121,6 +132,78 @@
         =link_to "" do
           %li.icon-pint
             %i.fab.fa-pinterest
+
+
+
+  .items-in-user-profile
+    .items-box-container
+      =link_to "" do
+        .items-box-head
+          ●●さんのその他出品
+        .items-box-content
+          =link_to "" do
+            .items-box
+              .items-box-photo
+                =image_tag '/otya2.png', class: ''
+              .items-box-body
+                .items-box-name
+                  お茶お茶お茶
+                .items-box-num
+                  .items-box-price
+                    ¥4,800
+          =link_to "" do
+            .items-box
+              .items-box-photo
+                =image_tag '/otya2.png', class: ''
+              .items-box-body
+                .items-box-name
+                  お茶お茶お茶
+                .items-box-num
+                  .items-box-price
+                    ¥4,800
+
+          =link_to "" do
+            .items-box
+              .items-box-photo
+                =image_tag '/otya2.png', class: ''
+              .items-box-body
+                .items-box-name
+                  お茶お茶お茶
+                .items-box-num
+                  .items-box-price
+                    ¥4,800
+          =link_to "" do
+            .items-box
+              .items-box-photo
+                =image_tag '/otya2.png', class: ''
+              .items-box-body
+                .items-box-name
+                  お茶お茶お茶
+                .items-box-num
+                  .items-box-price
+                    ¥4,800
+          =link_to "" do
+            .items-box
+              .items-box-photo
+                =image_tag '/otya2.png', class: ''
+              .items-box-body
+                .items-box-name
+                  お茶お茶お茶
+                .items-box-num
+                  .items-box-price
+                    ¥4,800
+          =link_to "" do
+            .items-box
+              .items-box-photo
+                =image_tag '/otya2.png', class: ''
+              .items-box-body
+                .items-box-name
+                  お茶お茶お茶
+                .items-box-num
+                  .items-box-price
+                    ¥4,800
+
+
 
 
 
