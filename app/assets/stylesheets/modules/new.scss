@@ -9,32 +9,36 @@
   box-sizing:border-box;
 }
 
+
+.sell-wrappe{
+  background-color: #fafafa;
+
 .sell {
   width: 700px;
   margin: 0 auto;
   background-color: white;
   .clearfix::after {
-    @include input-box();
+    @include input-box;
   }
   input:focus, textarea:focus, select:focus {
-    @include input-box();
+    @include input-box;
   }
 
   & a {
     color: blue;
     text-decoration: none;
     &:hover {
-      @include input-box();
+      @include input-box;
     }
   }
   .required::after {
+    @include input-box;
     content: '必須';
-    @include input-box();
     background-color: red;
   }
   .required-gray::after {
     content: '任意';
-    @include input-box();
+    @include input-box;
     background-color: gray;
   }
   .form {
@@ -127,7 +131,7 @@
     }
   }
   &__about {
-    height: 600px;
+    height: 400px;
     margin-top: 1px;
     border-top: solid 1px #fafafa;
     padding: 40px;
@@ -164,6 +168,9 @@
           position: relative;
           width: 400px;
           margin-top: 8px;
+          &-none{
+            display:none;
+          }
           & select {
             padding: 0 16px;
             width: 100%;
@@ -257,7 +264,7 @@
         margin: 24px auto 0;
         background-color: gray;
         &:active {
-          @include input-box(); 
+          @include input-box; 
         }
       }
       &-text {
@@ -271,9 +278,10 @@
         text-align: center;
         font-size: 14px;
         &:hover {
-          @include input-box();
+          @include input-box;
         }
       }
     }
   }
+}
 }
