@@ -1,0 +1,42 @@
+.sign-up
+  =render '/users/registrations/sign_up_header'
+  .sign-up__form
+    %h3.sign-up__form-heading お支払い方法
+    .sign-up__form-container
+      = form_with model:[@user,@credit] ,local:true do |f|
+
+        .sign-up_field
+          .sign-up_field-label
+            = f.label :number ,'カード番号'
+            %span 必須
+          = f.text_field :number,class:'sign-up_field-input',placeholder:'半角数字のみ' 
+          %ul.credit__list
+            %li
+              =link_to ""  do
+                =image_tag "/credit/card_logo.png",class:"credit__list-image"
+            %li
+              =link_to ""  do
+                =image_tag "/credit/master300px.gif",class:"credit__list-image"
+            %li
+              =link_to ""  do
+                =image_tag "/credit/saison300px.gif",class:"credit__list-image"
+            %li
+              =link_to ""  do
+                =image_tag "/credit/jcb300px.gif",class:"credit__list-image"
+            %li
+              =link_to ""  do
+                =image_tag "/credit/diners300px.gif",class:"credit__list-image"
+        .sign-up_field
+          .sign-up_field-label
+            = f.label :expiration_date, "有効期限"
+            %span 必須
+          = f.date_select :expiration_date,{use_two_digit_numbers:true,discard_day: true,date_separator: '年'},class:'sign-up_field-date',placeholder:''        
+        .sign-up_field
+          .sign-up_field-label
+            = f.label :security_code ,'セキュリティーコード'
+            %span 必須
+          = f.text_field :security_code,class:'sign-up_field-input',placeholder:'カード背面４桁もしくは３桁の番号'        
+
+        =f.submit  "次に進む" ,class:"sign-up-next "
+        
+=render '/momo/footter'

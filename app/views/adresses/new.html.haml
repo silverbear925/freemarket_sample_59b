@@ -1,9 +1,9 @@
 .sign-up
-  =render 'sign_up_header'
+  =render '/users/registrations/sign_up_header'
   .sign-up__form
     %h3.sign-up__form-heading 住所確認
     .sign-up__form-container
-      = form_with url:"" do |f|
+      = form_with model:[@user,@adress] ,local:true do |f|
 
         .sign-up_field
           .sign-up_field-label

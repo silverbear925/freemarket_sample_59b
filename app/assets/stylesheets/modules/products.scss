@@ -7,14 +7,16 @@ body{
 
 a{
   text-decoration:none;
+  color: black;
 }
 .container{
-  max-width:900px;
+  max-width:1000px;
   margin:0 auto;
 }
 
 li{
   list-style:none;
+  
 }
 .header{
   &__top{
@@ -27,8 +29,8 @@ li{
     &-search{
       background:lightgrey;
       border:grey solid 2px;
-      width:200%;
-      height:50px;
+      width:450%;
+      height:46px;
       float:right;
     }
   }
@@ -65,6 +67,7 @@ li{
   position:relative;
   widows: 100vw;
   overflow:hidden;
+  background: white;
   &-image{
     // position:absolute;
     width:100vw;
@@ -73,7 +76,7 @@ li{
 }
 
 .category{
-  background:lightgrey;
+  background:#fafafa;
   &__heading{
     text-align:center;
     margin:0;
@@ -109,6 +112,9 @@ li{
   }
 }
 
+
+
+
 footer{
   background:black;
   color:white;
@@ -120,11 +126,24 @@ footer{
   }
 }
 
+.popularity{
+  font-size: 28px;
+  height: 90px;
+  padding-top:40px;
+  font-weight: 800;
+}
+.women-new-item{
+  font-size: 25px;
+  font-weight: 800;
+
+  
+}
+
 
 .sale-logo{
   position:fixed;
   z-index:1;
-  bottom:0;right:0;
+  bottom:30px;right:20px;
   background:red;
   border-radius:50%;
   width:150px;
