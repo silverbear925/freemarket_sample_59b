@@ -17,9 +17,11 @@
   width: 700px;
   margin: 0 auto;
   background-color: white;
-  .clearfix::after {
-    @include input-box;
+  .clearfix{
+    width: 700px;
+    display: flex;
   }
+
   input:focus, textarea:focus, select:focus {
     @include input-box;
   }
@@ -27,19 +29,26 @@
   & a {
     color: blue;
     text-decoration: none;
-    &:hover {
-      @include input-box;
-    }
   }
   .required::after {
-    @include input-box;
     content: '必須';
     background-color: red;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
   }
   .required-gray::after {
     content: '任意';
-    @include input-box;
-    background-color: gray;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+    background-color: #ccc;
   }
   .form {
     width: 100%;
@@ -131,7 +140,7 @@
     }
   }
   &__about {
-    height: 400px;
+    height: 100%;
     margin-top: 1px;
     border-top: solid 1px #fafafa;
     padding: 40px;
@@ -155,10 +164,11 @@
       float: left;
       color: #888;
       font-weight: bold;
+      width: 35%;
     }
     &__right {
       float: right;
-      width: 400px;
+      width: 65%;
       &__wrap{
         margin-top: 40px; 
         &:first-child {
@@ -168,6 +178,7 @@
           position: relative;
           width: 400px;
           margin-top: 8px;
+
           &-none{
             display:none;
           }
@@ -239,7 +250,7 @@
         &__profit {
           height: 83px;
           padding: 24px 0;
-          border-top: 1px solid gray;
+          border-top: 1px solid grey;
           font-weight: 600;
           &-left {
             float: left;
@@ -263,25 +274,20 @@
         width: 45%;
         margin: 24px auto 0;
         background-color: gray;
-        &:active {
-          @include input-box; 
-        }
       }
       &-text {
         line-height: 1.5;
+        clear: both;
       }
       &-btn {
         display: block;
         height: 50px;
         line-height: 50px;
-        color: white!important;
+        color: white;
         text-align: center;
         font-size: 14px;
-        &:hover {
-          @include input-box;
-        }
       }
     }
-  }
+ }
 }
 }

@@ -4,7 +4,7 @@
       %h3.sell__title 商品の情報を入力
       .sell__image
         = f.label :image, "出品画像"
-        %span 必須
+        %span.required
         %p.max 最大10枚までアップロードできます
         .sell__image-select
           またはクリックしてファイルをアップロード
@@ -12,19 +12,19 @@
       .sell__about
         .sell__about__name
           = f.label :name, "商品名"
-          %span 必須
+          %span.required
           = f.text_field :name,  placeholder: "商品名（必須40文字まで）",class: "form"
         .sell__about__description
           = f.label :description, "商品の説明"
-          %span 必須
+          %span.required
           = f.text_area :description, class: "sell__about-description__form", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
           
       .sell__about.clearfix
-        %h3= "商品の詳細" 
+        .sell__about__left 商品の詳細 
         .sell__about__right
           .sell__about__right__wrap
             = f.label :postage_burden, "カテゴリー"
-            %span 必須
+            %span.required
             .sell__about__right__wrap-box
               = f.select :postage_burden, [["赤",0],["黄",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
@@ -34,16 +34,16 @@
             .sell__about__right__wrap-box-none
               = f.select :postage_burden, [["赤",0],["黄",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
-          .sell__about__right__wrap
+          .sell__about__right__wrap-box-none
             = f.label :postage_burden, "サイズ"
-            %span 必須
+            %span.required
             .sell__about__right__wrap-box-none
               = f.select :postage_burden, [["赤",0],["黄",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
           .sell__about__right__wrap-box-none
             = f.label :brand_id, "ブランド"
             %span.required-gray
-            .sell__about__right__wrap-box
+            .sell__about__right__wrap-box-none
               = f.text_field :brand_id, placeholder: "例）シャネル", class: "form"
           .sell__about__right__wrap
             = f.label :postage_burden, "商品の状態"
@@ -51,30 +51,31 @@
             .sell__about__right__wrap-box
               = f.select :postage_burden, [["赤",0],["黄",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
+
       .sell__about.clearfix
         .sell__about__left 配送について
         .sell__about__right
           .sell__about__right__wrap
             = f.label :postage_burden, "配送料の負担"
-            %span 必須
+            %span.required
             .sell__about__right__wrap-box
               = f.select :postage_burden, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
-          .sell__about__right__wrap
+          .sell__about__right__wrap-box-none
             = f.label :postage_burden, "配送の方法"
-            %span 必須
-            .sell__about__right__wrap-box
+            %span.required
+            .sell__about__right__wrap-box-none
               = f.select :postage_burden, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
           .sell__about__right__wrap
             = f.label :postage_burden, "配送元の地域"
-            %span 必須
+            %span.required
             .sell__about__right__wrap-box
               = f.select :postage_burden, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
           .sell__about__right__wrap
             = f.label :postage_burden, "配送までの日数"
-            %span 必須
+            %span.required
             .sell__about__right__wrap-box
               = f.select :postage_burden, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
@@ -86,22 +87,22 @@
             .sell__about__right__wrap__price
               .sell__about__right__wrap__price-label
                 = f.label :price, "価格"
-                %span 必須
+                %span.required
               .sell__about__right__wrap__price-input
                 ¥
                 .sell__about__right__wrap__price-input-form
                   = f.number_field :price, placeholder: "例）300", class: "form"
 
-          .sell__about__right__wrap__fee.clearfix
-            .sell__about__right__wrap__fee-left
-              販売手数料 (10%)
-            .sell__about__right__wrap__fee-right
-              ¥
-          .sell__about__right__wrap__profit
-            .sell__about__right__wrap__profit-left
-              販売利益
-            .sell__about__right__wrap__profit-right
-              ¥
+            .sell__about__right__wrap__fee
+              .sell__about__right__wrap__fee-left
+                販売手数料 (10%)
+              .sell__about__right__wrap__fee-right
+                −
+            .sell__about__right__wrap__profit
+              .sell__about__right__wrap__profit-left
+                販売利益
+              .sell__about__right__wrap__profit-right
+                −
       .sell__about.clearfix
         .sell__about__bottom
           .sell__about__bottom-text
@@ -117,7 +118,7 @@
               = link_to '#' do
                 偽ブランド
               の販売は犯罪であり処罰される可能性があります。
-            %p
+            %p 
               また、出品をもちまして
               = link_to '#' do
                 加盟店規約
