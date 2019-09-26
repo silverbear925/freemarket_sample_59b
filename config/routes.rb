@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   root to: "products#index"
   resources :products
   resources :users
+  resources :adresses
+  resources :credits
 
   resources :momo
 end
