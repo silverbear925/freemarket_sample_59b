@@ -26,7 +26,7 @@
             %i.fa.fa-check
             やることリスト
         %li.header__bottom__right-list
-          =link_to user_path(1)  do
+          =link_to user_path(current_user)  do
             =image_tag "/member_photo_noimage_thumb.png",class:'my-page'
             マイページ
         %li.header__bottom__right-list
