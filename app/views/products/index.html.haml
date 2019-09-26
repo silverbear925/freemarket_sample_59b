@@ -6,7 +6,8 @@
 
 .category
   .category__heading
-    %h3 人気のカテゴリー
+    %h3.popularity
+      人気のカテゴリー
     %ul.category__heading-list
       =link_to "" do
         %li レディース
@@ -18,7 +19,7 @@
         %li おもちゃ・ホビー・グッズ
   .container
     .category-new
-      %h3 レディース新着アイテム
+      %h3.women-new-item レディース新着アイテム
       =link_to "もっと見る","",class:'category-new-link'
     .category__products
       =render 'card'
