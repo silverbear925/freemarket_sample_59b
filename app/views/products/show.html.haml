@@ -1,3 +1,5 @@
+=render '/layouts/header'
+
 
 .default-container
 
@@ -106,6 +108,29 @@
 
   .item-social-media-box
     .text-center
-    %i.fab.fa-facebook-square
+      %ul.text-center-icon
+        =link_to "" do
+          %li.icon-facebook
+            %i.fab.fa-facebook
+        =link_to "" do
+          %li.icon-twitter
+            %i.fab.fa-twitter
+        =link_to "" do
+          %li.icon-line
+            %i.fab.fa-line
+        =link_to "" do
+          %li.icon-pint
+            %i.fab.fa-pinterest
 
 
+
+
+
+
+
+
+
+
+
+
+=render '/layouts/footer'
