@@ -1,7 +1,7 @@
 = render partial: 'layouts/header'
 
 .log-out-main
-= link_to destroy_user_session_path do 
+= link_to destroy_user_session_path, method:"delete" do 
   .log-out-box
     .log-out-box-button
       %p.log-out
