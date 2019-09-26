@@ -20,31 +20,31 @@
         background-size: cover;
         text-align: center;
         height: 200px;
-      }
 
-      .mypage-user-icon>a{
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        -webkit-transform: translate(0, -50%);
-        transform: translate(0, -50%);
-        color: #333;
-      }
+        &>a{
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+          color: #333;
 
-      figure{
-        overflow: hidden;
-        width: 60px;
-        height: 60px;
-        margin: 0 auto;
-        border-radius: 50%;
-      }
+          figure{
+            overflow: hidden;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            border-radius: 50%;
+          }
 
-      .user-name{
-        margin: 8px 0 0;
-        font-size: 14px;
-      }
+          .user-name{
+            margin: 8px 0 0;
+            font-size: 14px;
+          }
+        }
+      }      
     }
 
 
