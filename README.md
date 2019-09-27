@@ -13,7 +13,7 @@
 |delivery_days|string|null:false|
 |brand|references|foreigner_key:true|
 |user|references|null:false,foreigner_key:true|
-|buy_user|integer|
+|buy_user|integer| 
 |sale|string|
 
 ### Association
