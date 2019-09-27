@@ -1,18 +1,14 @@
 .sell-wrappe
   .sell
-    = form_with name:"" do |f|
+    = form_with model:@product ,local:true do |f|
       %h3.sell__title 商品の情報を入力
       .sell__image
         = f.label :image, "出品画像"
         %span.required
         %p.max 最大10枚までアップロードできます
         .sell__image-select
-
           = f.fields_for :images do |image|
-            -# = image_tag(image.object.content)
-            -# 画像があれば表示する
             =image.file_field :src
-            -# image.hidden_field :id, value: image.object.id
             f.submit
 
           またはクリックしてファイルをアップロード
