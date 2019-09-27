@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   resources :users do
     collection do
       get :log_out
+      post :credit_new
+      post :credit_update
+      destroy :credit_delete
     end
   end
   resources :adresses
