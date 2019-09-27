@@ -79,3 +79,5 @@ gem  "haml-rails"
 gem "erb2haml"
 gem 'devise'
 gem 'fog-aws'
+gem 'ancestry'
+gem 'payjp'
