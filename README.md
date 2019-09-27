@@ -37,6 +37,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null:false|
+
 ### Association
 - has_many :products
 - has_many :products, through: :products_categories
