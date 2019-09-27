@@ -93,8 +93,8 @@
       .item-price-box-tax　(税込)
       .item-price-box-shipping-fee　送料込み
 
-    .item-buy-btn
-      =link_to "" do
+    =link_to "" do
+      .item-buy-btn
         購入画面に進む
 
     .item-description
@@ -126,9 +126,9 @@
         =link_to "" do
           %li.icon-twitter
             %i.fab.fa-twitter
-        =link_to "" do
-          %li.icon-line
-            %i.fab.fa-line
+        -# =link_to "" do
+        -#   %li.icon-line
+        -#     %i.fab.fa-line
         =link_to "" do
           %li.icon-pint
             %i.fab.fa-pinterest
@@ -141,70 +141,24 @@
         .items-box-head
           ●●さんのその他出品
         .items-box-content
-          =link_to "" do
-            .items-box
-              .items-box-photo
-                =image_tag '/otya2.png', class: ''
-              .items-box-body
-                .items-box-name
-                  お茶お茶お茶
-                .items-box-num
-                  .items-box-price
-                    ¥4,800
-          =link_to "" do
-            .items-box
-              .items-box-photo
-                =image_tag '/otya2.png', class: ''
-              .items-box-body
-                .items-box-name
-                  お茶お茶お茶
-                .items-box-num
-                  .items-box-price
-                    ¥4,800
-
-          =link_to "" do
-            .items-box
-              .items-box-photo
-                =image_tag '/otya2.png', class: ''
-              .items-box-body
-                .items-box-name
-                  お茶お茶お茶
-                .items-box-num
-                  .items-box-price
-                    ¥4,800
-          =link_to "" do
-            .items-box
-              .items-box-photo
-                =image_tag '/otya2.png', class: ''
-              .items-box-body
-                .items-box-name
-                  お茶お茶お茶
-                .items-box-num
-                  .items-box-price
-                    ¥4,800
-          =link_to "" do
-            .items-box
-              .items-box-photo
-                =image_tag '/otya2.png', class: ''
-              .items-box-body
-                .items-box-name
-                  お茶お茶お茶
-                .items-box-num
-                  .items-box-price
-                    ¥4,800
-          =link_to "" do
-            .items-box
-              .items-box-photo
-                =image_tag '/otya2.png', class: ''
-              .items-box-body
-                .items-box-name
-                  お茶お茶お茶
-                .items-box-num
-                  .items-box-price
-                    ¥4,800
-
-
-
+          =render 'show_card'
+          =render 'show_card'
+          =render 'show_card'
+          =render 'show_card'
+          =render 'show_card'
+          =render 'show_card'
+    .items-box-container
+      =link_to "" do
+        .items-box-head
+          ●ほかの商品
+        .items-box-content
+          =render 'show_card'
+          =render 'show_card'
+          =render 'show_card'
+          =render 'show_card'
+          =render 'show_card'
+          =render 'show_card'
+          
 
 
 
