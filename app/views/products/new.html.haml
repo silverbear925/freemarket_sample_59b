@@ -9,7 +9,6 @@
         .sell__image-select
           = f.fields_for :images do |image|
             =image.file_field :src
-            f.submit
 
           またはクリックしてファイルをアップロード
       
@@ -19,27 +18,27 @@
           %span.required
           = f.text_field :name,  placeholder: "商品名（必須40文字まで）",class: "form"
         .sell__about__description
-          = f.label :description, "商品の説明"
+          = f.label :text, "商品の説明"
           %span.required
-          = f.text_area :description, class: "sell__about-description__form", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+          = f.text_area :text, class: "sell__about-description__form", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
           
       .sell__about.clearfix
         .sell__about__left 商品の詳細 
         .sell__about__right
           .sell__about__right__wrap
-            = f.label :postage_burden, "カテゴリー"
+            = f.label :category, "カテゴリー"
             %span.required
             .sell__about__right__wrap-box
-              = f.select :postage_burden, [["赤",0],["黄",1]], prompt: "---", class: "select"
+              = f.select :category, [["赤",0],["黄",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
             .sell__about__right__wrap-box-none
-              = f.select :postage_burden, [["赤",0],["黄",1]], prompt: "---", class: "select"
+              = f.select :category, [["赤",0],["黄",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
             .sell__about__right__wrap-box-none
-              = f.select :postage_burden, [["赤",0],["黄",1]], prompt: "---", class: "select"
+              = f.select :category, [["赤",0],["黄",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
           .sell__about__right__wrap-box-none
-            = f.label :postage_burden, "サイズ"
+            = f.label :"", "サイズ"
             %span.required
             .sell__about__right__wrap-box-none
               = f.select :postage_burden, [["赤",0],["黄",1]], prompt: "---", class: "select"
@@ -50,20 +49,20 @@
             .sell__about__right__wrap-box-none
               = f.text_field :brand_id, placeholder: "例）シャネル", class: "form"
           .sell__about__right__wrap
-            = f.label :postage_burden, "商品の状態"
+            = f.label :state, "商品の状態"
             %span.required
             .sell__about__right__wrap-box
-              = f.select :postage_burden, [["赤",0],["黄",1]], prompt: "---", class: "select"
+              = f.select :state, [["赤",0],["黄",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
 
       .sell__about.clearfix
         .sell__about__left 配送について
         .sell__about__right
           .sell__about__right__wrap
-            = f.label :postage_burden, "配送料の負担"
+            = f.label :delivery_price, "配送料の負担"
             %span.required
             .sell__about__right__wrap-box
-              = f.select :postage_burden, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]], prompt: "---", class: "select"
+              = f.select :delivery_price, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
           .sell__about__right__wrap-box-none
             = f.label :postage_burden, "配送の方法"
@@ -72,7 +71,7 @@
               = f.select :postage_burden, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
           .sell__about__right__wrap
-            = f.label :postage_burden, "配送元の地域"
+            = f.label :area, "配送元の地域"
             %span.required
             .sell__about__right__wrap-box
               = f.select :postage_burden, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]], prompt: "---", class: "select"
