@@ -15,11 +15,11 @@ $(function() {
     
     var angle_link = $(this).index()
 
-    $(".fa-angle-right").eq(angle_link).css("color", "#333");
-      
+    $(".fa-angle-right").eq(angle_link).addClass(".side-nav-hover");
+      console.log(angle_link)
   }, function(){
     var angle_link = $(this).index()
     
-    $(".fa-angle-right").eq(angle_link).css("color", "");
+    $(".fa-angle-right").eq(angle_link).removeClass(".side-nav-hover");
   })
 });
