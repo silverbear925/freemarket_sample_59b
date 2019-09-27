@@ -212,12 +212,12 @@ color: #fafafa;
 font-size: 24px;
 }
 
-.icon-line{
-background: #00c137;
-border-radius: 4px;
-color: #fafafa;
-font-size: 24px;
-}
+// .icon-line{
+// background: #00c137;
+// border-radius: 4px;
+// color: #fafafa;
+// font-size: 24px;
+// }
 
 .icon-pint{
 background: #aa262a;
@@ -233,8 +233,6 @@ font-size: 24px;
 .items-in-user-profile{
   width: 700px;
   margin: 0 auto;
-  height: 900px;
-  background-color: aqua;
 }
 .items-box{
   &-head{
@@ -258,7 +256,7 @@ font-size: 24px;
   width: 213px;
   margin: 0 10px 20px 10px;
   height: 330px;
-  background-color: #888;
+  background-color: #fafafa;
   &-photo img{
     height: 220px;
     width: 100%;
