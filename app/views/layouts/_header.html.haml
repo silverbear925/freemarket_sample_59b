@@ -7,8 +7,9 @@
         =form_with url:"" do |f|
           .header__item__search__text
             =f.text_field :"",class:"header__top-search"
-            =f.submit :"",class:"header__top-button"
-            %i.fa.fa-search
+            %ladel.header__top-button__label
+              =f.submit :"",class:"header__top-button"
+              %i.fa.fa-search
     .header__bottom
       %ul.header__bottom__left
         %li.header__bottom__left-list
