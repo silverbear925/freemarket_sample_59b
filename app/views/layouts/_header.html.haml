@@ -4,12 +4,12 @@
       =link_to root_path do
         =image_tag "/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg" ,class:"header__top-logo"
       .header__item__search
-        =form_with url:"" do |f|
+        =form_with url:"/" do |f|
           .header__item__search__text
             =f.text_field :"",class:"header__top-search"
             %ladel.header__top-button__label
-              =f.submit :"",class:"header__top-button"
-              %i.fa.fa-search
+              = button_tag type: 'submit', class: "header__top-button" do
+                %i.fa.fa-search
     .header__bottom
       %ul.header__bottom__left
         %li.header__bottom__left-list

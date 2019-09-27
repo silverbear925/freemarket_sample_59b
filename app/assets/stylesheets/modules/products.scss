@@ -12,26 +12,38 @@ a{
 .container{
   max-width:1000px;
   margin:0 auto;
+  padding-top: 8px;
 }
 
 li{
   list-style:none;
-  
 }
 
-
+//亦賀編集（検索ボタン。アイコン）
 .header__item__search{
   height:50px;
   &__text{
     display: flex;
     background-color: rgb(245, 245, 245);
-    border:grey solid 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-image: initial;
+    border-radius: 4px;
+    position: relative;
   }
 }
 .header__top-button__label{
-
+  position: absolute;
+  right: 0;
 }
-
+.header__top-button{
+  height: 45px;
+  width: 45px;
+  background-color: rgb(245, 245, 245);
+  border-style: none;
+}
+//亦賀編集終わり
 
 .header{
   
