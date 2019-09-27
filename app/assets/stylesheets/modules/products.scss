@@ -18,12 +18,18 @@ li{
   list-style:none;
   
 }
+
+
 .header__item__search{
   height:50px;
   &__text{
     display: flex;
-    
+    background-color: rgb(245, 245, 245);
+    border:grey solid 2px;
   }
+}
+.header__top-button__label{
+
 }
 
 
@@ -37,8 +43,8 @@ li{
       width:180px;
     }
     &-search{
-      background:lightgrey;
-      border:grey solid 2px;
+      background:rgb(245, 245, 245);;
+      border-style: none;
       width:770px;
       height:46px;
       float:right;
