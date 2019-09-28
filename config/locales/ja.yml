@@ -5,3 +5,26 @@ ja:
     - :month
     - :day
 
+ja:
+  enums:
+    task:  //モデル名
+      status:  //カラム名
+        untouched: "未完了"  
+        working: "着手中"
+        done: "完了"
+
+
+ja:
+  enums:
+    product:
+      status:
+        new: "新品、未使用"
+        clocsetonew: "未使用に近い"
+        noscratches: "目立った傷や汚れなし"
+        slightlynoscratches: "やや傷や汚れなし"
+        scratches: "傷や汚れあり”
+        bad: 
+
+
+
+
