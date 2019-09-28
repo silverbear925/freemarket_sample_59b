@@ -8,13 +8,17 @@
 |text|text|null:false|
 |category|references|null:false,foreigner_key:true|
 |status|string|null:false|
-|delivery_price|string|null:false|
+|plice|string|null:false|
 |area|references|null:false,foreigner_key:true|
 |delivery_days|string|null:false|
 |brand|references|foreigner_key:true|
 |user|references|null:false,foreigner_key:true|
+|burden|string|null:false|
+|way|string|null:false|
+|plice|integer|null:false|
 |buy_user|integer| 
 |sale|string|
+|size|string|
 
 ### Association
 - has_many :categoies
