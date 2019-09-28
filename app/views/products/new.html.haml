@@ -51,11 +51,10 @@
             .sell__about__right__wrap-box
               = f.text_field :brand_id, placeholder: "例）シャネル", class: "form"
           .sell__about__right__wrap
-            = f.select :status, Product.statuses {}, {class: "select"}
             = f.label :status, "商品の状態"
             %span.required
             .sell__about__right__wrap-box
-              = f.select :status, [["ひび割れ",0],["黄ばみ",1]], prompt: "---", class: "select"
+              = f.select :status,Product.statuses {}, {class: "select"}
               %i.fas.fa-chevron-down
 
       .sell__about.clearfix
@@ -66,14 +65,14 @@
             = f.label :burden, "配送料の負担"
             %span.required
             .sell__about__right__wrap-box
-              = f.select :burden, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]], prompt: "---", class: "select"
+              = f.select :burden_status, Product.burden_statuses {}, {class: "select"}
               %i.fas.fa-chevron-down
 
           .sell__about__right__wrap-box
             = f.label :way, "配送の方法"
             %span.required
             .sell__about__right__wrap-box
-              = f.select :way, [["黒猫",0],["ありさん",1]], prompt: "---", class: "select"
+              = f.select :way, Product.way_statuses {}, {class: "select"}
               %i.fas.fa-chevron-down
 
           .sell__about__right__wrap
@@ -86,7 +85,7 @@
             = f.label :delivery_days, "配送までの日数"
             %span.required
             .sell__about__right__wrap-box
-              = f.select :delivery_days, [["２時間",0],["２０年",1]], prompt: "---", class: "select"
+              = f.select :delivery_days, Product.delivery_days_statuses {}, {class: "select"}
               %i.fas.fa-chevron-down
 
       .sell__about.clearfix
