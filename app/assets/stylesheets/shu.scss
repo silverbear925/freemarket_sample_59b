@@ -6,6 +6,7 @@
   .mypage-content{
     margin: 40px auto 0;
     width: 1020px;
+    
 
     .mypage-main{
       float: right;
@@ -14,7 +15,7 @@
       .mypage-user-icon{
         position: relative;
         padding: 20px;
-        background: #ea352d;
+        background: Blue;
         background-repeat: no-repeat;
         background-size: cover;
         text-align: center;
@@ -29,8 +30,9 @@
           -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
           color: #333;
+          height: 111px;
 
-          figure{
+          .icon-figure{
             overflow: hidden;
             width: 60px;
             height: 60px;
@@ -41,11 +43,13 @@
           .user-name{
             margin: 8px 0 0;
             font-size: 14px;
+            height: 16px;
           }
 
           .mypage-number{
             margin: 8px 0 0;
             font-size: 0;
+            height: 16px;
 
             .mypage-evaluetion{
               display: inline-block;
@@ -53,12 +57,118 @@
 
               .mypage-bold{
                 margin: 0 0 0 8px;
-                font-size: 16px;
+                font-size: 14px;
+              }
+            }
+
+            .mypage-exhibit{
+              display: inline-block;
+              font-size: 14px;
+              margin: 0 0 0 16px;
+
+              .mypage-bold{
+                margin: 0 0 0 8px;
+                font-size: 14px;
               }
             }
           }
         }
-      }      
+      }
+
+      // .mypage-tab-content{
+
+        // .tab-content{
+
+        //   &__list{
+        //     // display: none;
+
+        //     &:active{
+        //       display: block;
+        //     }
+
+        //     &-item{
+        //       border-bottom: 1px solid #eee;
+        //       height: 81px;
+        //       display: block;
+
+        //       &__link{
+        //         display: block;
+        //         min-height: 80px;
+        //         padding: 16px;
+        //         color: #333;               
+
+        //         &-figure{
+        //           position: relative;
+        //           overflow: hidden;
+        //           float: left;
+        //           width: 48px;
+        //           height: 48px;
+        //           margin: 0;
+
+        //           .tab-img{  
+        //             position: absolute;
+        //             top: 0;
+        //             right: 0;
+        //             bottom: 0;
+        //             left: 0;
+        //             z-index: 1;
+        //             width: 100%;
+        //           }
+        //         }
+
+        //         .tab-item-body{
+        //           margin: 0 40px 0 68px;              
+
+        //           &__text{
+        //             overflow: hidden;
+        //             display: block;
+        //             display: -webkit-box;
+        //             max-height: 4.4rem;
+        //             -webkit-line-clamp: 3;
+        //             -webkit-box-orient: vertical;
+        //             text-overflow: ellipsis;
+        //             line-height: 1.5;
+        //           }
+
+        //           &__time{
+        //             display: inline-block;
+        //             color: #888;
+        //             // height: 17.42px;
+        //             // width: 100px;
+        //             // font-size: 13px;
+
+        //             .icon-time{
+        //               margin: 0 8px 0 0;
+        //               &:before{
+        //                 content: '\e02a'; 
+        //               }
+        //             }
+
+        //             .time-text{
+        //               vertical-align: middle;
+        //             }
+        //           }
+        //         }
+        //       }
+        //     }
+
+        //     &-go{
+        //       border: 0;
+        //       padding: 16px;
+
+        //       &__link{
+        //         display: block;
+        //         height: 56px;
+        //         margin: 0 auto;
+        //         background: #eee;
+        //         color: #333;
+        //         line-height: 56px;
+        //         text-align: center;
+        //       }
+        //     }
+        //   }
+        // }
+      // }
     }
 
 
