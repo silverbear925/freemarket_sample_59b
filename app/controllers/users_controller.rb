@@ -10,4 +10,10 @@ class UsersController < ApplicationController
 
   def credit_delete
   end
+
+  def credit_add
+  end
+
+  def credit_create
+  end
 end

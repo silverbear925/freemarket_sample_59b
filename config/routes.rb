@@ -20,6 +20,8 @@ Rails.application.routes.draw do
     collection do
       get :log_out
       get :credit_delete
+      get :credit_add
+      get :credit_create
     end
   end
   resources :adresses

@@ -7,6 +7,8 @@
   .kodomo-content{
     margin: 40px auto 0;
     width: 1020px;
+    height: 1500px; 
+
   
     .mago-content{
       float: right;
@@ -24,24 +26,69 @@
         background-color: white;
         border-top: solid 1px white;
         padding: 64px;
-        text-align: center;
+        
 
         &__up{
-          font-size: 16px;
+          font-size: 16px; 
+          padding-left: 127px;
         }
 
         &__senter{
           height: 150px;
+          display: flex;
+          border-bottom: solid 1px lightgrey;
+
+          &__ue{
+          display: block;
+          width: 250px;
+          padding-left: 100px;
+          }
+
+          &__shita{
+            border: 1px solid red;
+            color: red;
+            width: 70px;
+            height: 24px;
+            float: right;
+            margin-left: 100px;
+          }
+
+          &__addbox{
+            width: 572px;
+            height: 107px;
+            padding: 24px 0;
+            color: white;
+
+            
+            &__l{
+              width: 320px;
+              height: 50px;
+              display: block;
+              margin-bottom: 8px;
+              background-color: #ea352d;
+              margin: auto;
+              display: flex;
+            }
+            &__m{
+              padding-left: 40px;
+              padding-top: 12px;
+            }           
+
+            &__s{
+              padding-left: 15px;
+              padding-top: 12px;
+            }
+          }
         }
-        
         &__bottom{
           text-align: right;
           color: #0099e8;
         }
-      }
+      }       
     }
   }
    
+
 
   .side-nav{ 
     float: left;
@@ -118,6 +165,10 @@
     }
   }
 }
-
+.sign-up_field-label-text{
+  text-align: right;
+  color: #0099e8;
+  font-size: 14px;
+}
 
     
