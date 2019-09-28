@@ -1,0 +1,123 @@
+.oya-content{
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-color: #fafafa;
+
+  .kodomo-content{
+    margin: 40px auto 0;
+    width: 1020px;
+  
+    .mago-content{
+      float: right;
+      width: 700px;
+
+      &__top{
+        height: 50px;
+        background-color: white;
+        font-size: 24px;
+        padding: 8px 24px;
+      }
+
+      &__midle{
+        height: 314px;
+        background-color: white;
+        border-top: solid 1px white;
+        padding: 64px;
+        text-align: center;
+
+        &__up{
+          font-size: 16px;
+        }
+
+        &__senter{
+          height: 150px;
+        }
+        
+        &__bottom{
+          text-align: right;
+          color: #0099e8;
+        }
+      }
+    }
+  }
+   
+
+  .side-nav{ 
+    float: left;
+    width: 280px;
+    margin: 0 40px 0 0;
+    
+
+    .nav-mypage{
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+
+      &__list{
+        list-style: none;
+
+        &-item{
+          position: relative;
+          display: block;
+          min-height: 48px;
+          padding: 16px;
+          background-color: #fff;
+          font-size: 14px;
+          color: #333;
+          border: solid 1px #fafafa;
+
+          &:active{
+            background: #ccc;
+            font-weight: 600;
+
+            .fa-angle-right{
+              color: #333;
+            }
+          }
+
+          &-number{
+            position: absolute;
+            top: 50%;
+            right: 32px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #ea352d;
+            text-align: center;
+            line-height: 24px;
+            color: #fff;
+            font-size: 13px;
+            -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+          }
+
+          .fa-angle-right{
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            color: #ccc;
+            -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            -webkit-transition: all ease-out .2s;
+            transition: all ease-out .2s;
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      &__head{
+        margin: 40px 0 0;
+        font-size: 16px;
+        font-weight: bold;
+
+        &+.nav-mypage__list{
+          margin: 8px 0 0;
+        }
+      }
+    }
+  }
+}
+
+
+    
