@@ -144,6 +144,7 @@ li{
 
 
 footer{
+  
   background:black;
   color:white;
   .footer-image{
@@ -151,6 +152,17 @@ footer{
   }
   .text-area{
     display:flex;
+    width: 700px;
+    margin: 0 auto;
+    li{
+      font-size: 12px;
+      color:lightgrey;
+      margin: 25px;
+    }
+    _heading{
+      font-size: 16px;
+
+    }
   }
 }
 
@@ -162,9 +174,7 @@ footer{
 }
 .women-new-item{
   font-size: 25px;
-  font-weight: 800;
-
-  
+  font-weight: 800;  
 }
 
 
