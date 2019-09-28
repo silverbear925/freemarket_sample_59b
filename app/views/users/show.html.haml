@@ -1,6 +1,8 @@
 .mypage-container
+  = render '/layouts/header'
   %main.mypage-content.clearfix
-    .mypage-main
+    = render '/layouts/sidenav'
+    .mypage-main   
       %section.mypage-user-icon
         = link_to "" do
           %figure
@@ -16,6 +18,6 @@
               %span.mypage-bold
                 0
 
-
-    = render '/layouts/sidenav'  
+    
+  = render '/layouts/footer'
     
