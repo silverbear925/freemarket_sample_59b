@@ -1,6 +1,6 @@
 .sell-wrappe
   .sell
-    = form_for @product do |f|
+    = form_with model:@product,local: true do |f|
       %h3.sell__title 商品の情報を入力
       .sell__image
         = f.label :image, "出品画像"
@@ -8,11 +8,11 @@
         %p.max 最大10枚までアップロードできます
         .sell__image-select
           = f.fields_for :images do |image|
-            .sell__image-select-area
-              =image.label :src, ""
-              =image.file_field :src, :maltiple => true
+            =image.label :src do
+              =image.file_field :src,class:'file-hidden'
+              .sell__image-select-area
           またはクリックしてファイルをアップロード
-      
+
       .sell__about
         .sell__about__name
           = f.label :name, "商品名"
@@ -30,7 +30,7 @@
             = f.label :category_id, "カテゴリー"
             %span.required
             .sell__about__right__wrap-box
-              = f.select :category_id, [["赤",0],["黄",1]], prompt: "---", class: "select"
+              = f.select :category_id, @categories_roots.map{|category| [category.name, category.id]}, prompt: "---", class: "select"
               %i.fas.fa-chevron-down
             -# .sell__about__right__wrap-box-none
             -#   = f.select :category, [["赤"],["黄ばみ"]], prompt: "---", class: "select"
@@ -38,16 +38,17 @@
             -# .sell__about__right__wrap-box-none
             -#   = f.select :category, [["赤"],["黄"]], prompt: "---", class: "select"
             -#   %i.fas.fa-chevron-down
-          .sell__about__right__wrap-box-none
+          .sell__about__right__wrap
             = f.label :size, "サイズ"
             %span.required
-            .sell__about__right__wrap-box-none
-              = f.select :size, [["l"],["s"]], prompt: "---", class: "select"
+            .sell__about__right__wrap-box
+              = f.select :size, [["赤",0],["黄",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
-          .sell__about__right__wrap-box-none
+              
+          .sell__about__right__wrap-box
             = f.label :brand_id, "ブランド"
             %span.required-gray
-            .sell__about__right__wrap-box-none
+            .sell__about__right__wrap-box
               = f.text_field :brand_id, placeholder: "例）シャネル", class: "form"
           .sell__about__right__wrap
             = f.label :status, "商品の状態"
@@ -59,18 +60,21 @@
       .sell__about.clearfix
         .sell__about__left 配送について
         .sell__about__right
+
           .sell__about__right__wrap
             = f.label :burden, "配送料の負担"
             %span.required
             .sell__about__right__wrap-box
               = f.select :burden, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
-          .sell__about__right__wrap-box-none
+
+          .sell__about__right__wrap-box
             = f.label :way, "配送の方法"
             %span.required
-            .sell__about__right__wrap-box-none
+            .sell__about__right__wrap-box
               = f.select :way, [["黒猫",0],["ありさん",1]], prompt: "---", class: "select"
               %i.fas.fa-chevron-down
+
           .sell__about__right__wrap
             = f.label :area_id, "配送元の地域"
             %span.required
@@ -129,4 +133,4 @@
               に同意したことになります。
           = f.submit "出品する", class: 'sell__about__bottom-btn submit'
           %button{type: "button", onclick: "history.back()", class: 'sell__about__bottom-btn back'} もどる
-
+=render '/momo/footter'
