@@ -21,6 +21,7 @@
             %i.fa.fa-list-ul
             ブランドから探す
       %ul.header__bottom__right
+      - if user_signed_in?
         %li.header__bottom__right-list
           =link_to ""  do
             %i.fa.fa-bell
@@ -33,6 +34,7 @@
           =link_to user_path(1)  do
             =image_tag "/member_photo_noimage_thumb.png",class:'my-page'
             マイページ
+      - else
         %li.header__bottom__right-list
           =link_to registrations_index_path  do
             新規登録
