@@ -1,12 +1,14 @@
 .mypage-container
   = render '/layouts/header'
+
   %main.mypage-content.clearfix
     = render '/layouts/sidenav'
+    
     .mypage-main   
-      %section.mypage-user-icon
+      .mypage-user-icon
         = link_to "" do
-          %figure
-            %img{alt: "", hight: "60", src: "", width: "60"}
+          %figure.icon-figure
+            %img{alt: "", hight: "60", src: "https://static.mercdn.net/images/member_photo_noimage_thumb.png", width: "60"}
           %h2.user-name ああああ
           .mypage-number
             .mypage-evaluetion
@@ -18,6 +20,51 @@
               %span.mypage-bold
                 0
 
+
+      .mypage-main__tab
+        %li.notice-todo.active
+          %h3.tab-notice
+            =link_to "", class: "tab-notice__link" do
+              お知らせ
+        %li.notice-todo.active
+          %h3.tab-todo
+            =link_to "", class: "tab-todo__links" do
+              やることリスト
+
+        .mypage-main__tab-content
+          %ul.mypage-main__tab-content__list
+            %li.mypage-main__tab-content__list-item
+            
+
+
     
-  = render '/layouts/footer'
+  -# = render '/layouts/footer'
+
+        -# %section.mypage-tab-content
+        -# %ul.mypage-tabs
+        -#   %li.notice-thing.active
+        -#     %h3.notice-thing__font
+        -#       = link_to "" do
+        -#         お知らせ
+        -#   %li.notice-thing.active
+        -#     %h3.notice-thing__font
+        -#       = link_to "" do
+        -#         やることリスト
+
+        -# .tab-content
+        -#   %ul.tab-content__list.active
+        -#     %li.tab-content__list-item
+        -#       = link_to "", class: "tab-content__list-item__link" do
+        -#         %figure.tab-content__list-item__link-figure
+        -#           %img.tab-img{alt: "", "": "", src: "https://static.mercdn.net/images/mercari_profile.png"}
+        -#         .tab-item-body
+        -#           .tab-item-body__text
+        -#             fgfg
+        -#           .tab-item-body__time
+        -#             %i.icon-time
+        -#             %span.time-text
+        -#               1 時間前
+        -#     %li.tab-content__list-go
+        -#       =link_to "", class: "tab-content__list-go__link" do
+        -#         一覧を見る
     
