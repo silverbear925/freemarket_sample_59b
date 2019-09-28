@@ -1,4 +1,5 @@
 ja:
+<<<<<<< HEAD
   activerecord:
     errors:
       models:
@@ -83,3 +84,33 @@ ja:
     unlocks:
       new:
         resend_unlock_instructions: "アカウントの凍結解除方法を再送する"
+=======
+  date:
+    order:
+    - :year
+    - :month
+    - :day
+
+ja:
+  enums:
+    task:  //モデル名
+      status:  //カラム名
+        untouched: "未完了"  
+        working: "着手中"
+        done: "完了"
+
+
+ja:
+  enums:
+    product:
+      status:
+        new: "新品、未使用"
+        clocsetonew: "未使用に近い"
+        noscratches: "目立った傷や汚れなし"
+        slightlynoscratches: "やや傷や汚れなし"
+        scratches: "傷や汚れあり”
+
+
+
+
+>>>>>>> 4ffae8633812186c150cfcbcab01dd0aeed8cd2e
