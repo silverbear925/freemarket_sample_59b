@@ -65,7 +65,7 @@
             = f.label :burden, "配送料の負担"
             %span.required
             .sell__about__right__wrap-box
-              = f.select :burden_status, Product.burden_statuses {}, {class: "select"}
+              = f.select :burden, Product.burden_statuses {}, {class: "select"}
               %i.fas.fa-chevron-down
 
           .sell__about__right__wrap-box
