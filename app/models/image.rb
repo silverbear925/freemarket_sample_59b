@@ -1,4 +1,5 @@
 class Image < ApplicationRecord
-  has_many :products
-  accepts_nested_attributes_for :products
+  belongs_to :product
+  mount_uploader :image, ImageUploader
+
 end

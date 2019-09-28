@@ -80,7 +80,7 @@
       line-height: 1.5;
     }
     & input {
-      display: none;
+      // display: none;
     }
     &-select {
       position: relative;
@@ -124,7 +124,7 @@
             }
           }
           & .btn-box {
-            display: none;
+            // display: none;
             & a {
               display: inline-block;
               float: left;
@@ -180,7 +180,7 @@
           margin-top: 8px;
 
           &-none{
-            display:none;
+            // display:none;
           }
           & select {
             padding: 0 16px;
@@ -202,7 +202,7 @@
           }
         }
         & .child, .grand_child{
-          display: none;
+          // display: none;
         }
         &__price {
           width: 400px;
