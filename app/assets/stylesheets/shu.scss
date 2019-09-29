@@ -2,10 +2,12 @@
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
+  background: #fafafa;
    
   .mypage-content{
     margin: 40px auto 0;
     width: 1020px;
+    height: 1500px;
     
 
     .mypage-main{
@@ -15,7 +17,7 @@
       .mypage-user-icon{
         position: relative;
         padding: 20px;
-        background: Blue;
+        background: palevioletred;
         background-repeat: no-repeat;
         background-size: cover;
         text-align: center;
@@ -75,100 +77,171 @@
         }
       }
 
-      // .mypage-tab-content{
 
-        // .tab-content{
+      &__tab{
+        border: 0;
+        background: #eee;
+        font-size: 0;
+        display: flex;
+        text-align: center;
 
-        //   &__list{
-        //     // display: none;
+        .notice-todo{
+          width: 50%;
 
-        //     &:active{
-        //       display: block;
-        //     }
+          &:active{
+            background: #fff;
 
-        //     &-item{
-        //       border-bottom: 1px solid #eee;
-        //       height: 81px;
-        //       display: block;
+            .tab-notice-todo__link{
+              border-top: 2px solid #ea352d;
+            }
+          }
 
-        //       &__link{
-        //         display: block;
-        //         min-height: 80px;
-        //         padding: 16px;
-        //         color: #333;               
+          .tab-notice-todo{
+            font-size: 22px;
+            
+            &__link{
+              position: relative;
+              display: block;
+              color: #333;
+              font-size: 16px;
+              line-height: 72px;           
+            }
+          }
 
-        //         &-figure{
-        //           position: relative;
-        //           overflow: hidden;
-        //           float: left;
-        //           width: 48px;
-        //           height: 48px;
-        //           margin: 0;
+          .tab-notice-todo{
+            font-size: 22px;
+            
+            &__link{
+              position: relative;
+              display: block;
+              color: #333;
+              font-size: 16px;
+              line-height: 72px;
+            }
+          }
+        }
+      }
 
-        //           .tab-img{  
-        //             position: absolute;
-        //             top: 0;
-        //             right: 0;
-        //             bottom: 0;
-        //             left: 0;
-        //             z-index: 1;
-        //             width: 100%;
-        //           }
-        //         }
 
-        //         .tab-item-body{
-        //           margin: 0 40px 0 68px;              
+      &__tab-content{
+        background: #fff;
 
-        //           &__text{
-        //             overflow: hidden;
-        //             display: block;
-        //             display: -webkit-box;
-        //             max-height: 4.4rem;
-        //             -webkit-line-clamp: 3;
-        //             -webkit-box-orient: vertical;
-        //             text-overflow: ellipsis;
-        //             line-height: 1.5;
-        //           }
+        &__list{
+          // display: none;
 
-        //           &__time{
-        //             display: inline-block;
-        //             color: #888;
-        //             // height: 17.42px;
-        //             // width: 100px;
-        //             // font-size: 13px;
+          &:active{
+            display: block;
+          }
 
-        //             .icon-time{
-        //               margin: 0 8px 0 0;
-        //               &:before{
-        //                 content: '\e02a'; 
-        //               }
-        //             }
+          &-item{
+            border-bottom: 1px solid #eee;
 
-        //             .time-text{
-        //               vertical-align: middle;
-        //             }
-        //           }
-        //         }
-        //       }
-        //     }
+            &__link{
+              display: block;
+              min-height: 80px;
+              padding: 16px;
+              color: #333;
+              position: relative;
 
-        //     &-go{
-        //       border: 0;
-        //       padding: 16px;
+              &-img{
+                float: left;
+                width: 48px;
+                height: 48px;
+              }
 
-        //       &__link{
-        //         display: block;
-        //         height: 56px;
-        //         margin: 0 auto;
-        //         background: #eee;
-        //         color: #333;
-        //         line-height: 56px;
-        //         text-align: center;
-        //       }
-        //     }
-        //   }
-        // }
-      // }
+              &-body{
+                margin: 0 40px 0 68px;
+
+                &__text{
+                  overflow: hidden;
+                  display: block;
+                  display: -webkit-box;
+                  max-height: 4.4rem;
+                  -webkit-line-clamp: 3;
+                  -webkit-box-orient: vertical;
+                  text-overflow: ellipsis;
+                  line-height: 1.5;
+                }
+
+                &__time{
+                  display: inline-block;
+                  color: #888;
+
+                  .time-icon{
+                    margin: 0 8px 0 0;
+
+                    &:before{
+                      content: '\e02a';
+                    }
+                  }
+
+                  .time-text{
+                    vertical-align: middle;
+                  }
+                }
+              }
+
+              .fas{
+                position: absolute;
+                top: 50%;
+                right: 16px;
+                font-size: 1.4rem;
+              }
+            }
+          }
+
+          &-go{
+            padding: 16px;
+            border: 0;
+
+            &__link{
+              display: block;
+              height: 56px;
+              margin: 0 auto;
+              background: #eee;
+              color: #333;
+              line-height: 56px;
+              text-align: center;
+            }
+          }
+        }
+      }
+
+
+      &__buy{
+        margin: 40px 0 0;
+        background: #fff;
+
+        &-product{
+          height: 72px;
+          padding: 0 16px;
+          background: #fafafa;
+          font-size: 16px;
+          line-height: 72px;
+          text-align: left;
+        }
+      }
+
+      &__list{
+        background: #fff;
+        height: 236px;
+
+        &-nowwas{
+          display: none;
+          
+          &:active{
+            display: block;
+          }
+
+          &__item{
+            border: 0;
+            padding: 160px 0 60px;
+            text-align: center;
+            font-size: 16px;
+            color: #ccc;
+          }
+        }
+      }
     }
 
 

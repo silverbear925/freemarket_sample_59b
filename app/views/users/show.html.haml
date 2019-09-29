@@ -23,48 +23,52 @@
 
       .mypage-main__tab
         %li.notice-todo.active
-          %h3.tab-notice
-            =link_to "", class: "tab-notice__link" do
+          %h3.tab-notice-todo
+            =link_to "", class: "tab-notice-todo__link" do
               お知らせ
         %li.notice-todo.active
-          %h3.tab-todo
-            =link_to "", class: "tab-todo__links" do
+          %h3.tab-notice-todo
+            =link_to "", class: "tab-notice-todo__link" do
               やることリスト
 
-        .mypage-main__tab-content
-          %ul.mypage-main__tab-content__list
-            %li.mypage-main__tab-content__list-item
-            
+      .mypage-main__tab-content
+        %ul.mypage-main__tab-content__list.active
+          %li.mypage-main__tab-content__list-item
+            =link_to "", class: "mypage-main__tab-content__list-item__link" do
+              %img.mypage-main__tab-content__list-item__link-img{alt: "", "": "", src: "https://static.mercdn.net/images/mercari_profile.png"}
+              .mypage-main__tab-content__list-item__link-body
+                .mypage-main__tab-content__list-item__link-body__text
+                  fgfg
+                .mypage-main__tab-content__list-item__link-body__time
+                  %i.time-icon
+                  %span.time-text
+                    1 時間前
+              %i.fas.fa-angle-right          
+          %li.mypage-main__tab-content__list-go
+            =link_to "", class: "mypage-main__tab-content__list-go__link" do
+              一覧を見る
 
 
-    
-  -# = render '/layouts/footer'
+      .mypage-main__buy
+        %h2.mypage-main__buy-product
+          購入した商品
+      .mypage-main__tab
+        %li.notice-todo.active
+          %h3.tab-notice-todo
+            =link_to "", class: "tab-notice-todo__link" do
+              取引中
+        %li.notice-todo.active
+          %h3.tab-notice-todo
+            =link_to "", class: "tab-notice-todo__link" do
+              過去の取引
+      .mypage-main__list
+        %ul.mypage-main__list-nowwas.active
+          %li.mypage-main__list-nowwas__item
+            取引中の商品がありません
+        %ul.mypage-main__list-nowwas.active
+          %li.mypage-main__list-nowwas__item
+            過去に取引した商品はありません
 
-        -# %section.mypage-tab-content
-        -# %ul.mypage-tabs
-        -#   %li.notice-thing.active
-        -#     %h3.notice-thing__font
-        -#       = link_to "" do
-        -#         お知らせ
-        -#   %li.notice-thing.active
-        -#     %h3.notice-thing__font
-        -#       = link_to "" do
-        -#         やることリスト
 
-        -# .tab-content
-        -#   %ul.tab-content__list.active
-        -#     %li.tab-content__list-item
-        -#       = link_to "", class: "tab-content__list-item__link" do
-        -#         %figure.tab-content__list-item__link-figure
-        -#           %img.tab-img{alt: "", "": "", src: "https://static.mercdn.net/images/mercari_profile.png"}
-        -#         .tab-item-body
-        -#           .tab-item-body__text
-        -#             fgfg
-        -#           .tab-item-body__time
-        -#             %i.icon-time
-        -#             %span.time-text
-        -#               1 時間前
-        -#     %li.tab-content__list-go
-        -#       =link_to "", class: "tab-content__list-go__link" do
-        -#         一覧を見る
+  = render '/layouts/footer'
     
