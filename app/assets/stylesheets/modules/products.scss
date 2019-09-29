@@ -9,10 +9,14 @@ a{
   text-decoration:none;
   color: #0099e8;
 }
+.container__top{
+  background: #fff;
+}
 .container{
   max-width:1000px;
   margin:0 auto;
   padding-top: 8px;
+  background: #fff;
 }
 
 li{
@@ -46,6 +50,22 @@ li{
   margin-right: 2px;
 }
 //亦賀編集終わり
+
+
+.container__top{
+  background-color: #fafafa;
+  margin-top: 10px;
+}
+
+.login-out-main-mai{
+max-width: 1020px;
+margin: 0 auto;
+}
+
+
+
+
+
 
 .header{
   &__top{
