@@ -1,3 +1,0 @@
-class Catedogory < ApplicationRecord
-  
-end

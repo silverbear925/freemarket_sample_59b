@@ -9,33 +9,11 @@
     %h3.popularity
       人気のカテゴリー
     %ul.category__heading-list
-      =link_to "" do
-        %li レディース
-      =link_to "" do
-        %li メンズ
-      =link_to "" do
-        %li 家電・スマホ
-      =link_to "" do
-        %li おもちゃ・ホビー・グッズ
+      -@categories.each do |category|
+        %li
+          =link_to category.name ,category_path(category)
   .container
-    .category-new
-      %h3.women-new-item レディース新着アイテム
-      =link_to "もっと見る","",class:'category-new-link'
-    .category__products
-      =render 'card'
-      =render 'card'
-      =render 'card'
-      =render 'card'
-      =render 'card'
-      =render 'card'
-      =render 'card'
-      =render 'card'
-      =render 'card'
-      =render 'card'
+    = render partial: "category" ,collection: @categories
 
-=link_to new_product_path do
-  .sale-logo
-    出品
-    %i.fa.fa-camera
-
+=render '/layouts/sale-logo'
 =render '/layouts/footer'

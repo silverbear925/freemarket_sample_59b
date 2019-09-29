@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
-  def index 
+  def index
+    @categories = Category.roots.all
   end
 
   def show

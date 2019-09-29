@@ -3,8 +3,7 @@ class Product < ApplicationRecord
   accepts_nested_attributes_for :images
   belongs_to :area
   belongs_to :brand, optional: true
-  has_many :product_category
-  has_many :categories, through: :product_category
+  belongs_to :category
   # mount_uploaders :images, ImageUploader
   enum statuses:{"新品": 0,"未使用に近い": 1,"目立った傷や汚れなし":2,"やや傷や汚れあり":3,"傷や汚れあり": 4,"汚れあり": 5}
   enum burden_status:{"送料込み": 0,"着払い": 1}
