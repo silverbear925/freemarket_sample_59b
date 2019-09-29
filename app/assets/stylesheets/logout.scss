@@ -1,8 +1,19 @@
+.login-out-main-main{
+  background: whitesmoke;
+  
+}
+.log-out-main-header{
+  background: red;
+}
+
+
 .log-out-main{
-  width: 100%;
+  width: 1000px;
   height:1511px;
+  margin: 0 auto;
   background: #fafafa;
   position: relative;
+  margin-top:60px;
 }
   
   
@@ -11,10 +22,9 @@
   width: 600px;
   height: 200px;
   background:white;
-  margin: right;
   position: absolute;
-  top: 200px;
-  right:300px
+  right: 1px;
+  top:70px;
 
 }
 
