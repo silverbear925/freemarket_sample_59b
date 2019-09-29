@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   end
   resources :adresses
   resources :credits
+  resources :categories
 
   resources :momo
 end
