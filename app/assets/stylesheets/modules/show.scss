@@ -1,6 +1,6 @@
 .default-container{
-  background-color: #fff;
-  background:rgb(245, 245, 245);;
+  background: whitesmoke;
+  padding-top: 40px;
 }
 
 .item-name {
@@ -17,9 +17,8 @@
   }
 .item-box-container{
   width: 700px;
-  height: 1000px;
   background-color: #fff;
-  margin: 40px auto 0;
+  margin: 0px auto 0;
   padding: 24px 40px 40px;
 }
   .item-main-content{
@@ -253,6 +252,7 @@ font-size: 24px;
   display: flex;
   flex-wrap: wrap;
 }
+//部分テンプレート
 .items-box{
   list-style: none;
   width: 213px;
@@ -265,6 +265,7 @@ font-size: 24px;
   }
   &-body{
     padding: 16px;
+    color: #333333;
   }
   &-name{
     overflow: hidden;
