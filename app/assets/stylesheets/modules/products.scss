@@ -178,7 +178,7 @@ margin: 0 auto;
 
 footer{
   
-  background:black;
+  background:rgb(34, 34, 34);
   color:white;
   .footer-image{
     width:100vw;
@@ -191,12 +191,22 @@ footer{
       font-size: 12px;
       color:lightgrey;
       margin: 25px;
+      
+      
     }
     _heading{
       font-size: 16px;
 
     }
   }
+}
+
+.footer__icon{
+  width: 1020px;
+  height: 33px;
+}
+.mercari2019{
+  text-align: center;
 }
 
 .popularity{
