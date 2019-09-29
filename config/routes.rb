@@ -22,6 +22,7 @@ Rails.application.routes.draw do
       get :credit_delete
       get :credit_add
       get :credit_create
+      get :transaction_buy
     end
   end
   resources :adresses
