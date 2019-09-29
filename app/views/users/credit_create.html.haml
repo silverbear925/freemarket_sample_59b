@@ -1,44 +1,62 @@
+-# .sign-up
+-#   =render '/users/registrations/sign_up_header'
+-#   .sign-up__form
+-#     %h3.sign-up__form-heading クレジットカード情報入力
+-#     .sign-up__form-container
+-#       = form_with url:"" do |f|
+
+-#         .sign-up_field
+-#           .sign-up_field-label
+-#             = f.label :number ,'カード番号'
+-#             %span 必須
+-#           = f.text_field :number,class:'sign-up_field-input',placeholder:'半角数字のみ' 
+-#           %ul.credit__list
+-#             %li
+-#               =link_to ""  do
+-#                 =image_tag "/credit/card_logo.png",class:"credit__list-image"
+-#             %li
+-#               =link_to ""  do
+-#                 =image_tag "/credit/master300px.gif",class:"credit__list-image"
+-#             %li
+-#               =link_to ""  do
+-#                 =image_tag "/credit/saison300px.gif",class:"credit__list-image"
+-#             %li
+-#               =link_to ""  do
+-#                 =image_tag "/credit/jcb300px.gif",class:"credit__list-image"
+-#             %li
+-#               =link_to ""  do
+-#                 =image_tag "/credit/diners300px.gif",class:"credit__list-image"
+-#         .sign-up_field
+-#           .sign-up_field-label
+-#             = f.label :expiration_date, "有効期限"
+-#             %span 必須
+-#           != sprintf(f.date_select(:expiration_date,with_css_classes:'XXXXX', order:[:month,:year,:day], use_month_numbers:true, discard_day:true, start_year:Time.now.year-2000, end_year:Time.now.year-2000+40, date_separator:'%s'),'月') + '年'      
+-#         .sign-up_field
+-#           .sign-up_field-label
+-#             = f.label :security_code ,'セキュリティーコード'
+-#             %span 必須
+-#           = f.text_field :security_code,class:'sign-up_field-input',placeholder:'カード背面４桁もしくは３桁の番号' 
+-#         .sign-up_field-label-text
+-#           %i.fas.fa-question-circle
+-#           カードの裏側の番号とは？
+-#         =f.submit  "次に進む" ,class:"sign-up-next "
+        
+-# =render '/momo/footter'
+
+
 .sign-up
   =render '/users/registrations/sign_up_header'
   .sign-up__form
     %h3.sign-up__form-heading クレジットカード情報入力
     .sign-up__form-container
-      = form_with url:"" do |f|
+hod: "PATCH", id: "charge-form") do
 
-        .sign-up_field
-          .sign-up_field-label
-            = f.label :number ,'カード番号'
-            %span 必須
-          = f.text_field :number,class:'sign-up_field-input',placeholder:'半角数字のみ' 
-          %ul.credit__list
-            %li
-              =link_to ""  do
-                =image_tag "/credit/card_logo.png",class:"credit__list-image"
-            %li
-              =link_to ""  do
-                =image_tag "/credit/master300px.gif",class:"credit__list-image"
-            %li
-              =link_to ""  do
-                =image_tag "/credit/saison300px.gif",class:"credit__list-image"
-            %li
-              =link_to ""  do
-                =image_tag "/credit/jcb300px.gif",class:"credit__list-image"
-            %li
-              =link_to ""  do
-                =image_tag "/credit/diners300px.gif",class:"credit__list-image"
-        .sign-up_field
-          .sign-up_field-label
-            = f.label :expiration_date, "有効期限"
-            %span 必須
-          != sprintf(f.date_select(:expiration_date,with_css_classes:'XXXXX', order:[:month,:year,:day], use_month_numbers:true, discard_day:true, start_year:Time.now.year-2000, end_year:Time.now.year-2000+40, date_separator:'%s'),'月') + '年'      
-        .sign-up_field
-          .sign-up_field-label
-            = f.label :security_code ,'セキュリティーコード'
-            %span 必須
-          = f.text_field :security_code,class:'sign-up_field-input',placeholder:'カード背面４桁もしくは３桁の番号' 
-        .sign-up_field-label-text
-          %i.fas.fa-question-circle
-          カードの裏側の番号とは？
-        =f.submit  "次に進む" ,class:"sign-up-next "
-        
+  %label カード番号
+    %input{maxlength: "16", type: "text", class: "number", id: "payment_card_no" name: "number", placeholder: "カード番号"}
+  %label CVC
+    %input{type: "text", class: "cvc", id: "payment_card_security_code", name: "cvc", maxlength: "3", placeholder: "CVC"}
+  %label 有効期限
+    %input{type: "text", class: "exp_month", id: "payment_card_expire_mm",  name: "exp_month", maxlength: "2", placeholder: "月"}
+    %input{type: "text", class: "exp_year", name: "exp_year", maxlength: "4",  placeholder: "年"}
+
 =render '/momo/footter'
