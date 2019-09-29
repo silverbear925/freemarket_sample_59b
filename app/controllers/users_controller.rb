@@ -16,4 +16,7 @@ class UsersController < ApplicationController
 
   def credit_create
   end
+
+  def transaction_buy
+  end
 end
