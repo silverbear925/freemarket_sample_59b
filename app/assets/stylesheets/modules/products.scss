@@ -89,8 +89,6 @@ margin: 0 auto;
     }
   }
 
-
-
   &__bottom{
     display:flex;
     height:50px;
@@ -101,6 +99,7 @@ margin: 0 auto;
       display:flex;
       padding:0;
       &-list{
+        font-weight:bold;
         margin-right:20px;
       }
       &-list i{
@@ -112,18 +111,42 @@ margin: 0 auto;
     }
     &__right{
       display:flex;
-      line-height:50px;
+      align-items: center;
+      .fa{
+        font-size:20px;
+        color:grey;
+        margin-right:5px;
+      }
       &-list{
         margin-left:20px;
-        .my-page{
-          line-height:50px;
-          border-radius:50%;
-          width:26px;
-          height:26px;
+        &-signup{
+          padding:5px 10px;
+          background:red;
+          color:white;
+          border-radius:5px;
         }
+        &-login{
+          border-radius:5px;
+          padding:5px 10px;
+          background:transparent;
+          color:$link_to;
+          border:1px solid $link_to;
+        }
+
+        
       }
     }
   }
+}
+
+.my-page__wrapper{
+  display:flex;
+  align-items: center;
+  &-logo{
+    border-radius:50%;
+    width:26px;
+    height:26px;
+    }
 }
 
 .slide{
@@ -183,11 +206,7 @@ margin: 0 auto;
 }
 
 
-
-
 footer{
-
-  
   background:rgb(34, 34, 34);
   color:white;
   .footer-image{
