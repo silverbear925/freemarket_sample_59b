@@ -17,14 +17,17 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "products#index"
-  resources :products
+  resources :products do
+    member do
+      get :transaction_buy
+    end
+  end
   resources :users do
     collection do
       get :log_out
       get :credit_delete
       get :credit_add
       get :credit_create
-      get :transaction_buy
     end
   end
   resources :adresses
