@@ -1,28 +1,55 @@
 .single-container
-  .single-header
+  = render '/momo/header'
 
-
-
-
-  .single-main
+  .single__main
     .l-single-container
       .l-single-head
         購入内容の確認
       .buy-content
-        .buy-content-inner
+        .buy-content-inner_buy
+          .buy-item-image
+            =image_tag '/otya.png', class: 'buy__image__Photo'
+            .buy-item-name
+              おチャオチャオチャオチャオ
+          .buy-price-box
+            .buy-price
+              .buy-price-ja
+                $ 14000
+              .item-shipping-fee
+                送料込み
+              %ul.buy-accordion
+
+              .buy-price-table
+                .buy-price-table-cell
+                  支払い金額
+                .buy-price-table-price
+                  ￥10000
+
+
+
+      .buy-content-2
+        .buy-content-inner_buy
+          配送先
+          .buy-user-info-text
+            %p 〒　000-000 大阪 姫路市 宮上町1ー000 田仲　太郎
+      .buy-content-3
+        .buy-content-inner_buy
+          支払い方法
+          .buy-user-info-text
+            %p ka-do
 
 
 
 
 
 
-  .buy-content
-  
+
+
+  = render '/momo/footter'
 
 
 
 
-  .buy-content
 
 
 
