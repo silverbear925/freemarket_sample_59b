@@ -3,14 +3,12 @@
 }
 
 .single-main{
-
 }
 .l-single-container{
   width: 700px;
   margin: 0 auto;
   background-color: #fff;
 }
-
 .l-single-head{
   padding: 16px;
   font-size: 22px;
@@ -50,14 +48,11 @@
   &__image__Photo{
     height: 70px;
     width: 70px;
-    //あとで変更
-
   }
   &-item-name{
 
   }
   &-price{
-    
     &-box {
       text-align: center;
       margin: 8px 0px 0px;
@@ -92,10 +87,7 @@
       font-size: 28px;
     }
   }
-  // &-price-table li{
-  //   display: inline;
-  // }
-  
+
   &-accordion{
     width: 320px;
     background-color: #888;
@@ -103,7 +95,6 @@
     padding: 16px;
     text-align: center;
     margin: 16px 0px 0px;
-    
   }
   &-content-inner_buy{
     font-size: 14px;
@@ -118,28 +109,14 @@
     text-align: right;
   }
   &-user-info-fix-l{
-    
   }
-
 }
 
-
-
-
-
-
-
-
-
-//購入ボタン
 .purchase__button__decision{
   width: 100%;
   line-height: 48px;
   font-size: 14px;
   color: #fff;
-
-
-  // background: #888;
   background: #ea352d;
 }
 .item-shipping-fee{
