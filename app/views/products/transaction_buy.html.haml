@@ -8,7 +8,7 @@
       .buy-content
         .buy-content-inner_buy
           .buy-item-image
-            =image_tag "#{@product.images[0][:src]}", class: 'buy__image__Photo'
+            -# =image_tag "#{@product.images[0][:src]}", class: 'buy__image__Photo'
             =image_tag @product.images[0].src.url,class:"buy__image__Photo"
             -# =image_tag "/member_photo_noimage_thumb.png", class: 'buy__image__Photo'
             .buy-item-name
