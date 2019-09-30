@@ -1,13 +1,13 @@
-.login-out-main-main
-  = render partial: 'layouts/header'
-
-  .log-out-main
-    =link_to destroy_user_session_path, method:"delete" do
-      .log-out-box
-        .log-out-box-button
+.logout-all
+  = render 'layouts/header'
+  
+  .logout-main
+    = render 'layouts/sidenav'
+    .logout-box
+      .logout-box-button
+        =link_to destroy_user_session_path,method:"delete" do
           %p.log-out
             ログアウト
-
-      = render 'layouts/sidenav'
-
+  = render 'layouts/sale-logo'
   = render 'layouts/footer'
+

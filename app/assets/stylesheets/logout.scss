@@ -1,45 +1,39 @@
-.login-out-main-main{
-  background: whitesmoke;
-  
-}
-.log-out-main-header{
-  background: red;
-  
+.logout-all{
+ margin: 0 auto; 
+ background: #fafafa;
 
-}
-
-
-.log-out-main{
-  width: 1000px;
+.logout-main{
+  width: 1020px;
   height:1511px;
   margin: 0 auto;
   background: #fafafa;
-  position: relative;
-  margin-top:60px;
+  margin-top:40px;
 }
-  
-  
-  
-.log-out-box{
-  width: 600px;
-  height: 200px;
+
+.logout-box{
+  width: 700px;
+  height: 179px;
   background:white;
-  position: absolute;
-  right: 1px;
-  top:70px;
+  margin: 0 auto;
+  float: right;
+  
 
 }
 
-.log-out-box-button{
-  width: 400px;
-  height: 60px;
+.logout-box-button{
+  width: 320px;
+  height: 50px;
   background:#EA352D;
-  margin:70px 50px 34px 90px;
+  margin-top: 60px;
+  margin-left: 190px;
+  margin-right: 0;
+  margin-bottom: 0;
+
   p{
     text-align: center;
     color: white;
     padding-top: 15px;
   }
 }
-
+}
 
