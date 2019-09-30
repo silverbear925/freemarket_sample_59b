@@ -1,11 +1,10 @@
 .card-wrapper
   =link_to product_path(product) do
     .card
-      =product.images.ids
       .card__top
-        =image_tag '/027e61bb6e6e1b9e3c94e408e71dd6e2.png',class:"card__top-image"
+        =image_tag product.images[0].src.url,class:"card__top-image"
         .card__top-price 
-          =product.price
+          ="¥#{product.price}"
       .card__bottom
         %p.card__bottom-text
           =product.text 

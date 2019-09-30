@@ -7,7 +7,7 @@
       .header__item__search
         =form_with url:"/" do |f|
           .header__item__search__text
-            =f.text_field :"",class:"header__top-search"
+            =f.text_field :"",class:"header__top-search",placeholder:"何かお探しですか？"
             %ladel.header__top-button__label
               = button_tag type: 'submit', class: "header__top-button" do
                 %i.fa.fa-search
@@ -22,23 +22,23 @@
             %i.fa.fa-list-ul
             ブランドから探す
       %ul.header__bottom__right
-      - if user_signed_in?
-        %li.header__bottom__right-list
-          =link_to ""  do
-            %i.fa.fa-bell
-            お知らせ
-        %li.header__bottom__right-list
-          =link_to ""  do
-            %i.fa.fa-check
-            やることリスト
-        %li.header__bottom__right-list
-          =link_to user_path(1)  do
-            =image_tag "/member_photo_noimage_thumb.png",class:'my-page'
-            マイページ
-      - else
-        %li.header__bottom__right-list
-          =link_to registrations_index_path  do
-            新規登録
-        %li.header__bottom__right-list
-          =link_to new_user_session_path do
-            ログイン
+        - if user_signed_in?
+          %li.header__bottom__right-list
+            =link_to ""  do
+              %i.fa.fa-bell
+              お知らせ
+          %li.header__bottom__right-list
+            =link_to ""  do
+              %i.fa.fa-check
+              やることリスト
+          %li.header__bottom__right-list
+            =link_to user_path(current_user)  do
+              =image_tag "/member_photo_noimage_thumb.png",class:'my-page'
+              マイページ
+        - else
+          %li.header__bottom__right-list
+            =link_to registrations_index_path  do
+              新規登録
+          %li.header__bottom__right-list
+            =link_to new_user_session_path do
+              ログイン

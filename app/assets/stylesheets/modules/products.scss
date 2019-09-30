@@ -4,6 +4,9 @@
 body{
   margin:0;
 }
+$link_to: #0099e8;
+
+$background:#fafafa;
 
 a{
   text-decoration:none;
@@ -16,7 +19,7 @@ a{
   max-width:1000px;
   margin:0 auto;
   padding-top: 8px;
-  background: #fff;
+  background: $background;
 }
 
 li{
@@ -44,7 +47,7 @@ li{
 .header__top-button{
   height: 40px;
   width: 45px;
-  background-color: rgb(245, 245, 245);
+  background-color: transparent;
   border-style: none;
   margin-top: 2px;
   margin-right: 2px;
@@ -53,7 +56,6 @@ li{
 
 
 .container__top{
-  background-color: #fafafa;
   margin-top: 10px;
 }
 
@@ -61,30 +63,30 @@ li{
 max-width: 1020px;
 margin: 0 auto;
 }
-
-
-
-
-
-
 .header{
   &__top{
-    height:50px;
+    height:40px;
       display:flex;
+      font-size:16px;
       justify-content:space-between;
       &-logo{
-      width:180px;
+      width:135px;
     }
     &-search{
-      background:rgb(245, 245, 245);;
+      border-radius:5px;
+      padding-left:10px;
+      background:$background;
       border-style: none;
-      width:770px;
-      height:46px;
+      width:830px;
+      height:37px;
       float:right;
     }
   }
   &__bottom a {
     color:#333;
+    &:hover{
+      color:$link_to;
+    }
   }
 
 
@@ -145,9 +147,10 @@ margin: 0 auto;
     &-list{
       margin:0;
       display:flex;
+      height:60px;
       justify-content:center;
+      align-items:center;
       li{
-        color:black;
         background:rgba(lightgrey,0.7);
         margin-right:20px;
         padding:0 15px;
@@ -155,6 +158,9 @@ margin: 0 auto;
         line-height:30px;
         border-radius:15px;
         margin-bottom:20px;
+        a{
+          color:black;
+        }
       }
     }
   }
@@ -162,6 +168,9 @@ margin: 0 auto;
     display:flex;
     align-items: flex-end;
     justify-content: space-between;
+    h3{
+      padding:30px 0 10px 0;
+    }
   }
   &__products{
     display:flex;
@@ -177,7 +186,6 @@ margin: 0 auto;
 
 
 footer{
-  
   background:black;
   color:white;
   .footer-image{
@@ -217,8 +225,8 @@ footer{
   bottom:30px;right:20px;
   background:red;
   border-radius:50%;
-  width:150px;
-  height:150px;
+  width:160px;
+  height:160px;
   color:white;
   display:flex;
   justify-content: center;
