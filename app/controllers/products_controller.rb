@@ -23,6 +23,12 @@ class ProductsController < ApplicationController
     end
     
   end
+  
+  def transaction_buy
+    @product = Product.find(params[:id])
+    # binding.pry
+  end
+
 
   def product_params
     params.require(:product).permit(:name, :text, :category_id, :size, :brand_id, :status, :burden, :way, :area_id, :delivery_days,:price , images_attributes: [:src]).merge(user_id:current_user.id)
