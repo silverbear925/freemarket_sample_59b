@@ -10,37 +10,55 @@
           .buy-item-image
             =image_tag '/otya.png', class: 'buy__image__Photo'
             .buy-item-name
-              おチャオチャオチャオチャオ
-          .buy-price-box
+              おチャオwwwチャaaaaaaaaaaaaaaa
+          .buy-price-boxs
             .buy-price
-              .buy-price-ja
-                $ 14000
-              .item-shipping-fee
-                送料込み
-              %ul.buy-accordion
+              %ul.buy-price-box
+                %li.buy-price-ja
+                  ¥10,000
+                %li.item-shipping-fee
+                  送料込み
+              .buy-accordion
+                ポイントはありません
 
-              .buy-price-table
-                .buy-price-table-cell
-                  支払い金額
-                .buy-price-table-price
-                  ￥10000
-
+              %ul.buy-price-table
+                %il.buy-price-table-row
+                  .buy-price-table-cell-left
+                    支払い金額
+                  .buy-price-table-cell-right
+                    ￥10,000
+              =form_with url:"/" do |f|
+                %ladel.purchase__button
+                  = button_tag type: 'submit', class: "purchase__button__decision" do
+                    購入する
 
 
       .buy-content-2
         .buy-content-inner_buy
           配送先
           .buy-user-info-text
-            %p 〒　000-000 大阪 姫路市 宮上町1ー000 田仲　太郎
+            %p
+            〒　000-000
+            %br/
+            大阪府　大阪市　大坂　0ー000
+            %br/
+            亦賀 周平
+            .buy-user-info-fix
+              =link_to "", class: "buy-user-info-fix-l" do
+                変更する
+                %i.fas.fa-chevron-right
       .buy-content-3
         .buy-content-inner_buy
           支払い方法
-          .buy-user-info-text
-            %p ka-do
-
-
-
-
+          %p 
+          ************1309
+          %br/
+          10 / 19
+          .444 VISA
+          .buy-user-info-fix
+            =link_to "", class: "buy-user-info-fix-l" do
+              変更する
+              %i.fas.fa-chevron-right
 
 
 
