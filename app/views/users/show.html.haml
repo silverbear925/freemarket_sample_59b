@@ -9,7 +9,8 @@
         = link_to "" do
           %figure.icon-figure
             %img{alt: "", hight: "60", src: "https://static.mercdn.net/images/member_photo_noimage_thumb.png", width: "60"}
-          %h2.user-name ああああ
+          %h2.user-name
+            =@user.nickname
           .mypage-number
             .mypage-evaluetion
               評価
@@ -21,39 +22,39 @@
                 0
 
 
-      %ul.mypage-main__tab.nab-tabs
-        %li.notice-todo.active
+      %ul.mypage-main__tab
+        %li.notice-todo.action
           %h3.tab-notice-todo
-            =link_to "#notice-tab", "data-toggle": "tab", class: "tab-notice-todo__link" do
-              お知らせ
-        %li.notice-todo.active
+            お知らせ
+        %li.notice-todo
           %h3.tab-notice-todo
-            =link_to "#todo-tab", "data-toggle": "tab", class: "tab-notice-todo__link" do
-              やることリスト
+            やることリスト
 
       .mypage-main__tab-content
-        %ul#notice-tab.mypage-main__tab-content__list.tab-pane.active
+        %ul.mypage-main__tab-content__list.active
           %li.mypage-main__tab-content__list-item
             =link_to "", class: "mypage-main__tab-content__list-item__link" do
               %img.mypage-main__tab-content__list-item__link-img{src: "https://static.mercdn.net/images/mercari_profile.png"}
               .mypage-main__tab-content__list-item__link-body
                 .mypage-main__tab-content__list-item__link-bdy__text
-                  fgfg
+                  お知らせのテキスト
                 .mypage-main__tab-content__list-item__link-body__time
-                  %i.fal.fa-clock
                   %span.time-text
                     1 時間前
               %i.fas.fa-angle-right
 
-        %ul#todo-tab.mypage-main__tab-content__list.tab-pane.active
+          %li.mypage-main__tab-content__list-go
+            =link_to "", class: "mypage-main__tab-content__list-go__link" do
+              一覧を見る
+
+        %ul.mypage-main__tab-content__list
           %li.mypage-main__tab-content__list-item
             =link_to "", class: "mypage-main__tab-content__list-item__link" do
               %img.mypage-main__tab-content__list-item__link-img{src: "https://static.mercdn.net/images/mercari_profile.png"}
               .mypage-main__tab-content__list-item__link-body
                 .mypage-main__tab-content__list-item__link-bdy__text
-                  fgfg
+                  やることリストのテキスト
                 .mypage-main__tab-content__list-item__link-body__time
-                  %i.fal.fa-clock
                   %span.time-text
                     1 時間前
               %i.fas.fa-angle-right
@@ -67,23 +68,21 @@
         %h2.mypage-main__buy-product
           購入した商品
           
-      .mypage-main__tab
-        %li.notice-todo.active
-          %h3.tab-notice
-            =link_to "", class: "tab-notice-todo__link" do
-              取引中
+      %ul.mypage-main__tab-transaction
+        %li.transaction.action
+          %h3.tab-nowwas
+            取引中
 
-        %li.notice-todo.active
-          %h3.tab-todo
-            =link_to "", class: "tab-notice-todo__link" do
-              過去の取引
+        %li.transaction
+          %h3.tab-nowwas
+            過去の取引
 
       .mypage-main__list
         %ul.mypage-main__list-nowwas.active
           %li.mypage-main__list-nowwas__item
             取引中の商品がありません
 
-        %ul.mypage-main__list-nowwas.active
+        %ul.mypage-main__list-nowwas
           %li.mypage-main__list-nowwas__item
             過去に取引した商品はありません
 

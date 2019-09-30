@@ -89,24 +89,21 @@
         .notice-todo{
           width: 50%;
 
-          &:active{
+          &.action{
             background: #fff;
 
-            .tab-notice-todo__link{
+            .tab-notice-todo{
               border-top: 2px solid #ea352d;
             }
           }
 
           .tab-notice-todo{
             font-size: 22px;
-
-            &__link{
-              position: relative;
-              display: block;
-              color: #333;
-              font-size: 16px;
-              line-height: 72px;
-            }
+            position: relative;
+            display: block;
+            color: #333;
+            font-size: 16px;
+            line-height: 72px
           }
         }
       }
@@ -116,9 +113,9 @@
         background: #fff;
 
         &__list{
-          // display: none;
+          display: none;
 
-          &:active{
+          &.active{
             display: block;
           }
 
@@ -155,15 +152,6 @@
                 &__time{
                   display: inline-block;
                   color: #888;
-
-                  .fa-clock{
-                    margin: 0 8px 0 0;
-
-                    // &::before{
-                    //   font-family: "FontAwesome";
-                    //   content: '\f017';
-                    // }
-                  }
 
                   .time-text{
                     vertical-align: middle;
@@ -212,21 +200,50 @@
         }
       }
 
+      .mypage-main__tab-transaction{
+        border: 0;
+        background: #eee;
+        font-size: 0;
+        display: flex;
+        text-align: center;
+
+        .transaction{
+          width: 50%;
+
+          &.action{
+            background: #fff;
+
+            .tab-nowwas{
+              border-top: 2px solid #ea352d;
+            }
+          }
+
+          .tab-nowwas{
+            font-size: 22px;
+            position: relative;
+            display: block;
+            color: #333;
+            font-size: 16px;
+            line-height: 72px
+          }
+        }
+      }
+
       &__list{
         background: #fff;
         height: 236px;
 
         &-nowwas{
-          // display: none;
+          display: none;
 
-          &:active{
+          &.active{
             display: block;
           }
 
           &__item{
             border: 0;
             padding: 160px 0 60px;
-            background: url(/jp/assets/img/common/common/logo-gray-icon.svg?28086846);
+            background: url('https://www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?3296506464');
             background-repeat: no-repeat;
             background-position: center 40px;
             background-size: 78px 85px;
