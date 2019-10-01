@@ -22,8 +22,6 @@ Rails.application.routes.draw do
   resources :products do
     member do
       get :transaction_buy
-    end
-    collection do
       patch :crente_buy
     end
   end
