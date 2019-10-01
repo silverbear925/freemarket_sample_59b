@@ -83,9 +83,9 @@ ActiveRecord::Schema.define(version: 2019_10_01_075016) do
     t.string "name", null: false
     t.bigint "category_id", null: false
     t.text "text", null: false
-    t.integer "status", null: false
+    t.string "status", null: false
     t.bigint "area_id", null: false
-    t.integer "delivery_days", null: false
+    t.string "delivery_days", null: false
     t.bigint "user_id", null: false
     t.integer "buy_user"
     t.string "sale"
