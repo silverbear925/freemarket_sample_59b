@@ -8,6 +8,9 @@ class CardController < ApplicationController
     redirect_to action: "show" if card.exists?
   end
 
+  def add
+  end
+
   def pay #payjpとCardのデータベース作成を実施します。
     Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
     if params['payjp-token'].blank?
@@ -32,7 +35,7 @@ class CardController < ApplicationController
       customer.delete
       card.delete
     end
-      redirect_to action: "new"
+      redirect_to action: "add"
   end
 
   def show #Cardのデータpayjpに送り情報を取り出します

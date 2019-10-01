@@ -57,7 +57,7 @@
             width: 572px;
             height: 107px;
             padding: 24px 0;
-            color: white;
+         
 
             
             &__l{
@@ -72,11 +72,13 @@
             &__m{
               padding-left: 40px;
               padding-top: 12px;
+              color: white;
             }           
 
             &__s{
               padding-left: 15px;
               padding-top: 12px;
+              color: white;
             }
           }
         }
@@ -86,14 +88,17 @@
         }
       }       
     }
+    
   }
-   
+ } 
 
-}
+
 .sign-up_field-label-text{
   text-align: right;
   color: #0099e8;
   font-size: 14px;
 }
+
+
 
     

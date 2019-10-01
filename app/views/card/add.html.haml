@@ -11,14 +11,12 @@
             .mago-content__midle__senter__addbox__l
               .mago-content__midle__senter__addbox__m
                 %i.far.fa-credit-card
-              .mago-content__midle__senter__addbox__s
-                クレジットカードを追加する
-        .mago-content__midle__bottom 支払い方法について
-
-
+              =link_to new_card_path do
+                .mago-content__midle__senter__addbox__s
+                  クレジットカードを追加する
         
-
-    
+        .mago-content__midle__bottom 支払い方法について
+        
 
   =link_to new_product_path do
     .sale-logo
