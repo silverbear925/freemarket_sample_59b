@@ -27,14 +27,10 @@ class ProductsController < ApplicationController
   
   def transaction_buy
     @product = Product.find(params[:id])
-    # binding.pry
   end
   def crente_buy
     @product = Product.find(params[:id])
-    binding.pry
-    
-    
-    @product.update(buy_user:current_user.id,)
+    @product.update(buy_user:current_user.id,sale: "購入")
   end
 
 
