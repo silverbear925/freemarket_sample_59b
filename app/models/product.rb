@@ -1,9 +1,9 @@
 class Product < ApplicationRecord
-  has_many :images
+  has_many :images, dependent: :delete_all
   accepts_nested_attributes_for :images
   belongs_to :area
   belongs_to :brand, optional: true
-  belongs_to :category
+  belongs_to :category 
   belongs_to :user
   # mount_uploaders :images, ImageUploader
   enum statuses:{"新品": 0,"未使用に近い": 1,"目立った傷や汚れなし":2,"やや傷や汚れあり":3,"傷や汚れあり": 4,"汚れあり": 5}

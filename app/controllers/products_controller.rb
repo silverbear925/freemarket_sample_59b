@@ -29,6 +29,12 @@ class ProductsController < ApplicationController
     # binding.pry
   end
 
+  def destory
+    @product =Product.find(id:[params[:id]])
+    @product.destory
+    redirect_to root_path
+  end
+
 
   def product_params
     params.require(:product).permit(:name, :text, :category_id, :size, :brand_id, :status, :burden, :way, :area_id, :delivery_days,:price , images_attributes: [:src]).merge(user_id:current_user.id)
