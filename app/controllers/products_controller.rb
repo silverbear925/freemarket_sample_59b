@@ -1,10 +1,12 @@
 class ProductsController < ApplicationController
   def index
     @categories = Category.roots.all
+    # @images = Image.where(id: images.id)
   end
 
   def show
     @product = Product.find(params[:id])
+    @images = Image.find(params[:id])
 
   end
 
