@@ -10,8 +10,5 @@ class UsersController < ApplicationController
   def log_out
   end
 
-  
-  # def credit_add
-  # end
 
 end
