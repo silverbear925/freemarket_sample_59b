@@ -55,7 +55,7 @@
             
             %span.required
             .sell__about__right__wrap-box
-              = f.select :status,Product.statuses {}, {class: "select"}
+              = f.select :status,Product.statuses.keys {}, {class: "select"}
               %i.fas.fa-chevron-down
 
       .sell__about.clearfix
@@ -66,14 +66,14 @@
             = f.label :burden, "配送料の負担"
             %span.required
             .sell__about__right__wrap-box
-              = f.select :burden, Product.burdens {}, {class: "select"}
+              = f.select :burden, Product.burdens.keys {}, {class: "select"}
               %i.fas.fa-chevron-down
 
           .sell__about__right__wrap-box
             = f.label :way, "配送の方法"
             %span.required
             .sell__about__right__wrap-box
-              = f.select :way, Product.ways {}, {class: "select"}
+              = f.select :way, Product.ways.keys {}, {class: "select"}
               %i.fas.fa-chevron-down
 
           .sell__about__right__wrap
@@ -86,7 +86,7 @@
             = f.label :delivery_days, "配送までの日数"
             %span.required
             .sell__about__right__wrap-box
-              = f.select :delivery_days, Product.delivery_days {}, {class: "select"}
+              = f.select :delivery_days, Product.delivery_days.keys {}, {class: "select"}
               %i.fas.fa-chevron-down
 
       .sell__about.clearfix
