@@ -1,7 +1,3 @@
-# crumb :root do
-#   link "Home", root_path
-# end
-
 crumb :root do
   link "メルカリ", root_path
 end
@@ -9,6 +5,16 @@ end
 crumb :mypage do
   link "マイページ", users_path
   parent :root
+end
+
+crumb :pay do
+  link "支払い方法", users_path
+  parent :mypage
+end
+
+crumb :logout do
+  link "ログアウト", users_path
+  parent :mypage
 end
 
 
