@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def show
+    @user = User.find(params[:id])
   end
   
 
@@ -17,6 +18,4 @@ class UsersController < ApplicationController
   def credit_create
   end
 
-  def transaction_buy
-  end
 end

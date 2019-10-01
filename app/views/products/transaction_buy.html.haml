@@ -8,29 +8,29 @@
       .buy-content
         .buy-content-inner_buy
           .buy-item-image
-            =image_tag '/otya.png', class: 'buy__image__Photo'
+            =image_tag @product.images[0].src.url,class:"buy__image__Photo"
             .buy-item-name
-              おチャオwwwチャaaaaaaaaaaaaaaa
+              = @product.name
+
+
           .buy-price-boxs
             .buy-price
               %ul.buy-price-box
                 %li.buy-price-ja
-                  ¥10,000
+                  = @product.price
                 %li.item-shipping-fee
                   送料込み
               .buy-accordion
                 ポイントはありません
-
               %ul.buy-price-table
                 %il.buy-price-table-row
                   .buy-price-table-cell-left
                     支払い金額
                   .buy-price-table-cell-right
-                    ￥10,000
-              =form_with url:"/" do |f|
-                %ladel.purchase__button
-                  = button_tag type: 'submit', class: "purchase__button__decision" do
-                    購入する
+                    = @product.price
+              .purchase__button
+                =link_to crente_buy_products_path,method: :patch, class: "purchase__button__decision" do
+                  購入する
 
 
       .buy-content-2

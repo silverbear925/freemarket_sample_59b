@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'card/new'
+  get 'card/show'
   get 'battle/test'
   devise_for :users, :controllers =>{
     :registrations => 'users/registrations'
@@ -15,14 +17,20 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "products#index"
-  resources :products
+  resources :products do
+    member do
+      get :transaction_buy
+    end
+    collection do
+      patch :crente_buy
+    end
+  end
   resources :users do
     collection do
       get :log_out
       get :credit_delete
       get :credit_add
       get :credit_create
-      get :transaction_buy
     end
   end
   resources :adresses
@@ -30,4 +38,12 @@ Rails.application.routes.draw do
   resources :categories
 
   resources :momo
+
+  resources :card, only: [:new, :show] do
+    collection do
+      post 'show', to: 'card#show'
+      post 'pay', to: 'card#pay'
+      post 'delete', to: 'card#delete'
+    end
+  end
 end
