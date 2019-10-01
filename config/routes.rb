@@ -31,7 +31,7 @@ Rails.application.routes.draw do
     collection do
       get :log_out
       # get :credit_delete
-      get :credit_add
+      # get :credit_add
       # get :credit_create
     end
   end
@@ -54,6 +54,7 @@ Rails.application.routes.draw do
       get 'index', to: 'purchase#index'
       post 'pay', to: 'purchase#pay'
       get 'done', to: 'purchase#done'
+      get :credit_add
     end
   end
 end
