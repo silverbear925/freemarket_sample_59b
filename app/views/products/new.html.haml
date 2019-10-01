@@ -1,3 +1,4 @@
+=render ''
 .sell-wrappe
   .sell
     = form_with model:@product,local: true do |f|
@@ -9,9 +10,10 @@
         .sell__image-select
           = f.fields_for :images do |image|
             =image.label :src do
-              =image.file_field :src,class:'file-hidden'
-              .sell__image-select-area
-          またはクリックしてファイルをアップロード
+              =image.file_field :src,class:'file-'
+              =image.file_field :src,class:'file-'
+
+              -# .sell__image-select-area
 
       .sell__about
         .sell__about__name
@@ -27,17 +29,17 @@
         .sell__about__left 商品の詳細 
         .sell__about__right
           .sell__about__right__wrap
-            = f.label :category_id, "カテゴリー"
+            = label_tag "parents_id", "カテゴリー"
             %span.required
             .sell__about__right__wrap-box
-              = f.select :category_id, @categories_roots.map{|category| [category.name, category.id]}, prompt: "---", class: "select"
+              -category_options = @categories_roots.map{|category| [category.name, category.id]}
+              =select_tag "parents_id",options_for_select(category_options) , prompt: "---",id:"parents"
               %i.fas.fa-chevron-down
-            -# .sell__about__right__wrap-box-none
-            -#   = f.select :category, [["赤"],["黄ばみ"]], prompt: "---", class: "select"
-            -#   %i.fas.fa-chevron-down
-            -# .sell__about__right__wrap-box-none
-            -#   = f.select :category, [["赤"],["黄"]], prompt: "---", class: "select"
-            -#   %i.fas.fa-chevron-down
+            .sell__about__right__wrap-box
+              =select_tag "children_id", options_for_select(@categories_roots.map{|category| [category.name, category.id]}), prompt: "---",class:"hidden",id:"children"
+              %i.fas.fa-chevron-down
+            .sell__about__right__wrap-box.hidden
+              =f.select :category, [["赤"],["黄"]], prompt: "---", id:"grandchildren",class:'hidden'
           .sell__about__right__wrap
             = f.label :size, "サイズ"
             %span.required
@@ -65,10 +67,10 @@
             = f.label :burden, "配送料の負担"
             %span.required
             .sell__about__right__wrap-box
-              = f.select :burden, Product.burden_statuses {}, {class: "select"}
+              = f.select :burden, Product.burden_statuses {}, {class: "select"},id:"burden"
               %i.fas.fa-chevron-down
 
-          .sell__about__right__wrap-box
+          .sell__about__right__wrap-box.hidden#way
             = f.label :way, "配送の方法"
             %span.required
             .sell__about__right__wrap-box
