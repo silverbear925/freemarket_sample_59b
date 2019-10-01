@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_01_075016) do
+
+ActiveRecord::Schema.define(version: 2019_10_01_081004) do
+
+ActiveRecord::Schema.define(version: 2019_10_01_075800) do
+
 
   create_table "adresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "zipcode", null: false
@@ -18,9 +22,14 @@ ActiveRecord::Schema.define(version: 2019_10_01_075016) do
     t.string "city", null: false
     t.string "adress", null: false
     t.string "building", null: false
+
+
+    t.string "phone_number", null: false
+62166625ed28cb02d5996e808fe22c7e2066ba30
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.string "phone_number"
     t.index ["user_id"], name: "index_adresses_on_user_id"
   end
 
@@ -91,10 +100,11 @@ ActiveRecord::Schema.define(version: 2019_10_01_075016) do
     t.string "sale"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "burden", null: false
-    t.string "way", null: false
-    t.string "size"
+    t.integer "burden", null: false
+    t.integer "way", null: false
+    t.integer "size"
     t.integer "price", null: false
+    t.string "brand"
     t.index ["area_id"], name: "index_products_on_area_id"
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["user_id"], name: "index_products_on_user_id"
