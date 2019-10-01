@@ -1,12 +1,9 @@
 class ProductsController < ApplicationController
+  before_action :set_product, except: [:index,:new, :create]
+  
   def index
     @categories = Category.roots.all
     # @images = Image.where(id: images.id)
-  end
-
-  def show
-    @product = Product.find(params[:id])
-
   end
 
   def new
@@ -23,20 +20,25 @@ class ProductsController < ApplicationController
     else
       render action: :new
     end
-    
+  end
+
+  def destory
+    @product.destory
   end
   
   def transaction_buy
-    @product = Product.find(params[:id])
   end
+
   def crente_buy
-    @product = Product.find(params[:id])
     @product.update(buy_user:current_user.id,sale: "購入")
   end
 
-
+  private
   def product_params
     params.require(:product).permit(:name, :text, :category_id, :size, :brand, :status, :burden, :way, :area_id, :delivery_days,:price , images_attributes: [:src]).merge(user_id:current_user.id)
   end
 
+  def set_product
+    @product = Product.find(params[:id])
+  end
 end
