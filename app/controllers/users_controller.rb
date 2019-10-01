@@ -4,7 +4,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   
-
+  def edit
+  end
 
   def log_out
   end
