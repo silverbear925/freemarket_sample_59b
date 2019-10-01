@@ -17,31 +17,13 @@
         .owl-carousel
           .owl-stage-outer
             .owl-stage
-              =image_tag @images.src.url, class: 'owl-item'
+              -@product.images.each do |image|
+                =image_tag image.src.url, class: 'owl-item'
 
-              =image_tag '/otya.png', class: 'owl-item'
-              =image_tag '/otya2.png', class: 'owl-item'
-              =image_tag '/otya.png', class: 'owl-item'
-              =image_tag '/otya2.png', class: 'owl-item'
-              =image_tag '/otya.png', class: 'owl-item'
-              =image_tag '/otya2.png', class: 'owl-item'
-              =image_tag '/otya.png', class: 'owl-item'
-              =image_tag '/otya2.png', class: 'owl-item'
-              =image_tag '/otya.png', class: 'owl-item'
             .owl-nav
             .owl-dots
-              =image_tag '/otya.png', class: 'owl-dot'
-              =image_tag '/otya.png', class: 'owl-dot'
-              =image_tag '/otya.png', class: 'owl-dot'
-              =image_tag '/otya.png', class: 'owl-dot'
-              =image_tag '/otya.png', class: 'owl-dot'
-              =image_tag '/otya.png', class: 'owl-dot'
-              =image_tag '/otya.png', class: 'owl-dot'
-              =image_tag '/otya.png', class: 'owl-dot'
-              =image_tag '/otya.png', class: 'owl-dot'
-              =image_tag '/otya.png', class: 'owl-dot'
-
-
+              -@product.images.each do |image|
+                =image_tag image.src.url, class: 'owl-dot'
 
 
       %table.item-detail-table
