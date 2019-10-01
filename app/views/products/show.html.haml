@@ -3,30 +3,52 @@
 
 .default-container
 
+
+
+
   .item-box-container
     %h1.item-name
-      =@product.name
+      ダボッと可愛く映え☆ゲス USA+刺繍 オーバーサイズ プルオーバー パーカー
     %p.item-wording
-      "『purple and yellow デニムジャケット Gジャン メンズ』は、327回の取引実績を持つシズカのままさんから出品されました。パープル アンド イエロー（Gジャン/デニムジャケット/メンズ）の商品で、奈良県から1~2日で発送されます。"
+      『遠赤外線 電気ストーブ YAMAZEN』は、13回の取引実績を持つトレッセさんから出品されました。電気ヒーター/家電・スマホ・カメラの商品で、静岡県から1~2日で発送されます。
 
     .item-main-content
       .item-photo
         .owl-carousel
           .owl-stage-outer
             .owl-stage
-              -@product.images.each do |image|
-                =image_tag image.src.url, class: 'owl-item'
+              =image_tag '/otya2.png', class: 'owl-item'
+              =image_tag '/otya.png', class: 'owl-item'
+              =image_tag '/otya2.png', class: 'owl-item'
+              =image_tag '/otya.png', class: 'owl-item'
+              =image_tag '/otya2.png', class: 'owl-item'
+              =image_tag '/otya.png', class: 'owl-item'
+              =image_tag '/otya2.png', class: 'owl-item'
+              =image_tag '/otya.png', class: 'owl-item'
+              =image_tag '/otya2.png', class: 'owl-item'
+              =image_tag '/otya.png', class: 'owl-item'
             .owl-nav
             .owl-dots
-              -@product.images.each do |image|
-                =image_tag image.src.url, class: 'owl-dot'
+              =image_tag '/otya.png', class: 'owl-dot'
+              =image_tag '/otya.png', class: 'owl-dot'
+              =image_tag '/otya.png', class: 'owl-dot'
+              =image_tag '/otya.png', class: 'owl-dot'
+              =image_tag '/otya.png', class: 'owl-dot'
+              =image_tag '/otya.png', class: 'owl-dot'
+              =image_tag '/otya.png', class: 'owl-dot'
+              =image_tag '/otya.png', class: 'owl-dot'
+              =image_tag '/otya.png', class: 'owl-dot'
+              =image_tag '/otya.png', class: 'owl-dot'
+
+
+
 
       %table.item-detail-table
         %tr.item-detail-table-tr
           %th.item-detail-table-th  出品者
           %td.item-detail-table-td
-            =link_to user_path  do
-              =@product.user.nickname
+            =link_to ""  do
+              お名前
             //評価アイコン始
             -# %div
             -#   .item-user-ratings
@@ -44,8 +66,8 @@
           %td.item-detail-table-td
             %ul.item-detail-table_category
               %li
-                =link_to category_path  do
-                  =@product.category.name
+                =link_to ""  do
+                  メンズ
               %li
                 =link_to ""  do
                   %i.fas.fa-chevron-right 靴
@@ -56,11 +78,10 @@
           %th.item-detail-table-th ブランド
           %td.item-detail-table-td
             =link_to ""  do
-              =@product.brand_id
+              ナイキ
         %tr.item-detail-table-tr
           %th.item-detail-table-th 商品状態
-          %td.item-detail-table-td 
-            =@product.status
+          %td.item-detail-table-td 目立った傷や汚れなし
         %tr.item-detail-table-tr
           %th.item-detail-table-th  配送料の負担
           %td.item-detail-table-td 送料込み(出品者負担)
@@ -71,15 +92,14 @@
           %th.item-detail-table-th  配送元地域
           %td.item-detail-table-td
             =link_to ""  do
-              =@product.area.name
+              大阪
         %tr.item-detail-table-tr
           %th.item-detail-table-th  発送日の目安
           %td.item-detail-table-td 2~3日で発送
 
     .item-price-box.text-center
       %ul.item-price-boxs
-        %li.item-price-box-price 
-          = "¥#{@product.price}"
+        %li.item-price-box-price ¥10,800
         %li.item-price-box-tax (税込)
         %li.item-price-box-shipping-fee 送料込み
 
@@ -89,7 +109,8 @@
 
     .item-description
       %p.item-description-text
-        =@product.text
+        倉庫から出てきたデットストック品（新品未使用品）です。
+        k赤かっk閣下閣下かっかっkかかっっか
 
     //massege-------------------------
   .item-detail-message

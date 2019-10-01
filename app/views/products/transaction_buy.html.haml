@@ -28,10 +28,9 @@
                     支払い金額
                   .buy-price-table-cell-right
                     = @product.price
-              =form_with url:"/" do |f|
-                %ladel.purchase__button
-                  = button_tag type: 'submit', class: "purchase__button__decision" do
-                    購入する
+              .purchase__button
+                =link_to crente_buy_products_path,method: :patch, class: "purchase__button__decision" do
+                  購入する
 
 
       .buy-content-2
