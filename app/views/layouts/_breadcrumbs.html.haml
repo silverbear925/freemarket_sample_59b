@@ -1,0 +1,12 @@
+- case params.values_at :controller, :action
+
+- when ['users', 'show']
+  - breadcrumb :mypage
+
+- when ['users', 'credit_delete']
+  - breadcrumb :pay
+
+- when ['users', 'log_out']
+  - breadcrumb :logout
+
+= breadcrumbs separator: " &rsaquo; "
