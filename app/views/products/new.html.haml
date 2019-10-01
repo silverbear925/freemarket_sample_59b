@@ -52,6 +52,7 @@
               = f.text_field :brand_id, placeholder: "例）シャネル", class: "form"
           .sell__about__right__wrap
             = f.label :status, "商品の状態"
+            
             %span.required
             .sell__about__right__wrap-box
               = f.select :status,Product.statuses {}, {class: "select"}
