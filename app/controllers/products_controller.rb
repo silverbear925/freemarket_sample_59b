@@ -28,6 +28,13 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     # binding.pry
   end
+  def crente_buy
+    @product = Product.find(params[:id])
+    binding.pry
+    
+    
+    @product.update(buy_user:current_user.id,)
+  end
 
 
   def product_params
