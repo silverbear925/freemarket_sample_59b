@@ -10,7 +10,7 @@
           %figure.icon-figure
             %img{alt: "", hight: "60", src: "https://static.mercdn.net/images/member_photo_noimage_thumb.png", width: "60"}
           %h2.user-name
-            =@user.nickname
+            = @user.nickname
           .mypage-number
             .mypage-evaluetion
               評価
@@ -33,7 +33,7 @@
       .mypage-main__tab-content
         %ul.mypage-main__tab-content__list.active
           %li.mypage-main__tab-content__list-item
-            =link_to "", class: "mypage-main__tab-content__list-item__link" do
+            = link_to "", class: "mypage-main__tab-content__list-item__link" do
               %img.mypage-main__tab-content__list-item__link-img{src: "https://static.mercdn.net/images/mercari_profile.png"}
               .mypage-main__tab-content__list-item__link-body
                 .mypage-main__tab-content__list-item__link-bdy__text
@@ -44,12 +44,12 @@
               %i.fas.fa-angle-right
 
           %li.mypage-main__tab-content__list-go
-            =link_to "", class: "mypage-main__tab-content__list-go__link" do
+            = link_to "", class: "mypage-main__tab-content__list-go__link" do
               一覧を見る
 
         %ul.mypage-main__tab-content__list
           %li.mypage-main__tab-content__list-item
-            =link_to "", class: "mypage-main__tab-content__list-item__link" do
+            = link_to "", class: "mypage-main__tab-content__list-item__link" do
               %img.mypage-main__tab-content__list-item__link-img{src: "https://static.mercdn.net/images/mercari_profile.png"}
               .mypage-main__tab-content__list-item__link-body
                 .mypage-main__tab-content__list-item__link-bdy__text
@@ -60,7 +60,7 @@
               %i.fas.fa-angle-right
 
           %li.mypage-main__tab-content__list-go
-            =link_to "", class: "mypage-main__tab-content__list-go__link" do
+            = link_to "", class: "mypage-main__tab-content__list-go__link" do
               一覧を見る
 
 
@@ -87,5 +87,5 @@
             過去に取引した商品はありません
 
 
-
+  = render '/layouts/sale-logo'
   = render '/layouts/footer'
