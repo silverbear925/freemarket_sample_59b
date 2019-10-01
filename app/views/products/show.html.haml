@@ -81,13 +81,21 @@
               ナイキ
         %tr.item-detail-table-tr
           %th.item-detail-table-th 商品状態
+
+          %td.item-detail-table-td 
+            = @product.status
+
+
+
           %td.item-detail-table-td 目立った傷や汚れなし
         %tr.item-detail-table-tr
           %th.item-detail-table-th  配送料の負担
-          %td.item-detail-table-td 送料込み(出品者負担)
+          %td.item-detail-table-td
+            = @product.burden
         %tr.item-detail-table-tr
           %th.item-detail-table-th  配達方法
-          %td.item-detail-table-td らくらくメルカリ便
+          %td.item-detail-table-td
+            = @product.way
         %tr.item-detail-table-tr
           %th.item-detail-table-th  配送元地域
           %td.item-detail-table-td
@@ -95,7 +103,9 @@
               大阪
         %tr.item-detail-table-tr
           %th.item-detail-table-th  発送日の目安
-          %td.item-detail-table-td 2~3日で発送
+          %td.item-detail-table-td
+            = @product.delivery_days
+
 
     .item-price-box.text-center
       %ul.item-price-boxs

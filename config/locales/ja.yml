@@ -1,4 +1,8 @@
 ja:
+  enum:
+    product:
+      statuses:
+        new_aaa: "オニュ"
   date:
       order:
       - :year
