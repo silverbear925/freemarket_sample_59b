@@ -6,7 +6,17 @@
 
     .profile-main
       .profile-main__content
-        %h2..profile-main__content-head
+        %h2.profile-main__content-head
           プロフィール
         .profile-main__content-icon
+          .profile-main__content-icon__img
+            %img{hight: "50", src: "https://static.mercdn.net/images/member_photo_noimage_thumb.png", width: "50"}
+          = text_field object_name, method, {}
+          -# .profile-main__content-icon__name{type: "text", name: "nickname", value: "@user.nickname"}
         .profile-main__content-text
+          %textarea.profile-main__content-text__textarea{placeholder: "例) こんにちは。ご覧いただきありがとうございます!かわいいものやきれいめきれいめオフィスカジュアル中心に出品してます!"}
+          %button.profile-main__content-text__button
+            変更する
+  
+  = render '/layouts/sale-logo'
+  = render '/layouts/footer'
