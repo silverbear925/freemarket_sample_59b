@@ -37,6 +37,7 @@ class ProductsController < ApplicationController
   end
   
   def transaction_buy
+
   end
 
   def crente_buy

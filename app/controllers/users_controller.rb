@@ -5,10 +5,13 @@ class UsersController < ApplicationController
   end
   
   def edit
+    @user = User.find(params[:id])
   end
 
   def log_out
   end
 
+  def user_edit
+  end
 
 end
