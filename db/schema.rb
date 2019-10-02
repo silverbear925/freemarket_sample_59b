@@ -97,6 +97,7 @@ ActiveRecord::Schema.define(version: 2019_10_01_103003) do
     t.integer "way", null: false
     t.integer "size"
     t.integer "price", null: false
+    t.string "brand"
     t.index ["area_id"], name: "index_products_on_area_id"
     t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["category_id"], name: "index_products_on_category_id"
