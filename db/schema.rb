@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 2019_10_01_103003) do
     t.string "city", null: false
     t.string "adress", null: false
     t.string "building", null: false
-    t.string "phone_number", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.string "phone_number"
     t.index ["user_id"], name: "index_adresses_on_user_id"
   end
 
