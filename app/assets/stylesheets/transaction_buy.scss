@@ -111,13 +111,16 @@
   &-user-info-fix-l{
   }
 }
-
-.purchase__button__decision a{
+.purchase__button {
   width: 100%;
   line-height: 48px;
-  font-size: 14px;
-  color: #fff;
   background: #ea352d;
+  text-align: center;
+  &__decision {
+    color: #fff;
+    font-size: 14px;
+  
+  }
 }
 .item-shipping-fee{
   margin: 0 0 0 8px;
