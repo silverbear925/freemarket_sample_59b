@@ -11,8 +11,8 @@
         .profile-main__content-icon
           .profile-main__content-icon__img
             %img{hight: "50", src: "https://static.mercdn.net/images/member_photo_noimage_thumb.png", width: "50"}
-          = text_field object_name, method, {}
-          -# .profile-main__content-icon__name{type: "text", name: "nickname", value: "@user.nickname"}
+          -# = text_field type: "text", name: "nickname", class: "profile-main__content-icon__name"
+          %input.profile-main__content-icon__name{type: "text", name: "nickname", value: "@user.nickname"}
         .profile-main__content-text
           %textarea.profile-main__content-text__textarea{placeholder: "例) こんにちは。ご覧いただきありがとうございます!かわいいものやきれいめきれいめオフィスカジュアル中心に出品してます!"}
           %button.profile-main__content-text__button
