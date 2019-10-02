@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
-    @product.images.build
+    3.times{@product.images.build}
     @areas = Area.all
     @categories_roots = Category.roots
   end
@@ -22,12 +22,22 @@ class ProductsController < ApplicationController
     end
   end
 
+  def edit
+    @areas = Area.all
+    @categories_roots = Category.roots
+ 
+  end
+
+  def update
+    @product=Product.update(product_params)
+  end
+
   def destory
     @product.destory
   end
   
   def transaction_buy
-    # @user = @product.user.adress
+
   end
 
   def crente_buy
@@ -36,7 +46,7 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:name, :text, :category_id, :size, :brand, :status, :burden, :way, :area_id, :delivery_days,:price , images_attributes: [:src]).merge(user_id:current_user.id)
+    params.require(:product).permit(:name, :text, :category_id, :size, :brand, :status, :burden, :way, :area_id, :delivery_days,:price , images_attributes:  [:src]).merge(user_id:current_user.id)
   end
 
   def set_product
