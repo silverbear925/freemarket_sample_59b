@@ -37,7 +37,7 @@ class ProductsController < ApplicationController
   end
   
   def transaction_buy
-
+    @adress = Adress.find(params[:id])
   end
 
   def crente_buy

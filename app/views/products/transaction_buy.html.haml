@@ -38,11 +38,13 @@
           配送先
           .buy-user-info-text
             %p
-            -# = @user.adress.zipcode
+            = @adress.zipcode
             %br/
-            大阪府　大阪市　大坂　0ー000
+            = @adress.prefectures
+            = @adress.city
+            = @adress.building
             %br/
-            亦賀 周平
+            = @product.name
             .buy-user-info-fix
               =link_to "", class: "buy-user-info-fix-l" do
                 変更する
