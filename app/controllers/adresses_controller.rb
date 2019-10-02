@@ -11,6 +11,8 @@ class AdressesController < ApplicationController
     end
   end
 
+  def show
+    @adoress = Adress.find(params[:id])  
 
   def adress_params
     params.require(:adress).permit(:zipcode, :prefectures, :city, :adress, :building, :phone_number).merge(user_id:current_user.id)
