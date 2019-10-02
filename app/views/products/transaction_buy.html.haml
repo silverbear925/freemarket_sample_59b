@@ -12,12 +12,11 @@
             .buy-item-name
               = @product.name
 
-
           .buy-price-boxs
             .buy-price
               %ul.buy-price-box
                 %li.buy-price-ja
-                  = @product.price
+                  ¥#{@product.price}
                 %li.item-shipping-fee
                   送料込み
               .buy-accordion
@@ -27,10 +26,11 @@
                   .buy-price-table-cell-left
                     支払い金額
                   .buy-price-table-cell-right
-                    = @product.price
+                    ¥#{@product.price}
               .purchase__button
                 =link_to crente_buy_product_path(@product.id),method: :patch, class: "purchase__button__decision" do
-                  購入する
+                  .purchase__button__buy
+                    購入する
 
 
       .buy-content-2
