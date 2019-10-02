@@ -11,5 +11,7 @@ class UsersController < ApplicationController
   def log_out
   end
 
+  def user_edit
+  end
 
 end
