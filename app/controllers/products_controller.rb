@@ -27,6 +27,7 @@ class ProductsController < ApplicationController
   end
   
   def transaction_buy
+    @user = @product.user
   end
 
   def crente_buy
