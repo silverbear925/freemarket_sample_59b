@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   resources :users do
     collection do
       get :log_out
+      get :user_edit
       # get :credit_delete
       # get :credit_add
       # get :credit_create
