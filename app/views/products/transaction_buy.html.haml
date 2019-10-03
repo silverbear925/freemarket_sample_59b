@@ -28,7 +28,7 @@
                   .buy-price-table-cell-right
                     ¥#{@product.price}
               .purchase__button
-                =link_to crente_buy_product_path(@product.id),method: :patch, class: "purchase__button__decision" do
+                =link_to purchase_index_path, class: "purchase__button__decision" do
                   .purchase__button__buy
                     購入する
 
