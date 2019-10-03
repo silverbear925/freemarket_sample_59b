@@ -33,12 +33,6 @@
             .sell__about__right__wrap-box
               = f.select :category_id, @categories_roots.map{|category| [category.name, category.id]}, prompt: "---", class: "select"
               %i.fas.fa-chevron-down
-            -# .sell__about__right__wrap-box-none
-            -#   = f.select :category, [["赤"],["黄ばみ"]], prompt: "---", class: "select"
-            -#   %i.fas.fa-chevron-down
-            -# .sell__about__right__wrap-box-none
-            -#   = f.select :category, [["赤"],["黄"]], prompt: "---", class: "select"
-            -#   %i.fas.fa-chevron-down
           .sell__about__right__wrap
             = f.label :size, "サイズ"
             %span.required
