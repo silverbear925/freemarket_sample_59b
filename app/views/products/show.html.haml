@@ -197,4 +197,6 @@
     %br/
     .modal_box2
       .cancel_box キャンセル
-      .delete_box 削除
+      =link_to product_path(@product),method:"delete" do
+        .delete_box 削除
+      

@@ -35,7 +35,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
-    redirect_to user_path
+    redirect_to user_path(current_user)
     
   end
   
