@@ -281,3 +281,12 @@ font-size: 24px;
   }
 
 }
+
+.modal{
+  width: 500px;
+  height:300px;
+  &_confirmation{
+  font-weight: 800px;
+}
+  
+}
