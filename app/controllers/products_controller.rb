@@ -33,8 +33,10 @@ class ProductsController < ApplicationController
     redirect_to root_path
   end
 
-  def destory
-    @product.destory
+  def destroy
+    @product.destroy
+    redirect_to user_path
+    
   end
   
   def transaction_buy
