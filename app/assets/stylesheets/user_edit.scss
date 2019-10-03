@@ -1,0 +1,105 @@
+body{
+  background: #f5f5f5;
+}
+.l-chapter{
+  
+}
+.l-container{
+  height: 2000px;
+  margin: 40px auto 0;
+  width: 1020px;
+}
+.l-content{
+  // background: #fff;
+}
+.l-chapter-container{
+  background: #fff;
+}
+.l-chapter-heder{
+  padding: 8px 24px;
+  font-size: 24px;
+  text-align: center;
+}
+.l-single-form-text{
+}
+.text-right{
+  text-align: right;
+}
+.l-single-inner p {
+  margin: 8px 0 0;
+  line-height: 1.5;
+}
+.l-content{
+  float: right;
+  width: 700px;
+  }
+
+  .l-single-form{
+    padding: 64px;
+    border-top: 1px solid #f5f5f5;
+    font-size: 14px;
+  }
+
+
+  .text-right a{
+    text-align: right;
+  }
+  .form-group{
+    margin-top: 40px;
+    font-size: 14px;
+    label{
+      font-weight:bold;
+    }
+    
+  }
+  .form-group span {
+    background-color: #ccc;
+    color: #fff;
+  }
+  .input-default{
+    width: 100%;
+    height: 48px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .select-default{
+    width: 100%;
+    height: 48px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+
+
+
+.btn-default{
+  margin: 40px 0 0 0;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  width: 100%;
+  line-height: 48px;
+  text-align: center;
+  &-befalt-center{
+  }
+}
+
+
+  .btn-default a{
+    color: #fff;
+  }
+  .aaaaaaaa{
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+    background: #ccc;
+  }

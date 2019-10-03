@@ -26,9 +26,11 @@ Rails.application.routes.draw do
     end
   end
   resources :users do
+    member do
+      get :user_edit
+    end
     collection do
       get :log_out
-      get :user_edit
       # get :credit_delete
       # get :credit_add
       # get :credit_create
