@@ -12,12 +12,11 @@ $(function(){
     $(function(){
       $('.file_form').change(function(){
         console.log('DADA')
-          $('img').remove();
           var file = $(this).prop('files')[0];
           console.log(file)
           var fileReader = new FileReader();
           fileReader.onloadend = function() {
-              $('.sell__image-select-area').html('<img  class=""src="' + fileReader.result + '"/>');
+              $('.sell__image-select-area').eq(0).append('<img class="output" src="' + fileReader.result + '"/>');
           }
           fileReader.readAsDataURL(file);
       });

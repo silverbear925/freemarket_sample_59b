@@ -95,10 +95,26 @@
       font-weight: 600;
       letter-spacing: -2.3px;
       vertical-align: middle;
+      display:flex;
       cursor: pointer;
       &-area{
+        width:50px;
         height:162px;
+        display:flex;
+
       }
+      .file_form{
+        display:none;
+      }
+      .output{
+        width:150px;
+        height:162px;
+        float:left;
+
+      }
+
+
+
       &__ul {
         position: absolute;
         top: 0;
@@ -291,6 +307,3 @@
 }
 }
 
-.file-hidden{
-  display:none;
-}
