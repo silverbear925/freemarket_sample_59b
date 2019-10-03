@@ -40,7 +40,7 @@
   end
   
   def transaction_buy
-    @adress = Adress.find(params[:id])
+    @adress = @product.user.adress
   end
 
   def crente_buy

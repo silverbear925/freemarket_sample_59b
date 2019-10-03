@@ -1,14 +1,35 @@
-.sign-up
-  =render '/users/registrations/sign_up_header'
-  .sign-up__form
+.info
+  =render '/layouts/header'
+  .info__wrapper
     =render '/layouts/sidenav'
-    %h3.sign-up__form-heading クレジットカード情報入力
-    .sign-up__form-container
+    .info__form
+      %h3.info__form-heading クレジットカード情報入力
       = form_tag(pay_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
-        %label カード番号
+        .info__form-sentence
+          %label カード番号
+          %span 必須
         = text_field_tag "number", "", class: "number", placeholder: "半角数字のみ" ,maxlength: "16", type: "text", id: "card_number"
+        %ul.credit__list
+          %li
+            =link_to ""  do
+              =image_tag "/credit/card_logo.png",class:"credit__list-image"
+          %li
+            =link_to ""  do
+              =image_tag "/credit/master300px.gif",class:"credit__list-image"
+          %li
+            =link_to ""  do
+              =image_tag "/credit/saison300px.gif",class:"credit__list-image"
+          %li
+            =link_to ""  do
+              =image_tag "/credit/jcb300px.gif",class:"credit__list-image"
+          %li
+            =link_to ""  do
+              =image_tag "/credit/diners300px.gif",class:"credit__list-image"
+
         %br
-        %label 有効期限
+        .info__form-sentence
+          %label 有効期限
+          %span 必須
         %select#exp_month{name: "exp_month", type: "text"}
           %option{value: ""} --
           %option{value: "1"}01
