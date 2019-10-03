@@ -8,10 +8,10 @@
         %span.required
         %p.max 最大10枚までアップロードできます
         .sell__image-select
-          = f.fields_for @images do |image|
+          = f.fields_for :images do |image|
             =image.label :src do
               -# =image_tag(image.object.src.url)
-              =image.file_field :src,class:'file-hid'
+              =image.file_field :src,class:'file_form'
 
               .sell__image-select-area
           またはクリックしてファイルをアップロード
