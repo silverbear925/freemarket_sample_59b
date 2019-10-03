@@ -28,4 +28,4 @@ class UsersController < ApplicationController
     params.require(:user).permit(:nickname, :text)
   end
 
-end
+end 
