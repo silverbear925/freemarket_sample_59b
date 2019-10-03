@@ -282,11 +282,54 @@ font-size: 24px;
 
 }
 
+
 .modal{
-  width: 500px;
+  width: 600px;
   height:300px;
-  &_confirmation{
-  font-weight: 800px;
-}
+  margin: 0 auto;
+  text-align: center;
+  background: white;
+  position: fixed;
+  top: 70px;
+  right: 700px;
   
+}
+
+
+
+.modal_box{
+  background: white;
+
+  }
+.modal_confirmation{
+  font-weight: 50px;
+}
+
+
+.modal_box2{
+  width: 600px;
+  border-top-style: solid;
+  border-color: gray;
+  border-width: 1px;
+}
+
+.cancel_box{
+  height:70px;
+  width: 300px;
+  background: white;
+  float: left;
+  text-align: center;
+  border-right-style: solid;
+  border-color:gray;
+  border-width: 1px;
+  padding-top:30px;
+  
+}
+
+.delete_box {
+  height: 70px;
+ 
+  background: white;
+  text-align: center;
+  padding-top:30px;
 }
