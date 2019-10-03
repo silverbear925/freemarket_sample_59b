@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_10_03_050923) do
     t.string "city", null: false
     t.string "adress", null: false
     t.string "building", null: false
-    t.string "phone_number", null: false
+    t.integer "phone_number", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(version: 2019_10_03_050923) do
     t.bigint "area_id", null: false
     t.integer "delivery_days", null: false
     t.bigint "user_id", null: false
+    t.bigint "brand_id"
     t.integer "buy_user"
     t.string "sale"
     t.datetime "created_at", null: false
@@ -96,8 +97,8 @@ ActiveRecord::Schema.define(version: 2019_10_03_050923) do
     t.integer "way", null: false
     t.integer "size"
     t.integer "price", null: false
-    t.string "brand"
     t.index ["area_id"], name: "index_products_on_area_id"
+    t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["user_id"], name: "index_products_on_user_id"
   end
