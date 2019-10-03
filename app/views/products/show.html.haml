@@ -187,13 +187,11 @@
 =render '/layouts/footer'
 
 .modal
-  .modal_box
+  %p.modal_confirmation 確認
 
-    %p.modal_confirmation 確認
-    %p.modal_reconfirmation 削除すると二度と復活できません。
-    %p.modal_reconfirmation 削除する代わりに停止することもできます。
-    %br/
-    %p.modal_reconfirmation_box 本当に削除しますか？
-  .modal_box2
-    .cancel_box キャンセル
-    .delete_box 削除
+  %br/
+  削除すると二度と復活できません。
+  %br/
+  削除する代わりに停止することもできます。
+  %br/
+  本当に削除しますか？

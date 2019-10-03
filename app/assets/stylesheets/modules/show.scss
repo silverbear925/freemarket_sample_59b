@@ -283,54 +283,10 @@ font-size: 24px;
 }
 
 .modal{
-  width: 800px;
-  height:200px;
-  margin: 0 auto;
-  background: white;
-  position: fixed;
-  top: 70px;
-  right: 500px;
-  
-
-  
-  
+  width: 500px;
+  height:300px;
+  &_confirmation{
+  font-weight: 800px;
 }
-.modal_confirmation{
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  padding-top:30px;
-}
-
-.modal_reconfirmation{
-  text-align: center;
-  &_box{
-    text-align: center;
-    border-bottom-style: solid;
-    border-color: gray;
-    border-width: 1px;
-  }
-}
-
-
-
-.cancel_box{
-  height:70px;
-  width: 400px;
-  background: white;
-  float: left;
-  text-align: center;
-  border-right-style: solid;
-  border-color:gray;
-  border-width: 1px;
-  padding-top:30px;
   
-}
-.delete_box {
-  height: 70px;
-  background: white;
-  text-align: center;
-  padding-top:30px;
-  
-
 }
