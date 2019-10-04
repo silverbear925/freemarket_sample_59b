@@ -7,13 +7,18 @@ crumb :mypage do
   parent :root
 end
 
+crumb :infomation do
+  link "本人情報", users_path
+  parent :mypage
+end
+
 crumb :profile do
   link "プロフィール", users_path
   parent :mypage
 end
 
 crumb :pay do
-  link "支払い方法", purchase_path
+  link "支払い方法", card_path(current_user.id)
   parent :mypage
 end
 
