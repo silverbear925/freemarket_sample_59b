@@ -188,13 +188,189 @@ end
 
 
 
+Users.create!(
+  [
+    {
+      id: '1',
+      email: 'test@test',
+      encypted_passwaord: '111111',
+      nickname: 'テスト',
+      family_name: 'テスト',
+      first_name: '太郎',
+      family_name_kana: 'テスト',
+      first_name_kana: 'タロウ',
+      birth_day: '2019-01-01',
+      text: '',
+    },
 
-                                 
+    {
+      id: '2',
+      email: 'mercari@mercari',
+      encypted_passwaord: '222222',
+      nickname: 'メルカリ',
+      family_name: 'メルカリ',
+      first_name: '次郎',
+      family_name_kana: 'メルカリ',
+      first_name_kana: 'ジロウ',
+      birth_day: '2019-02-02',
+      text: '',
+    },
+
+    {
+      id: '3',
+      email: 'tech@tech',
+      encypted_passwaord: '333333',
+      nickname: 'テック',
+      family_name: 'テック',
+      first_name: '三郎',
+      family_name_kana: 'テック',
+      first_name_kana: 'サブロウ',
+      birth_day: '2019-03-03',
+      text: '',
+    }
+  ]
+)
 
 
-                            
-                                                      
+Products.create!(
+  [
+    {
+      id: '1',
+      user_id: '1',
+      name: 'テスト1',
+      text: 'あーーーーーーーーー',
+      category_id: '1',
+      size: '1',
+      status: '4',
+      burden: '2',
+      way: '3',
+      area_id: '1',
+      delivery_days: '3',
+      price: '1111',
+    },
 
-                       
+    {
+      id: '2',
+      user_id: '1',
+      name: 'テスト2',
+      text: 'いーーーーーーーー',
+      category_id: '1',
+      size: '2',
+      status: '3',
+      burden: '2',
+      way: '2',
+      area_id: '2',
+      delivery_days: '2',
+      price: '2222',
+    },
 
-                          
+    {
+      id: '3',
+      user_id: '1',
+      name: 'テスト3',
+      text: 'うーーーーーーーー',
+      category_id: '1',
+      size: '1',
+      status: '5',
+      burden: '2',
+      way: '2',
+      area_id: '3',
+      delivery_days: '1',
+      price: '3333',
+    },
+
+    {
+      id: '4',
+      user_id: '1',
+      name: 'テスト4',
+      text: 'えーーーーーーーー',
+      category_id: '1',
+      size: '2',
+      status: '2',
+      burden: '2',
+      way: '2',
+      area_id: '4',
+      delivery_days: '3',
+      price: '4444',
+    },
+
+    {
+      id: '5',
+      user_id: '1',
+      name: 'テスト5',
+      text: 'おーーーーーーー',
+      category_id: '1',
+      size: '1',
+      status: '1',
+      burden: '2',
+      way: '2',
+      area_id: '5',
+      delivery_days: '2',
+      price: '5555',
+    }
+  ]
+)
+
+
+Adresses.create!(
+  [
+    {
+      id: '1',
+      zipcode: '111-1111',
+      prefectures: '大阪府 ',
+      city: '大阪市',
+      adress: '111-1',
+      building: 'テスト荘 302',
+      phone_number: '11111111111',
+      user_id: '1',
+    },
+
+    {
+      id: '2',
+      zipcode: '222-2222',
+      prefectures: '東京都',
+      city: '新宿区',
+      adress: '222-2',
+      building: 'メルカリ荘 109',
+      phone_number: '22222222222',
+      user_id: '2',
+    },
+
+    {
+      id: '3',
+      zipcode: '333-3333',
+      prefectures: '沖縄県',
+      city: '那覇市',
+      adress: '333-3',
+      building: 'テック荘 909',
+      phone_number: '33333333333',
+      user_id: '3',
+    }
+  ]
+)
+
+
+Cards.create!(
+  [
+    {
+      id: '1',
+      user_id: '1',
+      customer_id: '1',
+      card_id: '1',
+    },
+
+    {
+      id: '2',
+      user_id: '2',
+      customer_id: '2',
+      card_id: '2',
+    },
+
+    {
+      id: '3',
+      user_id: '3',
+      customer_id: '3',
+      card_id: '3',
+    }
+  ]
+)
