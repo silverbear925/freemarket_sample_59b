@@ -24,6 +24,9 @@ Rails.application.routes.draw do
     member do
       get :transaction_buy
       patch :crente_buy
+      # get 'index', to: 'purchase#index'
+      post 'pay', to: 'products#pay'
+      get 'done', to: 'products#done'
     end
   end
   resources :users do
@@ -52,12 +55,12 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :purchase, only: [:index] do
-    collection do
-      get 'index', to: 'purchase#index'
-      post 'pay', to: 'purchase#pay'
-      get 'done', to: 'purchase#done'
+  # resources :purchase, only: [:index] do
+  #   collection do
+  #     get 'index', to: 'purchase#index'
+  #     post 'pay', to: 'purchase#pay'
+  #     get 'done', to: 'purchase#done'
      
-    end
-  end
+  #   end
+  # end
 end
