@@ -15,9 +15,9 @@
       Googleで登録する
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|      
       .sign-in-field  
-        = f.email_field :email, autofocus: true, autocomplete: "email",class:"sign-in-field-email",palaceholder:'メールアドレス'
+        = f.email_field :email, autofocus: true, autocomplete: "email",class:"sign-in-field-email",placeholder:'メールアドレス'
       .sign-in-field
-        = f.password_field :password, autocomplete: "current-password",class:"sign-in-field-password",palaceholder:'パスワード'
+        = f.password_field :password, autocomplete: "current-password",class:"sign-in-field-password",placeholder:'パスワード'
       .sign-in-field
         = image_tag 'https://i.gyazo.com/514f22bd48ba27d99a7690f51218dac2.png',class:"sign-in-field-robot"   
       .sign-in-field
