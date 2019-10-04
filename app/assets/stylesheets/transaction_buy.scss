@@ -125,3 +125,23 @@
 .item-shipping-fee{
   margin: 0 0 0 8px;
 }
+
+.purchase__button{
+  background-color: #ea352d;
+  font-size: 16px;
+  color: white;
+}
+
+.payjp_checkout_box input[type=button]{
+  -webkit-appearance: none;
+ 
+  display: inline-block;
+  padding: .5em 1em;
+  font-size: 16px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #fff;
+  background-color: #ea352d;
+}

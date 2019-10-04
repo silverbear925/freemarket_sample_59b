@@ -18,12 +18,13 @@ Rails.application.routes.draw do
     
   end
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "products#index"
   resources :products do
     member do
       get :transaction_buy
       patch :crente_buy
+      post 'pay', to: 'products#pay'
+      get 'done', to: 'products#done'
     end
   end
   resources :users do
@@ -32,9 +33,6 @@ Rails.application.routes.draw do
     end
     collection do
       get :log_out
-      # get :credit_delete
-      # get :credit_add
-      # get :credit_create
     end
   end
   resources :adresses
@@ -49,15 +47,6 @@ Rails.application.routes.draw do
       post 'pay', to: 'card#pay'
       post 'delete', to: 'card#delete'
       get :add
-    end
-  end
-
-  resources :purchase, only: [:index] do
-    collection do
-      get 'index', to: 'purchase#index'
-      post 'pay', to: 'purchase#pay'
-      get 'done', to: 'purchase#done'
-     
     end
   end
 end
