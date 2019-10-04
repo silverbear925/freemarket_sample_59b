@@ -97,22 +97,31 @@
         %li.item-price-box-tax (税込)
         %li.item-price-box-shipping-fee 送料込み
 
-    =link_to transaction_buy_product_path do
+    - if user_signed_in?
+      =link_to edit_product_path(@product) do
+        .item-buy-btn
+          編集する     
+  
       .item-buy-btn
-        購入画面に進む
+        削除する
+      .item-description
+        %p.item-description-text
+          = @product.text
+
+    - else @product.user == current_user
+      =link_to transaction_buy_product_path do
+        .item-buy-btn
+          購入画面に進む
     
-    =link_to edit_product_path(@product) do
-      .item-buy-btn
-        編集する
+    -# =link_to edit_product_path(@product) do
+    -#   .item-buy-btn
+    -#     編集する 
 
-      %br/
-      %p or  
-
-    .item-buy-btn
-      削除する
-    .item-description
-      %p.item-description-text
-        = @product.text
+    -# .item-buy-btn
+    -#   削除する
+    -# .item-description
+    -#   %p.item-description-text
+    -#     = @product.text
 
 
     //massege-------------------------
