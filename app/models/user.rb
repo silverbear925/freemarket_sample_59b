@@ -6,13 +6,20 @@ class User < ApplicationRecord
   has_many :sns_credentials, dependent: :destroy
   # has_one :adress
   devise :database_authenticatable, :registerable,
+
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: %i[facebook google_oauth2]
          
+
+        :recoverable, :rememberable, :validatable
+
+
 validates :nickname, presence: true
 validates :email, presence: true
+validates :encrypted_password,presence: true,length: { minimum: 6, maximum: 200 }
 validates :family_name, presence: true
 validates :first_name, presence: true
+
 validates :family_name_kana, presence: true
 validates :first_name_kana, presence: true
 validates :birth_day, presence: true 
@@ -63,4 +70,8 @@ def self.without_sns_data(auth)
   end
   return { user: user ,sns: sns}
 end
+
+validates :family_name_kana, presence: true,format: { with: /\A[\p{katakana}\p{blank}ー－]+\z/, message: 'はカタカナで入力して下さい。'}
+validates :first_name_kana, presence: true,format: { with: /\A[\p{katakana}\p{blank}ー－]+\z/, message: 'はカタカナで入力して下さい。'}
+
 end

@@ -32,18 +32,7 @@
           %td.item-detail-table-td
             =link_to ""  do
               =@product.user.nickname
-            //評価アイコン始
-            -# %div
-            -#   .item-user-ratings
-            -#     %i.fas.fa-grin
-            -#     %span 36
-            -#   .item-user-ratings
-            -#     %i.fas.fa-meh
-            -#     %span 0
-            -#   .item-user-ratings
-            -#     %i.fas.fa-frown
-            -#     %span 0
-            //評価アイコn終
+            
         %tr.item-detail-table-tr
           %th.item-detail-table-th カテゴリ
           %td.item-detail-table-td
@@ -97,7 +86,7 @@
         %li.item-price-box-tax (税込)
         %li.item-price-box-shipping-fee 送料込み
 
-    - if @product.user.id == current_user.id
+    - if user_signed_in? && @product.user.id == current_user.id
       =link_to edit_product_path(@product) do
         .item-buy-btn
           編集する     
@@ -113,18 +102,7 @@
         .item-buy-btn
           購入画面に進む
     
-    -# =link_to edit_product_path(@product) do
-    -#   .item-buy-btn
-    -#     編集する 
-
-    -# .item-buy-btn
-    -#   削除する
-    -# .item-description
-    -#   %p.item-description-text
-    -#     = @product.text
-
-
-    //massege-------------------------
+    
   .item-detail-message
     .message-content
       ここにはメッセージ機能？？？？？
@@ -148,9 +126,7 @@
         =link_to "" do
           %li.icon-twitter
             %i.fab.fa-twitter
-        -# =link_to "" do
-        -#   %li.icon-line
-        -#     %i.fab.fa-line
+       
         =link_to "" do
           %li.icon-pint
             %i.fab.fa-pinterest
