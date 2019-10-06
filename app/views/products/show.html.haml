@@ -1,164 +1,164 @@
--# =render '/layouts/header'
+=render '/layouts/header'
 
 
--# .default-container
+.default-container
 
 
 
 
--#   .item-box-container
--#     %h1.item-name
--#       = @product.name
--#     %p.item-wording
--#       『遠赤外線 電気ストーブ YAMAZEN』は、13回の取引実績を持つトレッセさんから出品されました。電気ヒーター/家電・スマホ・カメラの商品で、静岡県から1~2日で発送されます。
+  .item-box-container
+    %h1.item-name
+      = @product.name
+    %p.item-wording
+      『遠赤外線 電気ストーブ YAMAZEN』は、13回の取引実績を持つトレッセさんから出品されました。電気ヒーター/家電・スマホ・カメラの商品で、静岡県から1~2日で発送されます。
 
--#     .item-main-content
--#       .item-photo
--#         .owl-carousel
--#           .owl-stage-outer
--#             .owl-stage
--#               -@product.images.each do |image|
--#                 =image_tag image.src.url, class: 'owl-item'
+    .item-main-content
+      .item-photo
+        .owl-carousel
+          .owl-stage-outer
+            .owl-stage
+              -@product.images.each do |image|
+                =image_tag image.src.url, class: 'owl-item'
 
--#             .owl-nav
--#             .owl-dots
--#               -@product.images.each do |image|
--#                 =image_tag image.src.url, class: 'owl-dot'
+            .owl-nav
+            .owl-dots
+              -@product.images.each do |image|
+                =image_tag image.src.url, class: 'owl-dot'
 
 
--#       %table.item-detail-table
--#         %tr.item-detail-table-tr
--#           %th.item-detail-table-th  出品者
--#           %td.item-detail-table-td
--#             =link_to ""  do
--#               =@product.user.nickname
+      %table.item-detail-table
+        %tr.item-detail-table-tr
+          %th.item-detail-table-th  出品者
+          %td.item-detail-table-td
+            =link_to ""  do
+              =@product.user.nickname
             
--#         %tr.item-detail-table-tr
--#           %th.item-detail-table-th カテゴリ
--#           %td.item-detail-table-td
--#             %ul.item-detail-table_category
--#               %li
--#                 =link_to ""  do
--#                   メンズ
--#               %li
--#                 =link_to ""  do
--#                   %i.fas.fa-chevron-right 靴
--#               %li
--#                 =link_to ""  do
--#                   %i.fas.fa-chevron-right スニーカー
--#         %tr.item-detail-table-tr
--#           %th.item-detail-table-th ブランド
--#           %td.item-detail-table-td
--#             =link_to ""  do
--#               ナイキ
--#         %tr.item-detail-table-tr
--#           %th.item-detail-table-th 商品状態
+        %tr.item-detail-table-tr
+          %th.item-detail-table-th カテゴリ
+          %td.item-detail-table-td
+            %ul.item-detail-table_category
+              %li
+                =link_to ""  do
+                  メンズ
+              %li
+                =link_to ""  do
+                  %i.fas.fa-chevron-right 靴
+              %li
+                =link_to ""  do
+                  %i.fas.fa-chevron-right スニーカー
+        %tr.item-detail-table-tr
+          %th.item-detail-table-th ブランド
+          %td.item-detail-table-td
+            =link_to ""  do
+              ナイキ
+        %tr.item-detail-table-tr
+          %th.item-detail-table-th 商品状態
 
--#           %td.item-detail-table-td 
--#             = @product.status
-
-
-
--#           %td.item-detail-table-td 
--#         %tr.item-detail-table-tr
--#           %th.item-detail-table-th  配送料の負担
--#           %td.item-detail-table-td
--#             = @product.burden
--#         %tr.item-detail-table-tr
--#           %th.item-detail-table-th  配達方法
--#           %td.item-detail-table-td
--#             = @product.way
--#         %tr.item-detail-table-tr
--#           %th.item-detail-table-th  配送元地域
--#           %td.item-detail-table-td
--#             =link_to ""  do
--#               = @product.area.name
--#         %tr.item-detail-table-tr
--#           %th.item-detail-table-th  発送日の目安
--#           %td.item-detail-table-td
--#             = @product.delivery_days
+          %td.item-detail-table-td 
+            = @product.status
 
 
--#     .item-price-box.text-center
--#       %ul.item-price-boxs
--#         %li.item-price-box-price
--#           = "¥#{@product.price}"
--#         %li.item-price-box-tax (税込)
--#         %li.item-price-box-shipping-fee 送料込み
 
--#     - if user_signed_in? && @product.user.id == current_user.id
--#       =link_to edit_product_path(@product) do
--#         .item-buy-btn
--#           編集する     
+          %td.item-detail-table-td 
+        %tr.item-detail-table-tr
+          %th.item-detail-table-th  配送料の負担
+          %td.item-detail-table-td
+            = @product.burden
+        %tr.item-detail-table-tr
+          %th.item-detail-table-th  配達方法
+          %td.item-detail-table-td
+            = @product.way
+        %tr.item-detail-table-tr
+          %th.item-detail-table-th  配送元地域
+          %td.item-detail-table-td
+            =link_to ""  do
+              = @product.area.name
+        %tr.item-detail-table-tr
+          %th.item-detail-table-th  発送日の目安
+          %td.item-detail-table-td
+            = @product.delivery_days
+
+
+    .item-price-box.text-center
+      %ul.item-price-boxs
+        %li.item-price-box-price
+          = "¥#{@product.price}"
+        %li.item-price-box-tax (税込)
+        %li.item-price-box-shipping-fee 送料込み
+
+    - if user_signed_in? && @product.user.id == current_user.id
+      =link_to edit_product_path(@product) do
+        .item-buy-btn
+          編集する     
         
   
--#       .item-buy-btn
--#         削除する
--#       .item-description
--#         %p.item-description-text
--#           = @product.text
+      .item-buy-btn
+        削除する
+      .item-description
+        %p.item-description-text
+          = @product.text
 
--#     - else 
--#       =link_to transaction_buy_product_path do
--#         .item-buy-btn
--#           購入画面に進む
+    - else 
+      =link_to transaction_buy_product_path do
+        .item-buy-btn
+          購入画面に進む
     
    
 
     
--#   .item-detail-message
--#     .message-content
--#       ここにはメッセージ機能？？？？？
+  .item-detail-message
+    .message-content
+      ここにはメッセージ機能？？？？？
   
--#   %ul.nav-item-link-prev-next.clearfix
--#     %li.nav-item-link-prev
--#       =link_to "" do
--#         %i.fas.fa-chevron-left
--#         おーいお茶
--#     %li.nav-item-link-next
--#       =link_to "" do
--#         綾鷹
--#         %i.fas.fa-chevron-right
+  %ul.nav-item-link-prev-next.clearfix
+    %li.nav-item-link-prev
+      =link_to "" do
+        %i.fas.fa-chevron-left
+        おーいお茶
+    %li.nav-item-link-next
+      =link_to "" do
+        綾鷹
+        %i.fas.fa-chevron-right
 
--#   .item-social-media-box
--#     .text-center
--#       %ul.text-center-icon
--#         =link_to "" do
--#           %li.icon-facebook
--#             %i.fab.fa-facebook
--#         =link_to "" do
--#           %li.icon-twitter
--#             %i.fab.fa-twitter
+  .item-social-media-box
+    .text-center
+      %ul.text-center-icon
+        =link_to "" do
+          %li.icon-facebook
+            %i.fab.fa-facebook
+        =link_to "" do
+          %li.icon-twitter
+            %i.fab.fa-twitter
         
--#         =link_to "" do
--#           %li.icon-pint
--#             %i.fab.fa-pinterest
+        =link_to "" do
+          %li.icon-pint
+            %i.fab.fa-pinterest
 
 
 
--#   .items-in-user-profile
--#     .items-box-container
--#       =link_to "" do
--#         .items-box-head
--#           ●●さんのその他出品
--#         .items-box-content
--#           =render 'show_card'
--#           =render 'show_card'
--#           =render 'show_card'
--#           =render 'show_card'
--#           =render 'show_card'
--#           =render 'show_card'
--#     .items-box-container
--#       =link_to "" do
--#         .items-box-head
--#           ●ほかの商品
--#         .items-box-content
--#           =render 'show_card'
--#           =render 'show_card'
--#           =render 'show_card'
--#           =render 'show_card'
--#           =render 'show_card'
--#           =render 'show_card'
+  .items-in-user-profile
+    .items-box-container
+      =link_to "" do
+        .items-box-head
+          ●●さんのその他出品
+        .items-box-content
+          =render 'show_card'
+          =render 'show_card'
+          =render 'show_card'
+          =render 'show_card'
+          =render 'show_card'
+          =render 'show_card'
+    .items-box-container
+      =link_to "" do
+        .items-box-head
+          ●ほかの商品
+        .items-box-content
+          =render 'show_card'
+          =render 'show_card'
+          =render 'show_card'
+          =render 'show_card'
+          =render 'show_card'
+          =render 'show_card'
           
 
 
@@ -171,20 +171,20 @@
 
 
 
--# =render '/layouts/footer'
+=render '/layouts/footer'
 
 
--# .modal
--#   .modal_box
--#     %p.modal_confirmation 確認
--#     %br/
--#     %p.modal_reconfirmation 削除すると二度と復活できません。
--#     %p.modal_reconfirmation 削除する代わりに停止することもできます。
--#     %br/
--#     %p.modal_reconfirmation_box 本当に削除しますか？
--#     %br/
--#     .modal_box2
--#       .cancel_box キャンセル
--#       =link_to product_path(@product),method:"delete" do
--#         .delete_box 削除
+.modal
+  .modal_box
+    %p.modal_confirmation 確認
+    %br/
+    %p.modal_reconfirmation 削除すると二度と復活できません。
+    %p.modal_reconfirmation 削除する代わりに停止することもできます。
+    %br/
+    %p.modal_reconfirmation_box 本当に削除しますか？
+    %br/
+    .modal_box2
+      .cancel_box キャンセル
+      =link_to product_path(@product),method:"delete" do
+        .delete_box 削除
       
