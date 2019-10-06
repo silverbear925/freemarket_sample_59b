@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 2019_10_03_050923) do
     t.string "city", null: false
     t.string "adress", null: false
     t.string "building", null: false
+    t.integer "phone_number", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
-    t.string "phone_number"
     t.index ["user_id"], name: "index_adresses_on_user_id"
   end
 
@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(version: 2019_10_03_050923) do
     t.bigint "area_id", null: false
     t.integer "delivery_days", null: false
     t.bigint "user_id", null: false
+    t.bigint "brand_id"
     t.integer "buy_user"
     t.string "sale"
     t.datetime "created_at", null: false
@@ -98,17 +99,9 @@ ActiveRecord::Schema.define(version: 2019_10_03_050923) do
     t.integer "price", null: false
     t.string "brand"
     t.index ["area_id"], name: "index_products_on_area_id"
+    t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["user_id"], name: "index_products_on_user_id"
-  end
-
-  create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "provider"
-    t.string "uid"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_sns_credentials_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -125,13 +118,10 @@ ActiveRecord::Schema.define(version: 2019_10_03_050923) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "provider"
-    t.string "uid"
     t.text "text"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "adresses", "users"
-  add_foreign_key "sns_credentials", "users"
 end
