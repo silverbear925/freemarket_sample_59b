@@ -97,7 +97,7 @@
         %li.item-price-box-tax (税込)
         %li.item-price-box-shipping-fee 送料込み
 
-    - if @product.user.id == current_user.id
+    - if user_signed_in? && @product.user.id == current_user.id
       =link_to edit_product_path(@product) do
         .item-buy-btn
           編集する     
