@@ -6,23 +6,24 @@
     
       .sign-in-new  
         新規会員登録
-    .sign-in-facebook     
-      %i.fab.fa-facebook.icon
-      facebookで登録する
-    .sign-in-google
-      %i.fab.fa-google
-
-      Googleで登録する
-    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|      
-      .sign-in-field  
-        = f.email_field :email, autofocus: true, autocomplete: "email",class:"sign-in-field-email",placeholder:'メールアドレス'
-      .sign-in-field
-        = f.password_field :password, autocomplete: "current-password",class:"sign-in-field-password",placeholder:'パスワード'
-      .sign-in-field
-        = image_tag 'https://i.gyazo.com/514f22bd48ba27d99a7690f51218dac2.png',class:"sign-in-field-robot"   
-      .sign-in-field
-        = f.submit "ログイン",class:"sign-in-field-login"
-      .sign-in-field
+    = link_to user_facebook_omniauth_authorize_path do
+      .sign-in-facebook     
+        %i.fab.fa-facebook.icon
+        facebookで登録する
+    = link_to user_google_oauth2_omniauth_authorize_path do
+      .sign-in-google
+        %i.fab.fa-google
+        Googleで登録する
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .sign-in-field  
+          = f.email_field :email, autofocus: true, autocomplete: "email",class:"sign-in-field-email",placeholder:'メールアドレス'
+        .sign-in-field
+          = f.password_field :password, autocomplete: "current-password",class:"sign-in-field-password",placeholder:'パスワード'
+        .sign-in-field
+          = image_tag 'https://i.gyazo.com/514f22bd48ba27d99a7690f51218dac2.png',class:"sign-in-field-robot"   
+        .sign-in-field
+          = f.submit "ログイン",class:"sign-in-field-login"
+        .sign-in-field
           
 
 

@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   get 'card/show'
   get 'battle/test'
   devise_for :users, :controllers =>{
-    :registrations => 'users/registrations'
+    registrations: 'users/registrations',
+    sessions: 'users/sessions',
+    omniauth_callbacks: 'users/omniauth_callbacks'
   }
 
   devise_scope :user do
