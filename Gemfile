@@ -44,7 +44,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
-
+  gem 'faker'
   gem 'rspec-rails'
   gem 'rails-controller-testing'
   gem 'factory_bot_rails'
@@ -65,7 +65,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-  gem 'faker'
+
 end
 
 group :production do
