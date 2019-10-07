@@ -6,13 +6,8 @@ class User < ApplicationRecord
   has_many :sns_credentials, dependent: :destroy
   # has_one :adress
   devise :database_authenticatable, :registerable,
-
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: %i[facebook google_oauth2]
-         
-
-        :recoverable, :rememberable, :validatable
-
 
 validates :nickname, presence: true
 validates :email, presence: true
@@ -25,7 +20,7 @@ validates :first_name_kana, presence: true
 validates :birth_day, presence: true 
 
 def self.without_sns_data(auth)
-  user = User.where(email: auth.info.email).first
+  user = User.find_by(email: auth.info.email)
 
     if user.present?
       sns = SnsCredential.create(
@@ -47,7 +42,7 @@ def self.without_sns_data(auth)
   end
 
  def self.with_sns_data(auth, snscredential)
-  user = User.where(id: snscredential.user_id).first
+  user = User.find_by(id: snscredential.user_id)
   unless user.present?
     user = User.new(
       nickname: auth.info.name,
@@ -60,7 +55,7 @@ def self.without_sns_data(auth)
  def self.find_oauth(auth)
   uid = auth.uid
   provider = auth.provider
-  snscredential = SnsCredential.where(uid: uid, provider: provider).first
+  snscredential = SnsCredential.find_by(uid: uid, provider: provider)
   if snscredential.present?
     user = with_sns_data(auth, snscredential)[:user]
     sns = snscredential
