@@ -7,12 +7,14 @@
         = f.label :image, "出品画像"
         %span.required
         %p.max 最大10枚までアップロードできます
-        .sell__image-select
-          .sell__image-select-text またはクリックしてファイルをアップロード
-          = f.fields_for :images do |image|
-            =image.label :src do
-              =image.file_field :src,class:'file_form'
-              .sell__image-select-area
+        .sell-image
+          .sell__image-output
+          .sell__image-select
+            = f.fields_for :images do |image|
+              =image.label :src ,class:'label',data_index:"0" do
+                =image.file_field :src,class:'file_form'
+            .sell__image-select-text またはクリックしてファイルをアップロード
+
 
       .sell__about
         .sell__about__name

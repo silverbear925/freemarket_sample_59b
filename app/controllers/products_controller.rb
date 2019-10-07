@@ -8,7 +8,7 @@
 
   def new
     @product = Product.new
-    10.times{@product.images.build}
+    @product.images.build
     @areas = Area.all
     @categories_roots = Category.roots
   end
