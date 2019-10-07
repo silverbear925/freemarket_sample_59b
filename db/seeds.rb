@@ -350,31 +350,6 @@ Adress.create!(
 )
 
 
-Card.create!(
-  [
-    {
-      id: '1',
-      user_id: '1',
-      customer_id: '1',
-      card_id: '1',
-    },
-
-    {
-      id: '2',
-      user_id: '2',
-      customer_id: '2',
-      card_id: '2',
-    },
-
-    {
-      id: '3',
-      user_id: '3',
-      customer_id: '3',
-      card_id: '3',
-    }
-  ]
-)
-
 Image.create!(
   [
     {
