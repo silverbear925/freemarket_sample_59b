@@ -188,12 +188,12 @@ end
 
 
 
-Users.create!(
+User.create!(
   [
     {
       id: '1',
       email: 'test@test',
-      encypted_passwaord: '111111',
+      password: '111111',
       nickname: 'テスト',
       family_name: 'テスト',
       first_name: '太郎',
@@ -206,7 +206,7 @@ Users.create!(
     {
       id: '2',
       email: 'mercari@mercari',
-      encypted_passwaord: '222222',
+      password: '222222',
       nickname: 'メルカリ',
       family_name: 'メルカリ',
       first_name: '次郎',
@@ -219,7 +219,7 @@ Users.create!(
     {
       id: '3',
       email: 'tech@tech',
-      encypted_passwaord: '333333',
+      password: '333333',
       nickname: 'テック',
       family_name: 'テック',
       first_name: '三郎',
@@ -232,7 +232,7 @@ Users.create!(
 )
 
 
-Products.create!(
+Product.create!(
   [
     {
       id: '1',
@@ -241,11 +241,11 @@ Products.create!(
       text: 'あーーーーーーーーー',
       category_id: '1',
       size: '1',
-      status: '4',
-      burden: '2',
-      way: '3',
+      status: '新品',
+      burden: '送料込み',
+      way: '未定',
       area_id: '1',
-      delivery_days: '3',
+      delivery_days: '１~２日で発送',
       price: '1111',
     },
 
@@ -256,11 +256,11 @@ Products.create!(
       text: 'いーーーーーーーー',
       category_id: '1',
       size: '2',
-      status: '3',
-      burden: '2',
-      way: '2',
+      status: '未使用に近い',
+      burden: '着払い',
+      way: 'らくらくメルカリ便',
       area_id: '2',
-      delivery_days: '2',
+      delivery_days: '2~3日で発送',
       price: '2222',
     },
 
@@ -271,11 +271,11 @@ Products.create!(
       text: 'うーーーーーーーー',
       category_id: '1',
       size: '1',
-      status: '5',
-      burden: '2',
-      way: '2',
+      status: '目立った傷や汚れなし',
+      burden: '着払い',
+      way: 'らくらくメルカリ便',
       area_id: '3',
-      delivery_days: '1',
+      delivery_days: '4~7日で発送',
       price: '3333',
     },
 
@@ -286,11 +286,11 @@ Products.create!(
       text: 'えーーーーーーーー',
       category_id: '1',
       size: '2',
-      status: '2',
-      burden: '2',
-      way: '2',
+      status: '未使用に近い',
+      burden: '送料込み',
+      way: 'ゆうメール',
       area_id: '4',
-      delivery_days: '3',
+      delivery_days: '4~7日で発送',
       price: '4444',
     },
 
@@ -301,18 +301,18 @@ Products.create!(
       text: 'おーーーーーーー',
       category_id: '1',
       size: '1',
-      status: '1',
-      burden: '2',
-      way: '2',
+      status: 'やや傷や汚れあり',
+      burden: '送料込み',
+      way: '普通郵便（定型、定型外',
       area_id: '5',
-      delivery_days: '2',
+      delivery_days: '2~3日で発送',
       price: '5555',
     }
   ]
 )
 
 
-Adresses.create!(
+Adress.create!(
   [
     {
       id: '1',
@@ -321,7 +321,7 @@ Adresses.create!(
       city: '大阪市',
       adress: '111-1',
       building: 'テスト荘 302',
-      phone_number: '11111111111',
+      phone_number: '1111',
       user_id: '1',
     },
 
@@ -332,7 +332,7 @@ Adresses.create!(
       city: '新宿区',
       adress: '222-2',
       building: 'メルカリ荘 109',
-      phone_number: '22222222222',
+      phone_number: '2222',
       user_id: '2',
     },
 
@@ -343,14 +343,14 @@ Adresses.create!(
       city: '那覇市',
       adress: '333-3',
       building: 'テック荘 909',
-      phone_number: '33333333333',
+      phone_number: '3333',
       user_id: '3',
     }
   ]
 )
 
 
-Cards.create!(
+Card.create!(
   [
     {
       id: '1',
@@ -371,6 +371,40 @@ Cards.create!(
       user_id: '3',
       customer_id: '3',
       card_id: '3',
+    }
+  ]
+)
+
+Image.create!(
+  [
+    {
+      id: '1',
+      src: open("https://cdn.pixabay.com/photo/2019/09/19/17/40/insects-4489864__480.jpg"),
+      product_id: '1',
+    },
+
+    {
+      id: '2',
+      src: open("https://cdn.pixabay.com/photo/2019/09/19/17/40/insects-4489864__480.jpg"),
+      product_id: '2',
+    },
+
+    {
+      id: '3',
+      src: open("https://cdn.pixabay.com/photo/2019/09/19/17/40/insects-4489864__480.jpg"),
+      product_id: '3',
+    },
+
+    {
+      id: '4',
+      src: open("https://cdn.pixabay.com/photo/2019/09/19/17/40/insects-4489864__480.jpg"),
+      product_id: '4',
+    },
+
+    {
+      id: '5',
+      src: open("https://cdn.pixabay.com/photo/2019/09/19/17/40/insects-4489864__480.jpg"),
+      product_id: '5',
     }
   ]
 )
