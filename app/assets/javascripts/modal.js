@@ -8,7 +8,7 @@ $(".item-buy-btn").click(function(){
 
 
 $(document).on("click",".cancel_box",function(){
-  console.log("huhu")
+  
   $(".modal").fadeOut();
 
 })

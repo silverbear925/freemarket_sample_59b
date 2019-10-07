@@ -6,14 +6,15 @@
     
       .sign-in-new  
         新規会員登録
-    .sign-in-facebook     
-      %i.fab.fa-facebook.icon
-      facebookで登録する
-    .sign-in-google
-      %i.fab.fa-google
-
-      Googleで登録する
-    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|      
+    = link_to user_facebook_omniauth_authorize_path do
+      .sign-in-facebook     
+        %i.fab.fa-facebook.icon
+        facebookで登録する
+    = link_to user_google_oauth2_omniauth_authorize_path do
+      .sign-in-google
+        %i.fab.fa-google
+        Googleで登録する
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .sign-in-field  
         = f.email_field :email, autofocus: true, autocomplete: "email",class:"sign-in-field-email",placeholder:'メールアドレス'
       .sign-in-field

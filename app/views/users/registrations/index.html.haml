@@ -9,11 +9,11 @@
         .main__mail
           %i.fa.fa-envelope
           メールアドレスで登録する
-      = link_to root_path do
+      = link_to user_facebook_omniauth_authorize_path do
         .main__facebook
           %i.fab.fa-facebook-square
           facebookで登録する
-      = link_to root_path do
+      = link_to user_google_oauth2_omniauth_authorize_path do
         .main__google
           %i.fab.fa-google
           Googleで登録する
