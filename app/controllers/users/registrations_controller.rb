@@ -23,8 +23,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def create
-    
-     if params[:user][:password] == "" #sns登録なら
+     if params[:user][:password] == nil #sns登録なら
        params[:user][:password] = "Devise.friendly_token.first(6)" #deviseのパスワード自動生成機能を使用
        params[:user][:password_confirmation] = "Devise.friendly_token.first(6)"
        super
