@@ -1,5 +1,7 @@
 class Product < ApplicationRecord
   validates :name, :text, :status,:delivery_days,:burden,:way,:price, presence: true
+  validates :name, length: {maximum: 40}
+  validates :text, length: {maximum: 1000}
   has_many :images,dependent: :destroy
   accepts_nested_attributes_for :images
   belongs_to :area
