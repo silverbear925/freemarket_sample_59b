@@ -92,7 +92,7 @@ gem 'enum_help'
 gem 'kaminari', '~> 0.17.0'
 
 gem 'dotenv-rails'
-
+gem 'rails-i18n'
 gem "gretel"
 
 gem 'omniauth'

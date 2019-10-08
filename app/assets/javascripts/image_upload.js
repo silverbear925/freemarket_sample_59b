@@ -1,5 +1,4 @@
 $(function(){
-
   let index = 0
     $(function(){
       $('.sell__image-select').on('change','.file_form',function(){
