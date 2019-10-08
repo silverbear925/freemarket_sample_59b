@@ -98,9 +98,13 @@
           = @product.text
 
     - else 
+    - if @product.buy_user == nil
       =link_to transaction_buy_product_path do
         .item-buy-btn
           購入画面に進む
+    - else 
+      .item-buy-btn
+        売り切れ
     
     
   .item-detail-message
