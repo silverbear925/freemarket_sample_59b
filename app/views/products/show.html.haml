@@ -18,7 +18,11 @@
           .owl-stage-outer
             .owl-stage
               -@product.images.each do |image|
-                =image_tag image.src.url, class: 'owl-item'
+                - if @product.buy_user == nil
+                  =image_tag image.src.url, class: 'owl-item'
+                - else
+                  =image_tag "/shopping.png", class: 'owl-item'
+
 
             .owl-nav
             .owl-dots

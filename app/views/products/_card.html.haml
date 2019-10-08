@@ -2,9 +2,14 @@
   =link_to product_path(product) do
     .card
       .card__top
-        =image_tag product.images[0].src.url,class:"card__top-image"
+        - if product.buy_user == nil
+          =image_tag product.images[0].src.url,class:"card__top-image"
+        - else
+          =image_tag "/shopping.png",class:"card__top-image"
+
         .card__top-price 
           ="¥#{product.price}"
       .card__bottom
         %p.card__bottom-text
           =product.text 
+
