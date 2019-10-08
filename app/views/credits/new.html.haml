@@ -47,7 +47,7 @@
   .sign-up__form
     %h3.sign-up__form-heading お支払い方法
     .sign-up__form-container
-      = form_tag(registrations_finish_path, method: :get, id: 'charge-form',  name: "inputForm") do
+      = form_tag(pay_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
         .info__form-sentence
           %label カード番号 
           %span 必須

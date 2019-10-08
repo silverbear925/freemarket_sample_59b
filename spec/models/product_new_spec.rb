@@ -19,7 +19,6 @@ describe Product do
 
       product = build(:product, category_id: "")
       product.valid?
-      binding.pry
       expect(product.errors[:category_id]).to include("を入力してください")
 
     end
