@@ -286,9 +286,11 @@
     &__bottom {
       & .submit {
         width: 100%;
+        height:50px;
         margin-top: 40px;
         background-color: red;
-        cursor: pointer;
+        clear:both;
+        // cursor: pointer;
       }
       & .back {
         width: 45%;
@@ -298,6 +300,7 @@
       &-text {
         line-height: 1.5;
         clear: both;
+        margin-bottom:40px;
       }
       &-btn {
         display: block;
@@ -349,4 +352,20 @@
 }
 .sell__image-output{
   display:flex;
+}
+
+.product_submit{
+  clear:both;
+  @include input-box;
+  width:100%;
+  height:50px;
+  background:red;
+  color:white;
+}
+
+.sell__about__bottom-btn{
+  width:50%;
+  margin:40px auto;
+  background:grey;
+
 }
