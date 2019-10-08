@@ -1,6 +1,6 @@
 $(function() {
 
-$(".item-buy-btn").click(function(){
+$(".delete_btn").click(function(){
   $(".modal").fadeIn();
 
 })

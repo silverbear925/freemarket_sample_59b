@@ -88,23 +88,23 @@
 
     - if user_signed_in? && @product.user.id == current_user.id
       =link_to edit_product_path(@product) do
-        .Edit_btn
+        .edit_btn
           編集する     
   
-      .item-buy-btn
+      .delete_btn
         削除する
       .item-description
         %p.item-description-text
           = @product.text
 
     - else 
-    - if @product.buy_user == nil
-      =link_to transaction_buy_product_path do
-        .purchase
-          購入画面に進む
-    - else 
-      .item-buy-btn
-        売り切れ
+      - if @product.buy_user == nil
+        =link_to transaction_buy_product_path do
+          .purchase
+            購入画面に進む
+      - else 
+        .item-buy-btn
+          売り切れ
     
     
   .item-detail-message
