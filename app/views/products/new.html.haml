@@ -1,1 +1,140 @@
-=render 'form'
+.sell-wrappe
+  =render "/momo/header"
+  .sell
+    = form_with model:@product,local: true do |f|
+      %h3.sell__title 商品の情報を入力
+      .sell__image
+        = f.label :image, "出品画像"
+        %span.required
+        %p.max 最大10枚までアップロードできます
+        .sell-image
+          .sell__image-output
+          .sell__image-select
+            = f.fields_for :images do |image|
+              =image.label :src ,class:'label',data_index:"0" do
+                =image.file_field :src,class:'file_form'
+            .sell__image-select-text またはクリックしてファイルをアップロード
+
+
+      .sell__about
+        .sell__about__name
+          = f.label :name, "商品名"
+          %span.required
+          = f.text_field :name,  placeholder: "商品名（必須40文字まで）",class: "form"
+        .sell__about__description
+          = f.label :text, "商品の説明"
+          %span.required
+          = f.text_area :text, class: "sell__about-description__form", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+          
+      .sell__about.clearfix
+        .sell__about__left 商品の詳細 
+        .sell__about__right
+          .sell__about__right__wrap
+            = f.label :category_id, "カテゴリー"
+            %span.required
+            .sell__about__right__wrap-box
+              = f.select :category_id, @categories_roots.map{|category| [category.name, category.id]}, prompt: "---", class: "select"
+              %i.fas.fa-chevron-down
+            -# .sell__about__right__wrap-box-none
+            -#   = f.select :category, [["赤"],["黄ばみ"]], prompt: "---", class: "select"
+            -#   %i.fas.fa-chevron-down
+            -# .sell__about__right__wrap-box-none
+            -#   = f.select :category, [["赤"],["黄"]], prompt: "---", class: "select"
+            -#   %i.fas.fa-chevron-down
+          .sell__about__right__wrap
+            = f.label :size, "サイズ"
+            %span.required
+            .sell__about__right__wrap-box
+              = f.select :size, [["赤",0],["黄",1]], prompt: "---", class: "select"
+              %i.fas.fa-chevron-down
+              
+          .sell__about__right__wrap-box
+            = f.label :brand, "ブランド"
+            %span.required-gray
+            .sell__about__right__wrap-box
+              = f.text_field :brand, placeholder: "例）シャネル", class: "form"
+          .sell__about__right__wrap
+            = f.label :status, "商品の状態"
+            
+            %span.required
+            .sell__about__right__wrap-box
+              = f.select :status,Product.statuses.keys {}, {class: "select"}
+              %i.fas.fa-chevron-down
+
+      .sell__about.clearfix
+        .sell__about__left 配送について
+        .sell__about__right
+
+          .sell__about__right__wrap
+            = f.label :burden, "配送料の負担"
+            %span.required
+            .sell__about__right__wrap-box
+              = f.select :burden, Product.burdens.keys {}, {class: "select"}
+              %i.fas.fa-chevron-down
+
+          .sell__about__right__wrap-box
+            = f.label :way, "配送の方法"
+            %span.required
+            .sell__about__right__wrap-box
+              = f.select :way, Product.ways.keys {}, {class: "select"}
+              %i.fas.fa-chevron-down
+
+          .sell__about__right__wrap
+            = f.label :area_id, "配送元の地域"
+            %span.required
+            .sell__about__right__wrap-box
+              = f.select :area_id, @areas.map{|area| [area.name,area.id]}, prompt: "---", class: "select"
+              %i.fas.fa-chevron-down
+          .sell__about__right__wrap
+            = f.label :delivery_days, "配送までの日数"
+            %span.required
+            .sell__about__right__wrap-box
+              = f.select :delivery_days, Product.delivery_days.keys {}, {class: "select"}
+              %i.fas.fa-chevron-down
+
+      .sell__about.clearfix
+        .sell__about__left 販売価格(300〜9,999,999)
+        .sell__about__right
+          .sell__about__right__wrap
+            .sell__about__right__wrap__price
+              .sell__about__right__wrap__price-label
+                = f.label :price, "価格"
+                %span.required
+              .sell__about__right__wrap__price-input
+                ¥
+                .sell__about__right__wrap__price-input-form
+                  = f.number_field :price, placeholder: "例）300", class: "form"
+
+            .sell__about__right__wrap__fee
+              .sell__about__right__wrap__fee-left
+                販売手数料 (10%)
+              .sell__about__right__wrap__fee-right
+                −
+            .sell__about__right__wrap__profit
+              .sell__about__right__wrap__profit-left
+                販売利益
+              .sell__about__right__wrap__profit-right
+                −
+      .sell__about
+        .sell__about__bottom-text
+          %p
+            = link_to '#' do
+              禁止されている出品
+            、
+            = link_to '#' do
+              行為
+            を必ずご確認ください。
+          %p
+            またブランド品でシリアルナンバー等がある場合はご記載ください。
+            = link_to '#' do
+              偽ブランド
+            の販売は犯罪であり処罰される可能性があります。
+          %p 
+            また、出品をもちまして
+            = link_to '#' do
+              加盟店規約
+            に同意したことになります。
+        = f.submit "出品する", class: 'product_submit'
+        =link_to root_path do
+          %button{type: "button", class: 'sell__about__bottom-btn back'} もどる
+=render '/momo/footter'
