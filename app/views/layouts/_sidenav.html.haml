@@ -1,7 +1,7 @@
 .side-nav
   %nav.nav-mypage
     %ul.nav-mypage__list
-      = link_to "", class: "nav-mypage__list-link" do
+      = link_to user_path(current_user), class: "nav-mypage__list-link" do
         %li.nav-mypage__list-item
           マイページ
           %span.nav-mypage__list-item-number
