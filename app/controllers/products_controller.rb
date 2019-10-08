@@ -71,7 +71,7 @@
 
   def crente_buy
     @product.update(buy_user:current_user.id,sale: "購入")
-    redirect_to user_path(current_user)
+    redirect_to root_path
   end
 
   private
