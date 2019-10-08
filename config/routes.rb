@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   resources :products do
     member do
       get :transaction_buy
-      patch :crente_buy
+      get :crente_buy
       post 'pay', to: 'products#pay'
       get 'done', to: 'products#done'
     end
