@@ -10,7 +10,7 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: %i[facebook google_oauth2]
 validates :nickname, presence: true
 validates :email, presence: true
-validates :password,presence: true,length: { minimum: 6, maximum: 200 }
+validates :password,presence: true,length: { minimum: 7, maximum: 200 }, on: :create
 validates :family_name, presence: true
 validates :first_name, presence: true
 
