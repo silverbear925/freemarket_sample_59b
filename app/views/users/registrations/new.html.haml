@@ -27,7 +27,7 @@
           = f.email_field :email, autofocus: true, autocomplete: "email",class:'sign-up_field-input',placeholder:'PC・携帯どちらでも可'
 
 
-        -if request.fullpath.match(/\/users\/sign_up/)
+        -if request.fullpath.match(/\/users\/sign_up/) || request.fullpath.match(/^\/users$/)
           .sign-up_field
             .sign-up_field-label
               = f.label :password,"パスワード"
