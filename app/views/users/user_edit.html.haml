@@ -18,17 +18,22 @@
                   %i.fas.fa-chevron-right
               .form-group
                 = f.label :zipcode ,'お名前'
-                %p 田仲太郎
+                <br>
+                = @user.family_name
+                = @user.first_name
               .form-group
                 = f.label :zipcode ,'お名前カナ'
-                %p タナカタロウ
+                .sss
+                  = @user.family_name_kana
+                  = @user.first_name_kana
               .form-group
                 = f.label :zipcode ,'誕生日'
-                %p 2010/09/09
+                
+                = @user.birth_day
               .form-group
                 = f.label :zipcode ,'郵便番号'
-                %span 任意
-                = f.text_field :zipcode,class:'input-default',placeholder:'例）123−4567'        
+                = f.text_field :zipcode,class:'input-default',placeholder:'例）123−4567'  
+              
               .form-group
                 = f.label :prefectures, "都道府県"
                 %span 任意
