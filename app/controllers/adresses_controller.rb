@@ -8,6 +8,8 @@ class AdressesController < ApplicationController
     @adress = Adress.new(adress_params)
     if @adress.save
       redirect_to new_credit_path
+    else
+      render action: :new
     end
   end
 
