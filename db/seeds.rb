@@ -193,7 +193,7 @@ User.create!(
     {
       id: '1',
       email: 'test@test',
-      password: '111111',
+      password: '1111111',
       nickname: 'テスト',
       family_name: 'テスト',
       first_name: '太郎',
@@ -206,7 +206,7 @@ User.create!(
     {
       id: '2',
       email: 'mercari@mercari',
-      password: '222222',
+      password: '2222222',
       nickname: 'メルカリ',
       family_name: 'メルカリ',
       first_name: '次郎',
@@ -219,7 +219,7 @@ User.create!(
     {
       id: '3',
       email: 'tech@tech',
-      password: '333333',
+      password: '3333333',
       nickname: 'テック',
       family_name: 'テック',
       first_name: '三郎',
