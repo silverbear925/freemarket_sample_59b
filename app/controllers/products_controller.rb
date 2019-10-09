@@ -14,11 +14,18 @@
   end
   
   def create
-    @product=Product.new(product_params)
-    if @product.save
-      redirect_to root_path
-    else
-      render action: :new
+    
+    image = params.require(:product).permit(images_attributes:  [:id])
+    if image.blank?
+      redirect_to new_product_path
+      else
+      @product=Product.new(product_params)
+      if @product.save
+        redirect_to root_path
+      else
+        render action: :new
+      end
+
     end
   end
 
