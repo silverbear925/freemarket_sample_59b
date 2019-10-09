@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   
   def show
-    @user = User.find(params[:id])  
+    @user = User.find(params[:id])
+    @product = Product.where(user_id: current_user)
   end
   
   def edit
@@ -18,6 +19,7 @@ class UsersController < ApplicationController
   end
 
   def user_edit
+    @user = User.find(params[:id])
   end
 
 
