@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   validates :name, length: {maximum: 40}
   validates :text, length: {maximum: 1000}
   has_many :images,dependent: :destroy
-  accepts_nested_attributes_for :images
+  accepts_nested_attributes_for :images, allow_destroy: true
   belongs_to :area
   belongs_to :category
   belongs_to :user

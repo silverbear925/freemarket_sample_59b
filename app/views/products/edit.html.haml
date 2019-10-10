@@ -9,14 +9,19 @@
         %p.max 最大10枚までアップロードできます
         .sell-image
           .sell__image-output
-            -@images.each do |image|
-              .image-wrapper
-                = image_tag image.src.url, class:'output'
-                .image_remove 削除
+            -@product.images.each_with_index do |image, i|
+              -if image.persisted?
+                .image-wrapper
+                  = image_tag image.src.url, class:'output'
+                  .image_remove{data:{index: i}}
+                    削除
           .sell__image-select
             = f.fields_for :images do |image|
-              =image.label :src ,class:'label',data_index:"0" do
+              =image.label :src ,class:'label',data:{index:@product.images.count} do
                 =image.file_field :src,class:'file_form'
+              - if image.object.persisted?
+                = image.check_box :_destroy,class:'hidden'
+                = image.label :_destroy, "",class:"image_destroy"
             .sell__image-select-text またはクリックしてファイルをアップロード
 
 

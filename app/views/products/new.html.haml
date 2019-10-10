@@ -11,7 +11,7 @@
           .sell__image-output
           .sell__image-select
             = f.fields_for :images do |image|
-              =image.label :src ,class:'label',data_index:"0" do
+              =image.label :src ,class:'label',data:{index:"0"} do
                 =image.file_field :src,class:'file_form'
             .sell__image-select-text またはクリックしてファイルをアップロード
 
