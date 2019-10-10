@@ -32,7 +32,8 @@
   def edit
     @areas = Area.all
     @categories_roots = Category.roots
-    @images=@product.images
+    @product.images.build
+
   end
 
   def update
