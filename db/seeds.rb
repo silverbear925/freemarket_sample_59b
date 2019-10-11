@@ -192,7 +192,7 @@ User.create!(
   [
     {
       id: '1',
-      email: 'test@test',
+      email: 'test@gmail.com',
       password: '1111111',
       nickname: 'テスト',
       family_name: 'テスト',
@@ -205,7 +205,7 @@ User.create!(
 
     {
       id: '2',
-      email: 'mercari@mercari',
+      email: 'mercari@gmail.com',
       password: '2222222',
       nickname: 'メルカリ',
       family_name: 'メルカリ',
@@ -218,7 +218,7 @@ User.create!(
 
     {
       id: '3',
-      email: 'tech@tech',
+      email: 'tech@gmail.com',
       password: '3333333',
       nickname: 'テック',
       family_name: 'テック',
@@ -238,7 +238,7 @@ Product.create!(
       id: '1',
       user_id: '1',
       name: 'テスト1',
-      text: 'あーーーーーーーーー',
+      text: '出品テスト1',
       category_id: '1',
       size: '1',
       status: '新品',
@@ -253,8 +253,8 @@ Product.create!(
       id: '2',
       user_id: '1',
       name: 'テスト2',
-      text: 'いーーーーーーーー',
-      category_id: '1',
+      text: '出品テスト2',
+      category_id: '45',
       size: '2',
       status: '未使用に近い',
       burden: '着払い',
@@ -262,51 +262,6 @@ Product.create!(
       area_id: '2',
       delivery_days: '2~3日で発送',
       price: '2222',
-    },
-
-    {
-      id: '3',
-      user_id: '1',
-      name: 'テスト3',
-      text: 'うーーーーーーーー',
-      category_id: '1',
-      size: '1',
-      status: '目立った傷や汚れなし',
-      burden: '着払い',
-      way: 'らくらくメルカリ便',
-      area_id: '3',
-      delivery_days: '4~7日で発送',
-      price: '3333',
-    },
-
-    {
-      id: '4',
-      user_id: '1',
-      name: 'テスト4',
-      text: 'えーーーーーーーー',
-      category_id: '1',
-      size: '2',
-      status: '未使用に近い',
-      burden: '送料込み',
-      way: 'ゆうメール',
-      area_id: '4',
-      delivery_days: '4~7日で発送',
-      price: '4444',
-    },
-
-    {
-      id: '5',
-      user_id: '1',
-      name: 'テスト5',
-      text: 'おーーーーーーー',
-      category_id: '1',
-      size: '1',
-      status: 'やや傷や汚れあり',
-      burden: '送料込み',
-      way: '普通郵便（定型、定型外',
-      area_id: '5',
-      delivery_days: '2~3日で発送',
-      price: '5555',
     }
   ]
 )
@@ -354,32 +309,32 @@ Image.create!(
   [
     {
       id: '1',
-      src: open("https://cdn.pixabay.com/photo/2019/09/19/17/40/insects-4489864__480.jpg"),
+      src: open("https://pakutaso.cdn.rabify.me/shared/img/thumb/TOMS526511.jpg?d=500"),
       product_id: '1',
     },
 
     {
       id: '2',
-      src: open("https://cdn.pixabay.com/photo/2019/09/19/17/40/insects-4489864__480.jpg"),
-      product_id: '2',
+      src: open("https://pakutaso.cdn.rabify.me/shared/img/thumb/cat9302332.jpg?d=500"),
+      product_id: '1',
     },
 
     {
       id: '3',
       src: open("https://cdn.pixabay.com/photo/2019/09/19/17/40/insects-4489864__480.jpg"),
-      product_id: '3',
+      product_id: '1',
     },
 
     {
       id: '4',
-      src: open("https://cdn.pixabay.com/photo/2019/09/19/17/40/insects-4489864__480.jpg"),
-      product_id: '4',
+      src: open("https://pakutaso.cdn.rabify.me/shared/img/thumb/kurodanwaIMGL8661.jpg?d=500"),
+      product_id: '2',
     },
 
     {
       id: '5',
-      src: open("https://cdn.pixabay.com/photo/2019/09/19/17/40/insects-4489864__480.jpg"),
-      product_id: '5',
+      src: open("https://pakutaso.cdn.rabify.me/shared/img/thumb/171203IMGL9868.jpg?d=500"),
+      product_id: '2',
     }
   ]
 )
