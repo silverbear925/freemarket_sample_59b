@@ -1,6 +1,9 @@
 ﻿class ProductsController < ApplicationController
   before_action :set_product, except: [:index,:new, :create]
-   
+  before_action :current_user_user_id? ,only: [:pay,:transaction_buy,:crente_buy]
+  before_action :not_current_user_user_id? ,only: [:edit, :update, :destroy]
+  
+  
   require 'payjp'
   def index
     @categories = Category.roots.all
@@ -24,7 +27,6 @@
       else
         render action: :new
       end
-
     end
   end
 
@@ -32,17 +34,17 @@
     @areas = Area.all
     @categories_roots = Category.roots
     @product.images.build
-
   end
 
   def update
     @images=@product.images
-    image = params.require(:product).permit(images_attributes:  [:id])
+    # binding.pry
+
     if @product.images
-      redirect_to edit_product_path(@product)
-    else
       @product.update(product_edit_params)
       redirect_to root_path
+    else
+      redirect_to edit_product_path(@product)
     end
   end
 
@@ -98,4 +100,17 @@
   def set_product
     @product = Product.find(params[:id])
   end
+
+  def current_user_user_id?
+    if current_user.id == @product.user_id
+      redirect_to root_path
+    end
+  end
+
+  def not_current_user_user_id?
+    if current_user.id != @product.user_id
+      redirect_to root_path
+    end
+  end
+  
 end
