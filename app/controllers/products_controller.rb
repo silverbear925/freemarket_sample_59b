@@ -14,7 +14,6 @@
   end
   
   def create
-    
     image = params.require(:product).permit(images_attributes:  [:id])
     if image.blank?
       redirect_to new_product_path
@@ -38,8 +37,13 @@
 
   def update
     @images=@product.images
-    @product.update(product_edit_params)
-    redirect_to root_path
+    image = params.require(:product).permit(images_attributes:  [:id])
+    if @product.images
+      redirect_to edit_product_path(@product)
+    else
+      @product.update(product_edit_params)
+      redirect_to root_path
+    end
   end
 
   def destroy
