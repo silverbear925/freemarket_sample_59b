@@ -55,10 +55,8 @@
   end
   
   def transaction_buy
-    if @product.buy_user == nil
-      redirect_to transaction_buy_product_path
-    else
-      redirect_to product_path(product)
+    if @product.buy_user.present?
+      redirect_to product_path(@product)
     end
     @adress = @product.user.adress
     @product = Product.find(params[:id])
