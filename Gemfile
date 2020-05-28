@@ -89,7 +89,7 @@ gem 'payjp'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem 'enum_help'
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2.1'
 
 gem 'dotenv-rails'
 gem 'rails-i18n'
